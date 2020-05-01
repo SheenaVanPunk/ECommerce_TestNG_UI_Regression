@@ -7,14 +7,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import utilities.HtmlElement;
 import utilities.Page;
 import utilities.WindowManager;
 
 public class BaseTest {
     protected static WebDriver driver;
     protected static WebDriverWait wait;
-    private static String url = "";
+    private static String url = "http://automationpractice.com/";
 
     @BeforeClass
     public void setUp() {

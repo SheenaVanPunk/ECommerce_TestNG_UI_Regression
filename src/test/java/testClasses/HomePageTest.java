@@ -4,7 +4,7 @@ import pageObjects.HomePage;
 import static org.testng.Assert.assertTrue;
 
 
-public class Test extends BaseTest {
+public class HomePageTest extends BaseTest {
 private HomePage hp;
 
     @org.testng.annotations.Test
