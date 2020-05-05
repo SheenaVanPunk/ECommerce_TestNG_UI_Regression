@@ -16,3 +16,4 @@ FRAMEWORK COMPONENTS
 12 - Catch more exceptions - TODO
 13 - DDT reading from Excell file - TODO
 14 - Jenkins automated pipeline - TODO
+15 - Explicit waits - incorporated in wrapper methods alongside StepLogger methods
