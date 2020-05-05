@@ -2,30 +2,33 @@ package utilities;
 
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 
 public class WindowManager extends Page {
 
-    public WindowManager(WebDriver driver, WebDriverWait wait) {
-        super(driver, wait);
+    public WindowManager(WebDriver driver) {
+        super(driver);
     }
 
     public void goBack() {
         driver.navigate().back();
+        new StepsLogger().info("Returned to the previous page " + "\""+ driver.getTitle() + "\"");
     }
 
     public void goForward() {
         driver.navigate().forward();
+        new StepsLogger().info("Moved forward to page " + "\""+ driver.getTitle() + "\"");
     }
 
     public void refreshPage() {
         driver.navigate().refresh();
+        new StepsLogger().info("Refreshed the page.");
     }
 
     public void goToUrl(String url) {
         driver.navigate().to(url);
+        new StepsLogger().info("Navigated to URL " + url);
     }
 
     public void switchToTabByTitle(String tabTitle) {
@@ -37,6 +40,7 @@ public class WindowManager extends Page {
                 break;
             }
         }
+        new StepsLogger().info("Switched to " + "\""+ driver.getTitle() + "\"" + " tab by page title.");
     }
 
     public void switchToTabByHandle(String handle) {
@@ -48,6 +52,7 @@ public class WindowManager extends Page {
                 break;
             }
         }
+        new StepsLogger().info("Switched to " + "\""+ driver.getTitle() + "\"" + " tab by window handle.");
     }
 
     public void switchToTabByIndex(int tab) {
@@ -60,16 +65,20 @@ public class WindowManager extends Page {
                 break;
             }
         }
+        new StepsLogger().info("Switched to " + "\""+ driver.getTitle() + "\"" + " tab by index.");
     }
 
     public void switchToTheFirstOpenedTab() {
         var tabs = driver.getWindowHandles();
         System.out.println(tabs);
         tabs.forEach(driver.switchTo()::window);
+        new StepsLogger().info("Switched to the next tab.");
     }
 
     public int getNumberOfOpenTabs() {
-        return driver.getWindowHandles().size();
+        int openTabs = driver.getWindowHandles().size();
+        new StepsLogger().info("The number of open tabs at the moment: " + openTabs);
+        return openTabs;
     }
 
     public void openANewTab(){
@@ -86,6 +95,7 @@ public class WindowManager extends Page {
                 driver.close();
             }
         }
+        new StepsLogger().info("Closed all open tabs.");
     }
 
 

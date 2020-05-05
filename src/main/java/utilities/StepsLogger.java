@@ -1,9 +1,12 @@
 package utilities;
 
-public class Logger {
+import java.util.logging.Logger;
 
-    public Logger() { }
-//
+public class StepsLogger extends LoggingFileSetup {
+
+
+    public StepsLogger() {}
+
 //    public static final String LOG_STYLE	= "color : purple; font-weight: bold;";
 //    public static final String DATA_STYLE 	= "color : magenta; font-weight: bold;";
 //    public static final String VERIFY_STYLE	= "color : green; font-weight: bold;";
@@ -11,22 +14,31 @@ public class Logger {
 //    public static final String INFO_STYLE 	= "color : blue; font-weight: bold;";
 
     public void step(String text) {
-        System.out.println("STEP —" + " " + text);
+        System.out.println("STEP —" + " " + text.toString());
     }
 
     public void info(String text) {
-        System.out.println("INFO — " + text);
+        if (text.contains("\n")){
+            System.out.println("----> INFO — " + text.replace("\n", " "));
+        }else{
+            System.out.println("-----> INFO — " + text);
+        }
+
     }
 
     public void error(String text) {
-        System.out.println("ERROR — " + text);
+        System.out.println(" ! ERROR — " + text);
+    }
+
+    public void failed(String text){
+        System.out.println("FAILED - " + text);
+    }
+
+    public void passed(String text){
+        System.out.println("PASSED - " + text);
     }
 
 
-//    private static String formatAssertion(String text){
-//        return String.format(VERIFY_STYLE, text);
-//    }
-//
 //    private static String formatData(String text) {
 //        return String.format(DATA_STYLE, text);
 //    }
