@@ -32,12 +32,8 @@ public class BaseTest extends LoggingFileSetup {
 
     @BeforeMethod
     public void goToHomePage() {
-//        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
-//        System.setProperty("webdriver.chrome.silentOutput", "true");
-//        driver = new ChromeDriver(getChromeDriverOptions());
         driver.get(url);
         hp = new HomePage(driver);
-
     }
 
 
@@ -52,9 +48,12 @@ public class BaseTest extends LoggingFileSetup {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
-//        driver.manage().deleteAllCookies();
-//        driver.quit();
+    }
+        
+    @AfterClass
+    public void tearDown() {
+        driver.manage().deleteAllCookies();
+        driver.quit();
     }
 
     private ChromeOptions getChromeDriverOptions() {
@@ -70,11 +69,7 @@ public class BaseTest extends LoggingFileSetup {
         return new WindowManager(driver);
     }
 
-    @AfterClass
-    public void tearDown() {
-        driver.manage().deleteAllCookies();
-        driver.quit();
-    }
+  
 
 
 }
