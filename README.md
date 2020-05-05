@@ -17,3 +17,4 @@ FRAMEWORK COMPONENTS
 13 - DDT reading from Excell file - TODO
 14 - Jenkins automated pipeline - TODO
 15 - Explicit waits - incorporated in wrapper methods alongside StepLogger methods
+16 - Connection with a MySql for DDT
