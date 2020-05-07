@@ -1,4 +1,10 @@
 package pageObjects;
 
-public class CartPage {
+import org.openqa.selenium.WebDriver;
+import classesUtilities.Page;
+
+public class CartPage extends Page {
+    public CartPage(WebDriver driver) {
+        super(driver);
+    }
 }

@@ -4,23 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import utilities.StepsLogger;
-import utilities.Page;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import classesUtilities.Page;
 
 
 public class HomePage extends Page {
     private By searchField = By.cssSelector("a.noo-search");
     private By searchPopUp = By.cssSelector("input.form-control");
     private By cartIcon = By.cssSelector("span.cart-name-and-total");
-    private By secondProduct = By.xpath("//a[contains(text(), 'playboy')]");
-    private By homePageSections = By.cssSelector("div.noo-container-fluid");
-    private By productsList = By.cssSelector("div.noo-product-item");
-    private By fashionNewsSectionTitle = By.cssSelector("div.noo-shblog-header");
+
+
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -37,38 +29,48 @@ public class HomePage extends Page {
 
     public SearchPage searchForAnItem(String text) {
         clickOnElement(searchField, "SEARCH FIELD");
-        sendText(searchPopUp, "SEARCH FORM", text + Keys.ENTER);
-        return new SearchPage();
+        type(searchPopUp, "SEARCH FORM", text + Keys.ENTER);
+        return new SearchPage(driver);
     }
 
-    public ProductPage clickOnRandomProduct() {
-        clickOnElement(secondProduct, driver.findElement(secondProduct).getText().toUpperCase());
-        return new ProductPage();
+
+
+    public String findLocatorOfPageSection(String key){
+        /**
+         * for entered name of the home page section, switch expression returns the unique locator
+         */
+        return switch(key){
+            case "umbra blue" -> "#slide-6-layer-4";
+            case "free shipping" -> "div.vc_custom_1465282622143";
+            case "ladies" -> "div.vc_custom_1465285769156";
+            case "men" -> "div.vc_custom_1465550716269";
+            case "reviews" -> "div.vc_custom_1554631440321";
+            case "fashion news" -> "div.noo-shblog-header";
+            case "sign up" -> "div.vc_custom_1554631514516";
+            case "footer" -> "footer.wrap-footer";
+            default -> "Provide the correct home page section name!";
+        };
     }
 
-    private Map<String, WebElement> createPageSectionsMap() {
-        List<String> sectionNames = List.of("top_banner", "four_icons", "products_girl",
-                "products_boy", "reviews",
-                "fashion_news", "sign_up_banner");
-        List<WebElement> sections = driver.findElements(homePageSections);
-        Map<String, WebElement> sectionsMap = new HashMap<>();
-        for (String sectionName : sectionNames) {
-            WebElement section = sections.listIterator().next();
-            sectionsMap.put(sectionName, section);
-        }
-        new StepsLogger().info("Home page sections are: " + sectionsMap.keySet().toString().toUpperCase());
-        return sectionsMap;
+    public String scrollUntilHomePageSection(String key) {
+        String elementName = key.toUpperCase() + " PAGE SECTION";
+        WebElement section = getWebElement(By.cssSelector(findLocatorOfPageSection(key)), elementName);
+        scrollUntilElement(section);
+        return getWebElementText(By.cssSelector(findLocatorOfPageSection(key)), "TITLE - "+ elementName);
     }
 
-    public List<WebElement> getProductsList() {
-        return driver.findElements(productsList);
-    }
-
-    public String scrollUntilFashionNews(String key) {
-
-        scrollUntilElement(createPageSectionsMap().get(key));
-        return getWebElementText(fashionNewsSectionTitle, "TITLE - FASHION NEWS SECTION");
-    }
-
+//    private Map<String, WebElement> createPageSectionsMap() {
+//        List<String> sectionNames = List.of("top_banner", "four_icons", "products_girl",
+//                "products_boy", "reviews",
+//                "fashion_news", "sign_up_banner");
+//        List<WebElement> sections = driver.findElements(homePageSections);
+//        Map<String, WebElement> sectionsMap = new HashMap<>();
+//        for (String sectionName : sectionNames) {
+//            WebElement section = sections.listIterator().next();
+//            sectionsMap.put(sectionName, section);
+//        }
+//        new StepsLogger().info("Home page sections are: " + sectionsMap.keySet().toString().toUpperCase());
+//        return sectionsMap;
+//    }
 
 }

@@ -2,39 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e646b72d-563d-4f71-a299-786045a49d57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test Results - C__Users_Nena_IdeaProjects_E-CommerceUIRegression_testng_xml.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/BlogPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Footer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Header.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/SubCategoryPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/WishlistPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/LoggingFileSetup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/TestListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testClasses/QuickSmokeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/E-CommerceUIRegression.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/StepsLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CompareProductsPopUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/HomePageBlogSection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/HomePageProductSection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/QuickViewPopUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testClasses/ProductPageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testClasses/SearchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentTestManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testUtilities/listeners/AnnotationTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testUtilities/listeners/Retry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Results - C__Users_Nena_IdeaProjects_E-CommerceUIRegression_testng_xml.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/BlogPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/BlogPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Footer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Footer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Header.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/SearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/EventListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/HtmlElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/StepsLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/WindowManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/WindowManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/SubCategoryPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/WishlistPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/MyWishlistPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/LoggingFileSetup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/Page.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/StepsLogger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/listeners/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/WindowManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/WindowManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/HomePageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/QuickSmokeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/QuickSmokeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/E-CommerceUIRegression.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/BlogPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/BlogPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/CartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/CartPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Footer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/Footer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Header.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/Header.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/MyAccountPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/MyAccountPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage$RelatedProducts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage$RelatedProducts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/SearchPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/SearchPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utilities/HtmlElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utilities/Logger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utilities/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utilities/Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utilities/WindowManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utilities/WindowManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/SubCategoryPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/WishlistPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utilities/LoggingFileSetup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utilities/Page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utilities/StepsLogger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utilities/TestListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utilities/WindowManager.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/HomePageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/HomePageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/QuickSmokeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/QuickSmokeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +76,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1bHLmmu8O1uSmIo1AvZdRgVnxGE" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -67,29 +84,33 @@
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="ignore.preview.features.used" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../swTestAcademyExtentReportExample" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="utilities" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="testUtilities.listeners" />
       <recent name="pageObjects" />
       <recent name="utilities" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="utilities" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nena\IdeaProjects\E-CommerceUIRegression\src\main\java\utilities\ExtentReports" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.HomePageTest">
+  <component name="RunManager" selected="TestNG.C:/Users/Nena/IdeaProjects/E-CommerceUIRegression/testng.xml">
     <configuration name="C:/Users/Nena/IdeaProjects/E-CommerceUIRegression/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-CommerceUIRegression" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
@@ -100,16 +121,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomePageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="HomePageTest.testVerifySearchTextField (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-CommerceUIRegression" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="utilities.*" />
+          <option name="PATTERN" value="testClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="PACKAGE_NAME" value="testClasses" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.HomePageTest" />
+      <option name="METHOD_NAME" value="testVerifySearchTextField" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="0" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageTest.testVerifySearchTextField" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="E-CommerceUIRegression" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testClasses.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testClasses" />
       <option name="MAIN_CLASS_NAME" value="testClasses.HomePageTest" />
+      <option name="METHOD_NAME" value="testVerifySearchTextField" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="E-CommerceUIRegression" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testClasses" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.SearchTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -117,53 +176,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomePageTest.testGetCartText" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchTest.testSearchForItem" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-CommerceUIRegression" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="utilities.*" />
+          <option name="PATTERN" value="testClasses.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.HomePageTest" />
-      <option name="METHOD_NAME" value="testGetCartText" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomePageTest.testSearchForItem" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="E-CommerceUIRegression" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.HomePageTest" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.SearchTest" />
       <option name="METHOD_NAME" value="testSearchForItem" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomePageTest.testTryinOut" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="E-CommerceUIRegression" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.HomePageTest" />
-      <option name="METHOD_NAME" value="testTryinOut" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -173,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.HomePageTest" />
         <item itemvalue="TestNG.C:/Users/Nena/IdeaProjects/E-CommerceUIRegression/testng.xml" />
-        <item itemvalue="TestNG.HomePageTest.testGetCartText" />
-        <item itemvalue="TestNG.HomePageTest.testSearchForItem" />
-        <item itemvalue="TestNG.HomePageTest.testTryinOut" />
+        <item itemvalue="TestNG.SearchTest.testSearchForItem" />
+        <item itemvalue="TestNG.HomePageTest.testVerifySearchTextField" />
+        <item itemvalue="TestNG.HomePageTest.testVerifySearchTextField (1)" />
+        <item itemvalue="TestNG.SearchTest" />
       </list>
     </recent_temporary>
   </component>
@@ -195,66 +218,124 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1588291886222">
+    <state x="568" y="226" key="#Notifications" timestamp="1588789030617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1588291886222" />
-    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1588612631530">
+    <state x="568" y="226" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1588789030617" />
+    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1588718628553">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1588612631530" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1588557747396">
+    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1588718628553" />
+    <state x="2052" y="-208" key="#com.intellij.ide.util.MemberChooser" timestamp="1588794050476">
+      <screen x="1366" y="-312" width="1920" height="1040" />
+    </state>
+    <state x="2052" y="-208" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588794050476" />
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1588780612247" />
+    <state x="505" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1588779990994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588557747396" />
-    <state width="1323" height="227" key="GridCell.Tab.0.bottom" timestamp="1588653282476">
+    <state x="505" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1588779990994" />
+    <state x="1946" y="-153" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588802237930">
+      <screen x="1366" y="-312" width="1920" height="1040" />
+    </state>
+    <state x="1946" y="-153" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588802237930" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1588787711625" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1588787352890">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588653282476" />
-    <state width="1323" height="227" key="GridCell.Tab.0.center" timestamp="1588653282476">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588787352890" />
+    <state width="1323" height="42" key="GridCell.Tab.0.bottom" timestamp="1588861056366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588653282476" />
-    <state width="1323" height="227" key="GridCell.Tab.0.left" timestamp="1588653282476">
+    <state width="1323" height="170" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
+    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
+    <state width="1323" height="42" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588861056366" />
+    <state width="1323" height="42" key="GridCell.Tab.0.center" timestamp="1588861056365">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588653282476" />
-    <state width="1323" height="227" key="GridCell.Tab.0.right" timestamp="1588653282476">
+    <state width="1323" height="170" key="GridCell.Tab.0.center/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
+    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
+    <state width="1323" height="42" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588861056365" />
+    <state width="1323" height="42" key="GridCell.Tab.0.left" timestamp="1588861056365">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588653282476" />
-    <state width="1323" height="195" key="GridCell.Tab.1.bottom" timestamp="1588639980069">
+    <state width="1323" height="170" key="GridCell.Tab.0.left/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
+    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
+    <state width="1323" height="42" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588861056365" />
+    <state width="1323" height="42" key="GridCell.Tab.0.right" timestamp="1588861056366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="195" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588639980069" />
-    <state width="1323" height="195" key="GridCell.Tab.1.center" timestamp="1588639980069">
+    <state width="1323" height="170" key="GridCell.Tab.0.right/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
+    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
+    <state width="1323" height="42" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588861056366" />
+    <state width="1877" height="170" key="GridCell.Tab.1.bottom" timestamp="1588809402876">
+      <screen x="1366" y="-312" width="1920" height="1040" />
+    </state>
+    <state width="1323" height="170" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
+    <state width="1877" height="170" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402876" />
+    <state width="1323" height="262" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588781594139" />
+    <state width="1877" height="170" key="GridCell.Tab.1.center" timestamp="1588809402875">
+      <screen x="1366" y="-312" width="1920" height="1040" />
+    </state>
+    <state width="1323" height="170" key="GridCell.Tab.1.center/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
+    <state width="1877" height="170" key="GridCell.Tab.1.center/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402875" />
+    <state width="1323" height="262" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1588781594139" />
+    <state width="1877" height="170" key="GridCell.Tab.1.left" timestamp="1588809402875">
+      <screen x="1366" y="-312" width="1920" height="1040" />
+    </state>
+    <state width="1323" height="170" key="GridCell.Tab.1.left/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
+    <state width="1877" height="170" key="GridCell.Tab.1.left/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402875" />
+    <state width="1323" height="262" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1588781594139" />
+    <state width="1877" height="170" key="GridCell.Tab.1.right" timestamp="1588809402875">
+      <screen x="1366" y="-312" width="1920" height="1040" />
+    </state>
+    <state width="1323" height="170" key="GridCell.Tab.1.right/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
+    <state width="1877" height="170" key="GridCell.Tab.1.right/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402875" />
+    <state width="1323" height="262" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588781594139" />
+    <state x="426" y="0" key="Maven.ArtifactSearchDialog" timestamp="1588799514981">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="195" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1588639980069" />
-    <state width="1323" height="195" key="GridCell.Tab.1.left" timestamp="1588639980068">
+    <state x="426" y="0" key="Maven.ArtifactSearchDialog/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588799514981" />
+    <state x="426" y="0" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1588737645860" />
+    <state x="347" y="5" key="SettingsEditor" timestamp="1588737296888">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="195" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1588639980068" />
-    <state width="1323" height="195" key="GridCell.Tab.1.right" timestamp="1588639980069">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="347" y="5" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588737296888" />
+    <state x="1458" y="-220" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588804155706">
+      <screen x="1366" y="-312" width="1920" height="1040" />
     </state>
-    <state width="1323" height="195" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588639980069" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1588442002884">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588442002884" />
+    <state x="1458" y="-220" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588804155706" />
     <state x="502" y="191" key="export.test.results" timestamp="1588642072125">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="502" y="191" key="export.test.results/0.0.1366.728@0.0.1366.728" timestamp="1588642072125" />
+    <state x="389" y="111" key="refactoring.ChangeSignatureDialog" timestamp="1588703837777">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="389" y="111" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1588703837777" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/HomePageProductSection.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/testClasses/HomePageTest.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="43" />
+          <line>13</line>
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -2,18 +2,28 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Regression UI Suite" verbose="1">
+
     <!--    <suite name="Regression UI Suite" verbose="1" parallel="methods" thread-count = "7">-->
     <listeners>
-        <listener class-name="utilities.TestListener"></listener>
+        <listener class-name="testUtilities.listeners.TestListener"/>
+       <listener class-name="testUtilities.listeners.AnnotationTransformer"/>
     </listeners>
+    <parameter name="browser" value="chrome"/>
+
+    <parameter name="url" value="http://shop.demoqa.com/"/>
+    <parameter name="expectedTextInSearchField" value="Search"/>
+    <parameter name="itemForSearch" value="dress"/>
+
     <test name="Regression1">
-        <groups>
-            <run>
-                <exclude name="selectSizeForAProduct"></exclude>
-            </run>
-        </groups>
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="smoke"/>-->
+<!--            </run>-->
+<!--        </groups>-->
         <classes>
-            <class name="testClasses.HomePageTest"></class>
-        </classes>
+            <class name="testClasses.SearchTest"/>
+            <class name="testClasses.HomePageTest"/>
+            <class name="testClasses.QuickSmokeTest"/>
+       </classes>
     </test>
 </suite>

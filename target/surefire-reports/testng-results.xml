@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-05-05T14:53:19Z" name="Command line suite" finished-at="2020-05-05T14:53:35Z" duration-ms="15820">
+    <groups>
+      <group name="proba">
+        <method signature="HomePageTest.selectSizeForAProduct()[pri:0, instance:testClasses.HomePageTest@37d31475]" name="selectSizeForAProduct" class="testClasses.HomePageTest"/>
+        <method signature="HomePageTest.testGetCartText()[pri:1, instance:testClasses.HomePageTest@37d31475]" name="testGetCartText" class="testClasses.HomePageTest"/>
+        <method signature="HomePageTest.testSearchForItem()[pri:0, instance:testClasses.HomePageTest@37d31475]" name="testSearchForItem" class="testClasses.HomePageTest"/>
+        <method signature="HomePageTest.testTryinOut()[pri:0, instance:testClasses.HomePageTest@37d31475]" name="testTryinOut" class="testClasses.HomePageTest"/>
+      </group> <!-- proba -->
+      <group name="smoke">
+        <method signature="QuickSmokeTest.testIsTheWebSiteLoadingTheHomePage()[pri:1, instance:testClasses.QuickSmokeTest@27808f31]" name="testIsTheWebSiteLoadingTheHomePage" class="testClasses.QuickSmokeTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2020-05-05T14:53:19Z" name="Command line test" finished-at="2020-05-05T14:53:35Z" duration-ms="15820">
+      <class name="testClasses.HomePageTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:testClasses.HomePageTest@37d31475]" started-at="2020-05-05T14:53:19Z" name="init" finished-at="2020-05-05T14:53:26Z" duration-ms="6795" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testClasses.HomePageTest@37d31475]" started-at="2020-05-05T14:53:26Z" name="goToHomePage" finished-at="2020-05-05T14:53:28Z" duration-ms="1842" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="selectSizeForAProduct()[pri:0, instance:testClasses.HomePageTest@37d31475]" started-at="2020-05-05T14:53:28Z" name="selectSizeForAProduct" finished-at="2020-05-05T14:53:31Z" duration-ms="3241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectSizeForAProduct -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:testClasses.HomePageTest@37d31475]" started-at="2020-05-05T14:53:31Z" name="recordFailure" finished-at="2020-05-05T14:53:31Z" duration-ms="60" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=selectSizeForAProduct status=SUCCESS method=HomePageTest.selectSizeForAProduct()[pri:0, instance:testClasses.HomePageTest@37d31475] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testClasses.HomePageTest@37d31475]" started-at="2020-05-05T14:53:31Z" name="goToHomePage" finished-at="2020-05-05T14:53:32Z" duration-ms="868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="testSearchForItem()[pri:0, instance:testClasses.HomePageTest@37d31475]" started-at="2020-05-05T14:53:32Z" name="testSearchForItem" finished-at="2020-05-05T14:53:34Z" duration-ms="1849" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchForItem -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:testClasses.HomePageTest@37d31475]" started-at="2020-05-05T14:53:34Z" name="recordFailure" finished-at="2020-05-05T14:53:34Z" duration-ms="24" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSearchForItem status=SUCCESS method=HomePageTest.testSearchForItem()[pri:0, instance:testClasses.HomePageTest@37d31475] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+        <test-method is-config="true" signature="goToHomePage()[pri:0, instance:testClasses.HomePageTest@37d31475]" started-at="2020-05-05T14:53:34Z" name="goToHomePage" finished-at="2020-05-05T14:53:35Z" duration-ms="828" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomePage -->
+        <test-method signature="testTryinOut()[pri:0, instance:testClasses.HomePageTest@37d31475]" started-at="2020-05-05T14:53:35Z" name="testTryinOut" finished-at="2020-05-05T14:53:35Z" duration-ms="282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTryinOut -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:testClasses.HomePageTest@37d31475]" started-at="2020-05-05T14:53:35Z" name="recordFailure" finished-at="2020-05-05T14:53:35Z" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testTryinOut status=SUCCESS method=HomePageTest.testTryinOut()[pri:0, instance:testClasses.HomePageTest@37d31475] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+      </class> <!-- testClasses.HomePageTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
