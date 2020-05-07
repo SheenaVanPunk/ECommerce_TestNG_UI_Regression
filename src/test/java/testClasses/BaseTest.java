@@ -60,7 +60,7 @@ public class BaseTest {
         private static ChromeOptions getChromeDriverOptions() {
             ChromeOptions options = new ChromeOptions();
             //options.addArguments("start-maximized");
-            //options.addArguments("--window-size=1325x744");
+            options.addArguments("--window-size=1366x626");
             options.setHeadless(true);
             options.setPageLoadStrategy(PageLoadStrategy.EAGER);
             return options;
