@@ -75,14 +75,14 @@ public class BaseTest {
                 case "chrome" -> driver = initChromeDriver();
                 case "firefox" -> driver = initFirefoxDriver();
                 default -> {
-                    System.out.println("browser : " + browserType + " is invalid, Launching Chrome as browser of choice..");
+                    System.out.println("browser : " + browserType + " is invalid, Launching Chrome as a browser of choice..");
                     driver = initChromeDriver();
                 }
             }
         }
 
         private static WebDriver initChromeDriver () {
-            System.out.println("Launching new instance of Google Chrome...");
+            System.out.println("Launching a new instance of Google Chrome...");
             System.setProperty("webdriver.chrome.driver", chromeDriverPath);
             System.setProperty("webdriver.chrome.silentOutput", "true");
             driver = new ChromeDriver(getChromeDriverOptions());
@@ -90,7 +90,7 @@ public class BaseTest {
         }
 
         private static WebDriver initFirefoxDriver () {
-            System.out.println("Launching new instance of Firefox browser..");
+            System.out.println("Launching a new instance of Firefox browser..");
             System.setProperty("webdriver.gecko.driver", firefoxDriverPath);
             driver = new FirefoxDriver();
             return driver;

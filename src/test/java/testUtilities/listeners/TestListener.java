@@ -1,21 +1,10 @@
 package testUtilities.listeners;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.google.common.io.Files;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.testng.*;
 import classesUtilities.StepsLogger;
-import testUtilities.extentReportsClasses.ExtentManager;
+import testUtilities.extentReportsClasses.ExtentReporterManager;
 import testUtilities.extentReportsClasses.ExtentTestManager;
-
-import java.io.File;
-import java.io.IOException;
 
 
 public class TestListener implements ITestListener {
@@ -37,7 +26,7 @@ public class TestListener implements ITestListener {
         System.out.println("Execution lasted for: " + lenghtOfExecution  + " seconds.");
         System.out.println(("*** Test Suite " + context.getName() + " ending ***"));
         ExtentTestManager.endTest();
-        ExtentManager.getInstance().flush();
+        ExtentReporterManager.getInstance().flush();
     }
 
     @Override

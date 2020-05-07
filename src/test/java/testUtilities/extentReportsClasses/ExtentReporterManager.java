@@ -7,12 +7,12 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import java.io.File;
 
 
-public class ExtentManager {
+public class ExtentReporterManager {
 
     private static ExtentReports extent;
-    private static String reportFileName = "Test-Report" + ".html";
+    private static String reportFileName = "E-Commerce UI Regression Suite" + ".html";
     private static String fileSeperator = System.getProperty("file.separator");
-    private static String reportFilepath = System.getProperty("user.home") + fileSeperator + fileSeperator+"TestReport";
+    private static String reportFilepath = System.getProperty("user.home") + fileSeperator + fileSeperator+"TestReports";
     private static String reportFileLocation =  reportFilepath +fileSeperator+ reportFileName;
 
     public static ExtentReports getInstance() {
@@ -27,16 +27,11 @@ public class ExtentManager {
 
         ExtentSparkReporter reporter = new ExtentSparkReporter(reportFilepath);
 
-
         reporter.config().setDocumentTitle("Extent Report"); //the page title
         reporter.config().setReportName(reportFileName); //the name of the report
         reporter.config().setEncoding("utf-8");
         reporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
-
         reporter.config().setTheme(Theme.STANDARD);
-
-
-
 
         extent = new ExtentReports();
         extent.attachReporter(reporter);

@@ -2,63 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e646b72d-563d-4f71-a299-786045a49d57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/E-CommerceUIRegression.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/StepsLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CompareProductsPopUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/HomePageBlogSection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/HomePageProductSection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/QuickViewPopUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testClasses/ProductPageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testClasses/SearchTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentTestManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testUtilities/listeners/AnnotationTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testUtilities/listeners/Retry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Results - C__Users_Nena_IdeaProjects_E-CommerceUIRegression_testng_xml.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/BlogPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/BlogPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Footer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Footer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Header.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/SearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/SubCategoryPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/WishlistPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/MyWishlistPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/LoggingFileSetup.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/StepsLogger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/listeners/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/WindowManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/WindowManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/HomePageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/QuickSmokeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/QuickSmokeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/E-CommerceUIRegression.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/BlogPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/BlogPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/CartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/CartPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Footer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/Footer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Header.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/Header.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/HomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/MyAccountPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/MyAccountPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage$RelatedProducts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage$RelatedProducts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/SearchPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/SearchPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/SubCategoryPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/WishlistPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utilities/LoggingFileSetup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utilities/Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utilities/StepsLogger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utilities/TestListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utilities/WindowManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/HomePageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/HomePageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/QuickSmokeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/QuickSmokeTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentReporterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentReporterManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentTestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentTestManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/listeners/TestListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
