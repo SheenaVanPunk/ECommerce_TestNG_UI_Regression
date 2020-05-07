@@ -40,16 +40,24 @@ public class BaseTest {
         }
     }
 
+<<<<<<< HEAD
     @BeforeMethod (description = "Opening home page and creating its instance")
     @Parameters("url")
     public void goToHomePage(String url) {
         driver.get(url);
         hp = new HomePage(driver);
         driver.manage().window().maximize();
+=======
+    @BeforeMethod
+    public void goToHomePage() {
+        driver.get(url);
+        hp = new HomePage(driver);
+>>>>>>> cc0041eda400cae9e06488ec9430ee817a806efe
     }
 
 
     @AfterMethod
+<<<<<<< HEAD
 //    public void recordFailure(ITestResult result) {
 //        if (ITestResult.FAILURE == result.getStatus()) {
 //            var camera = (TakesScreenshot) driver;
@@ -64,6 +72,24 @@ public class BaseTest {
     public void deleteAllCookies() {
         driver.manage().deleteAllCookies();
 
+=======
+    public void recordFailure(ITestResult result) {
+        if (ITestResult.FAILURE == result.getStatus()) {
+            var camera = (TakesScreenshot) driver;
+            File screenshot = camera.getScreenshotAs(OutputType.FILE);
+            try {
+                Files.move(screenshot, new File("resources/failedTestScreenshots/" + result.getName() + ".png"));
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+    }
+        
+    @AfterClass
+    public void tearDown() {
+        driver.manage().deleteAllCookies();
+        driver.quit();
+>>>>>>> cc0041eda400cae9e06488ec9430ee817a806efe
     }
 
     private ChromeOptions getChromeDriverOptions() {
@@ -79,11 +105,15 @@ public class BaseTest {
         return new WindowManager(driver);
     }
 
+<<<<<<< HEAD
     @AfterClass (description = "Quitting the browser instance.")
     public void tearDown() {
 
         driver.quit();
     }
+=======
+  
+>>>>>>> cc0041eda400cae9e06488ec9430ee817a806efe
 
     private void setDriver(String browserType) {
         switch (browserType) {
