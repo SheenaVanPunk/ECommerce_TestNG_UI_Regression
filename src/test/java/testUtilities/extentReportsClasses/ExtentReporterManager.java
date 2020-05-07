@@ -1,14 +1,14 @@
 package testUtilities.extentReportsClasses;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.ChartLocation;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import java.io.File;
 
 
 public class ExtentManager {
+
     private static ExtentReports extent;
     private static String reportFileName = "Test-Report" + ".html";
     private static String fileSeperator = System.getProperty("file.separator");
@@ -24,18 +24,22 @@ public class ExtentManager {
 
     //Create an extent report instance
     public static ExtentReports createInstance() {
-        String fileName = getReportPath(reportFilepath);
-        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(fileName);
-        htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
-        htmlReporter.config().setChartVisibilityOnOpen(true);
-        htmlReporter.config().setTheme(Theme.STANDARD);
-        htmlReporter.config().setDocumentTitle(fileName);
-        htmlReporter.config().setEncoding("utf-8");
-        htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
-        htmlReporter.config().setReportName(reportFileName);
+
+        ExtentSparkReporter reporter = new ExtentSparkReporter(reportFilepath);
+
+
+        reporter.config().setDocumentTitle("Extent Report"); //the page title
+        reporter.config().setReportName(reportFileName); //the name of the report
+        reporter.config().setEncoding("utf-8");
+        reporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
+
+        reporter.config().setTheme(Theme.STANDARD);
+
+
+
 
         extent = new ExtentReports();
-        extent.attachReporter(htmlReporter);
+        extent.attachReporter(reporter);
 
         return extent;
     }
