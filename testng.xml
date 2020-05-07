@@ -6,7 +6,7 @@
     <!--    <suite name="Regression UI Suite" verbose="1" parallel="methods" thread-count = "7">-->
     <listeners>
         <listener class-name="testUtilities.listeners.TestListener"/>
-       <listener class-name="testUtilities.listeners.AnnotationTransformer"/>
+<!--       <listener class-name="testUtilities.listeners.AnnotationTransformer"/>-->
     </listeners>
     <parameter name="browser" value="chrome"/>
 

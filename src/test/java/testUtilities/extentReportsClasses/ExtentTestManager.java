@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class ExtentTestManager {
     static Map<Integer, ExtentTest> extentTestMap = new HashMap<Integer, ExtentTest>();
-    static ExtentReports extent = ExtentManager.getInstance();
+    static ExtentReports extent = ExtentReporterManager.getInstance();
 
     public static synchronized ExtentTest getTest() {
         return (ExtentTest) extentTestMap.get((int) (long) (Thread.currentThread().getId()));
