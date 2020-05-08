@@ -1,5 +1,10 @@
 package testClasses;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.utils.FileUtil;
+import com.google.common.io.Files;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -8,6 +13,9 @@ import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import pageObjects.HomePage;
 import classesUtilities.WindowManager;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 
 
@@ -68,6 +76,15 @@ public class BaseTest {
 
         public WindowManager getWindowManager () {
             return new WindowManager(driver);
+        }
+
+        public String getScreenshotPath(String testCaseName, WebDriver driver) throws IOException {
+            TakesScreenshot camera = (TakesScreenshot) driver;
+            File screenshot = camera.getScreenshotAs(OutputType.FILE);
+            String screenshotPath = System.getProperty("user.home") + "\\TestReports\\" + testCaseName + ".png";
+            File file = new File(screenshotPath);
+            Files.move(screenshot, file);
+            return screenshotPath;
         }
 
         private void setDriver (String browserType){
