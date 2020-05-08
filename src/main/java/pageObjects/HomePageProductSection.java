@@ -8,7 +8,9 @@ import classesUtilities.Page;
 import java.util.Random;
 
 public class HomePageProductSection extends Page {
-    private By products = By.cssSelector("div.noo-product-item");
+    private By productsTitles = By.cssSelector("div.noo-product-item");
+    private By heartIcon = By.cssSelector("");
+    private By wishlistLink = By.linkText("My Wishlist");
 
     public HomePageProductSection(WebDriver driver) {
         super(driver);
@@ -16,7 +18,7 @@ public class HomePageProductSection extends Page {
 
     public WebElement getRandomProduct(){
         Random random = new Random();
-        return driver.findElements(products).get(random.nextInt(6));
+        return driver.findElements(productsTitles).get(random.nextInt(6));
     }
 
     public ProductPage clickOnRandomProduct() {
@@ -25,4 +27,29 @@ public class HomePageProductSection extends Page {
         return new ProductPage(driver);
     }
 
+    public String heartAProduct(){
+        hoverOverProduct();
+        clickOnElement(heartIcon, "HEART ICON");
+        verifyHeartIconStyleChange();
+        return getProductsName();
+
+    }
+
+    private String getProductsName() {
+        return null;
+    }
+
+    private void verifyHeartIconStyleChange() {
+
+    }
+
+    private void hoverOverProduct() {
+
+    }
+
+
+    public MyWishlistPage goToWishlist() {
+        clickOnElement(wishlistLink, "LINK TO MY WISHLIST");
+        return new MyWishlistPage(driver);
+    }
 }

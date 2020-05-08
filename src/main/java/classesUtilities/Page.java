@@ -1,6 +1,7 @@
 package classesUtilities;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -79,11 +80,9 @@ public class Page {
     public boolean isElementDisplayed(By locator, String elementName) {
         boolean displayed = getWebElement(locator, elementName).isDisplayed();
         waitForElementVisibility(driver.findElement(locator));
-        if (displayed) {
-            log.info(elementName + " is displayed");
-        } else {
-            log.info(elementName + " is not displayed");
-        }
+        String text = displayed ? " is displayed." : " is not displayed.";
+        log.info(elementName + text);
+
         return displayed;
     }
 
@@ -98,55 +97,67 @@ public class Page {
     }
 
 
-
+    protected void waitUntil(ExpectedCondition<WebElement> condition, Integer timeoutInSeconds){
+        timeoutInSeconds = timeoutInSeconds != null ? timeoutInSeconds : 20;
+        WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
+        wait.until(condition);
+    }
 
     public void waitForAllTabsToLoad() {
         int complete = driver.getWindowHandles().size();
         wait.until(ExpectedConditions.numberOfWindowsToBe(complete));
     }
 
-    public void waitForElementVisibility(WebElement element) {
-        try {
-            wait.until(ExpectedConditions.visibilityOf(element));
-        }catch(TimeoutException e){
-            log.error("Timeout - the wait time expired and the element is still not visible.");
+    public void waitForElementVisibility(WebElement element, Integer... timeoutInSeconds) {
+        int attempts = 0;
+        while(attempts < 2) {
+            try {
+                waitUntil(ExpectedConditions.visibilityOf(element), timeoutInSeconds.length > 0 ? timeoutInSeconds[0] : null);
+            } catch (TimeoutException e) {
+                log.error("Timeout - the wait time expired and the element is still not visible.");
+            }
+            attempts++;
         }
     }
 
-    public void waitForElementClickability(By locator) {
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(locator));
-        }catch (TimeoutException e){
-            log.error("Timeout - the wait time expired and the element is still not clickable.");
-            e.getMessage();
+    public void waitForElementClickability(By locator, Integer... timeoutInSeconds) {
+        int attempts = 0;
+        while(attempts < 2) {
+            try {
+                waitUntil(ExpectedConditions.elementToBeClickable(locator), timeoutInSeconds.length > 0 ? timeoutInSeconds[0] : null);
+            } catch (TimeoutException e) {
+                log.error("Timeout - the wait time expired and the element is still not clickable.");
+                e.getMessage();
+            }
+            attempts++;
         }
     }
-    public void waitForElementClickability(WebElement element) {
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(element));
-        }catch(TimeoutException e){
-            log.error("Timeout - the wait time expired and the element is still not clickable.");
-            e.getMessage();
+    public void waitForElementClickability(WebElement element, Integer... timeoutInSeconds) {
+        int attempts = 0;
+        while(attempts < 2) {
+            try {
+                waitUntil(ExpectedConditions.elementToBeClickable(element), timeoutInSeconds.length > 0 ? timeoutInSeconds[0] : null);
+            } catch (TimeoutException e) {
+                log.error("Timeout - the wait time expired and the element is still not clickable.");
+                e.getMessage();
+            }
+            attempts++;
         }
     }
 
-    public void waitForThePresenceOfElementInDom(By locator) {
-        try {
-            wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-        }catch(TimeoutException e){
-            log.error("Timeout - the wait time expired and the element is still not present in DOM.");
-            e.getMessage();
+    public void waitForThePresenceOfElementInDom(By locator, Integer... timeoutInSeconds) {
+        int attempts = 0;
+        while(attempts < 2) {
+            try {
+                waitUntil(ExpectedConditions.presenceOfElementLocated(locator), timeoutInSeconds.length > 0 ? timeoutInSeconds[0] : null);
+            } catch (TimeoutException e) {
+                log.error("Timeout - the wait time expired and the element is still not present in DOM.");
+                e.getMessage();
+            }
+            attempts++;
         }
     }
 
-    public void waitForInvisibilityOfElement(By locator) {
-        try {
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
-        }catch(TimeoutException e){
-            log.error("Timeout - the wait time expired and the element is still not invisible.");
-            e.getMessage();
-        }
-    }
 
     public void scrollUntilElement(WebElement element) {
         String script = "arguments[0].scrollIntoView();";

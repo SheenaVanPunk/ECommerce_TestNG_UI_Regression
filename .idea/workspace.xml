@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e646b72d-563d-4f71-a299-786045a49d57" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classesUtilities/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/HomePageProductSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/HomePageProductSection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/HomePageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/QuickSmokeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/QuickSmokeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/SearchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentReporterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentReporterManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentTestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentTestManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/listeners/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/HomePageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/HomePageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/QuickSmokeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/QuickSmokeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/SearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/SearchTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testUtilities/extentReportsClasses/ExtentReporterManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testUtilities/extentReportsClasses/ExtentReporterManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testUtilities/listeners/TestListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testUtilities/listeners/TestListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,27 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomePageTest.testVerifySearchTextField (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="E-CommerceUIRegression" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testClasses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
-      <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.HomePageTest" />
-      <option name="METHOD_NAME" value="testVerifySearchTextField" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="0" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomePageTest.testVerifySearchTextField" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="HomePageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-CommerceUIRegression" />
       <extension name="coverage">
         <pattern>
@@ -99,25 +90,43 @@
       </extension>
       <option name="PACKAGE_NAME" value="testClasses" />
       <option name="MAIN_CLASS_NAME" value="testClasses.HomePageTest" />
-      <option name="METHOD_NAME" value="testVerifySearchTextField" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="E-CommerceUIRegression" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testClasses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.SearchTest" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageTest.testAddRandomNumberOfProductToWishlist" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="E-CommerceUIRegression" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testClasses" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.HomePageTest" />
+      <option name="METHOD_NAME" value="testAddRandomNumberOfProductToWishlist" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageTest.testGetCartText" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="E-CommerceUIRegression" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testClasses" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.HomePageTest" />
+      <option name="METHOD_NAME" value="testGetCartText" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -145,10 +154,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/Nena/IdeaProjects/E-CommerceUIRegression/testng.xml" />
+        <item itemvalue="TestNG.HomePageTest.testAddRandomNumberOfProductToWishlist" />
+        <item itemvalue="TestNG.HomePageTest" />
+        <item itemvalue="TestNG.HomePageTest.testGetCartText" />
         <item itemvalue="TestNG.SearchTest.testSearchForItem" />
-        <item itemvalue="TestNG.HomePageTest.testVerifySearchTextField" />
-        <item itemvalue="TestNG.HomePageTest.testVerifySearchTextField (1)" />
-        <item itemvalue="TestNG.SearchTest" />
       </list>
     </recent_temporary>
   </component>
@@ -192,59 +201,59 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588787352890" />
-    <state width="1323" height="42" key="GridCell.Tab.0.bottom" timestamp="1588861056366">
+    <state width="1323" height="175" key="GridCell.Tab.0.bottom" timestamp="1588950679040">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
     <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
-    <state width="1323" height="42" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588861056366" />
-    <state width="1323" height="42" key="GridCell.Tab.0.center" timestamp="1588861056365">
+    <state width="1323" height="175" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588950679040" />
+    <state width="1323" height="175" key="GridCell.Tab.0.center" timestamp="1588950679040">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.center/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
     <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
-    <state width="1323" height="42" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588861056365" />
-    <state width="1323" height="42" key="GridCell.Tab.0.left" timestamp="1588861056365">
+    <state width="1323" height="175" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588950679040" />
+    <state width="1323" height="175" key="GridCell.Tab.0.left" timestamp="1588950679040">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.left/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
     <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
-    <state width="1323" height="42" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588861056365" />
-    <state width="1323" height="42" key="GridCell.Tab.0.right" timestamp="1588861056366">
+    <state width="1323" height="175" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588950679040" />
+    <state width="1323" height="175" key="GridCell.Tab.0.right" timestamp="1588950679040">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.right/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
     <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
-    <state width="1323" height="42" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588861056366" />
-    <state width="1877" height="170" key="GridCell.Tab.1.bottom" timestamp="1588809402876">
-      <screen x="1366" y="-312" width="1920" height="1040" />
+    <state width="1323" height="175" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588950679040" />
+    <state width="1323" height="194" key="GridCell.Tab.1.bottom" timestamp="1588914947217">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
     <state width="1877" height="170" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402876" />
-    <state width="1323" height="262" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588781594139" />
-    <state width="1877" height="170" key="GridCell.Tab.1.center" timestamp="1588809402875">
-      <screen x="1366" y="-312" width="1920" height="1040" />
+    <state width="1323" height="194" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588914947217" />
+    <state width="1323" height="194" key="GridCell.Tab.1.center" timestamp="1588914947217">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.center/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
     <state width="1877" height="170" key="GridCell.Tab.1.center/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402875" />
-    <state width="1323" height="262" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1588781594139" />
-    <state width="1877" height="170" key="GridCell.Tab.1.left" timestamp="1588809402875">
-      <screen x="1366" y="-312" width="1920" height="1040" />
+    <state width="1323" height="194" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1588914947217" />
+    <state width="1323" height="194" key="GridCell.Tab.1.left" timestamp="1588914947217">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.left/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
     <state width="1877" height="170" key="GridCell.Tab.1.left/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402875" />
-    <state width="1323" height="262" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1588781594139" />
-    <state width="1877" height="170" key="GridCell.Tab.1.right" timestamp="1588809402875">
-      <screen x="1366" y="-312" width="1920" height="1040" />
+    <state width="1323" height="194" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1588914947217" />
+    <state width="1323" height="194" key="GridCell.Tab.1.right" timestamp="1588914947217">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.right/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
     <state width="1877" height="170" key="GridCell.Tab.1.right/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402875" />
-    <state width="1323" height="262" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588781594139" />
-    <state x="426" y="0" key="Maven.ArtifactSearchDialog" timestamp="1588799514981">
+    <state width="1323" height="194" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588914947217" />
+    <state x="426" y="0" key="Maven.ArtifactSearchDialog" timestamp="1588908738326">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="426" y="0" key="Maven.ArtifactSearchDialog/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588799514981" />
-    <state x="426" y="0" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1588737645860" />
+    <state x="426" y="0" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1588908738326" />
     <state x="347" y="5" key="SettingsEditor" timestamp="1588737296888">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -276,14 +285,9 @@
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/HomePageProductSection.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/testClasses/HomePageTest.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="61" />
+          <line>32</line>
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

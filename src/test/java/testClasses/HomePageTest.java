@@ -3,7 +3,12 @@ package testClasses;
 
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import pageObjects.HomePageProductSection;
+import pageObjects.MyWishlistPage;
 
+import java.util.List;
+
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class HomePageTest extends BaseTest {
@@ -21,6 +26,20 @@ public class HomePageTest extends BaseTest {
         String actualText = hp.getCartText();
 
         soft.assertTrue(actualText.contains("Cart"));
+    }
+
+    @Test
+    public void testAddRandomNumberOfProductToWishlist(){
+        HomePageProductSection hpps = new HomePageProductSection(driver);
+        hp.scrollUntilHomePageSection("ladies");
+      //  String selectedProduct = hpps.heartAProduct();
+
+        MyWishlistPage wp = hpps.goToWishlist();
+//        int actualSavedItems = wp.countSavedItems();
+//        List<String> actualSavedProductNames = wp.getSavedProductsNames();
+//
+//        assertEquals(actualSavedItems, expectedSavedItems);
+//        assertEquals(actualSavedProductNames, expectedSavedProductsNames);
     }
 
 

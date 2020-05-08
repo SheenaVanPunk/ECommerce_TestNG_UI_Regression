@@ -7,6 +7,8 @@ import pageObjects.ProductPage;
 
 import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.assertFalse;
+import static org.testng.AssertJUnit.assertNull;
 
 public class QuickSmokeTest extends BaseTest {
     private HomePageProductSection ps;
@@ -21,10 +23,10 @@ public class QuickSmokeTest extends BaseTest {
     public void testIsDisclaimerCoveringHeader() {
         Header header = new Header(driver);
 
-        assertTrue(header.isDisclaimerDisplayed());
+        assertFalse(header.isDisclaimerDisplayed());
     }
 
-    @Test(groups = "smoke")
+    @Test(groups = "smoke", enabled = false)
     public void selectSizeForARandomProduct() {
         ps = new HomePageProductSection(driver);
         ProductPage pp = ps.clickOnRandomProduct();

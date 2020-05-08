@@ -1,5 +1,6 @@
 package testUtilities.extentReportsClasses;
 
+import com.aventstack.extentreports.AnalysisStrategy;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -31,10 +32,14 @@ public class ExtentReporterManager {
         reporter.config().setReportName(reportFileName); //the name of the report
         reporter.config().setEncoding("utf-8");
         reporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
-        reporter.config().setTheme(Theme.STANDARD);
+        reporter.config().enableTimeline(true);
+        reporter.config().setTheme(Theme.DARK);
 
         extent = new ExtentReports();
         extent.attachReporter(reporter);
+
+        extent.setAnalysisStrategy(AnalysisStrategy.TEST);
+        extent.setSystemInfo("Environment", "LAB");
 
         return extent;
     }
@@ -48,7 +53,7 @@ public class ExtentReporterManager {
                 return reportFileLocation;
             } else {
                 System.out.println("Failed to create directory: " + path);
-                return System.getProperty("user.dir");
+                return System.getProperty("user.home");
             }
         } else {
             System.out.println("Directory already exists: " + path);
