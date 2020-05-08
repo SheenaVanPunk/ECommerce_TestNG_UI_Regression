@@ -31,7 +31,7 @@ public class Page {
     }
 
 
-    public String getWebElementText(By locator, String elementName) {
+    protected String getWebElementText(By locator, String elementName) {
         waitForThePresenceOfElementInDom(locator);
         String e = getWebElement(locator, elementName).getText();
         log.step("Get text for WebElement " + elementName);
@@ -39,19 +39,19 @@ public class Page {
         return e;
     }
 
-    public String getPageTitle() {
+    protected String getPageTitle() {
         String pt = driver.getTitle();
         log.info("Page title is " + "\"" + pt + "\"");
         return pt;
     }
 
-    public void clickOnElement(By locator, String elementName) {
+    protected void clickOnElement(By locator, String elementName) {
             waitForElementClickability(locator);
             getWebElement(locator, elementName).click();
             log.step("Click on " + "\"" + elementName + "\"");
     }
 
-    public void clickOnElement(WebElement element, String elementName) {
+    protected void clickOnElement(WebElement element, String elementName) {
         try {
             waitForElementClickability(element);
             element.click();
@@ -65,19 +65,19 @@ public class Page {
         }
     }
 
-    public void clearField(By locator, String elementName) {
+    protected void clearField(By locator, String elementName) {
         waitForElementClickability(locator);
         getWebElement(locator, elementName).click();
         log.step("Clear the field " + elementName);
     }
 
-    public void type(By locator, String elementName, String text) {
+    protected void type(By locator, String elementName, String text) {
         waitForElementVisibility(driver.findElement(locator));
         getWebElement(locator, elementName).sendKeys(text);
         log.step("Send text " + "\"" + text + "\"" + " to " + elementName);
     }
 
-    public boolean isElementDisplayed(By locator, String elementName) {
+    protected boolean isElementDisplayed(By locator, String elementName) {
         boolean displayed = getWebElement(locator, elementName).isDisplayed();
         waitForElementVisibility(driver.findElement(locator));
         String text = displayed ? " is displayed." : " is not displayed.";
@@ -86,11 +86,11 @@ public class Page {
         return displayed;
     }
 
-    public Select createSelectElement(By locator) {
+    protected Select createSelectElement(By locator) {
         return new Select(driver.findElement(locator));
     }
 
-    public void selectByText(By locator, String text, String elementName) {
+    protected void selectByText(By locator, String text, String elementName) {
         waitForElementClickability(locator);
         createSelectElement(locator).selectByVisibleText(text);
         log.step("Select " + text + " from " + elementName + " dropdown");
@@ -103,12 +103,12 @@ public class Page {
         wait.until(condition);
     }
 
-    public void waitForAllTabsToLoad() {
+    protected void waitForAllTabsToLoad() {
         int complete = driver.getWindowHandles().size();
         wait.until(ExpectedConditions.numberOfWindowsToBe(complete));
     }
 
-    public void waitForElementVisibility(WebElement element, Integer... timeoutInSeconds) {
+    protected void waitForElementVisibility(WebElement element, Integer... timeoutInSeconds) {
         int attempts = 0;
         while(attempts < 2) {
             try {
@@ -120,7 +120,7 @@ public class Page {
         }
     }
 
-    public void waitForElementClickability(By locator, Integer... timeoutInSeconds) {
+    protected void waitForElementClickability(By locator, Integer... timeoutInSeconds) {
         int attempts = 0;
         while(attempts < 2) {
             try {
@@ -132,7 +132,8 @@ public class Page {
             attempts++;
         }
     }
-    public void waitForElementClickability(WebElement element, Integer... timeoutInSeconds) {
+
+    protected void waitForElementClickability(WebElement element, Integer... timeoutInSeconds) {
         int attempts = 0;
         while(attempts < 2) {
             try {
@@ -145,7 +146,7 @@ public class Page {
         }
     }
 
-    public void waitForThePresenceOfElementInDom(By locator, Integer... timeoutInSeconds) {
+    protected void waitForThePresenceOfElementInDom(By locator, Integer... timeoutInSeconds) {
         int attempts = 0;
         while(attempts < 2) {
             try {
@@ -159,7 +160,7 @@ public class Page {
     }
 
 
-    public void scrollUntilElement(WebElement element) {
+    protected void scrollUntilElement(WebElement element) {
         String script = "arguments[0].scrollIntoView();";
         log.info("Scrolling to element..." );
         waitForElementVisibility(element);
@@ -167,7 +168,7 @@ public class Page {
 
     }
 
-    public String getTabHandle() {
+    protected String getTabHandle() {
         return driver.getWindowHandle();
     }
 

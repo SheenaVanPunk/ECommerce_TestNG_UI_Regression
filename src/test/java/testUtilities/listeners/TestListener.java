@@ -2,30 +2,21 @@ package testUtilities.listeners;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-<<<<<<< HEAD
-import com.aventstack.extentreports.markuputils.Markup;
-import com.google.common.io.Files;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.*;
 import classesUtilities.StepsLogger;
 import testClasses.BaseTest;
-=======
-import org.testng.*;
-import classesUtilities.StepsLogger;
->>>>>>> working
+
 import testUtilities.extentReportsClasses.ExtentReporterManager;
 import testUtilities.extentReportsClasses.ExtentTestManager;
+
+import java.io.IOException;
 
 
 public class TestListener extends BaseTest implements ITestListener {
      StepsLogger log = new StepsLogger();
 
-<<<<<<< HEAD
      private static ThreadLocal<ExtentTest> parallel = new ThreadLocal<ExtentTest>();
-=======
->>>>>>> working
 
     @Override
     public void onStart(ITestContext context) {
@@ -74,8 +65,6 @@ public class TestListener extends BaseTest implements ITestListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
     @Override
