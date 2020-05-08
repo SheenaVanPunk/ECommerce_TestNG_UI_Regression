@@ -42,6 +42,9 @@ public class ProductPage extends Page {
         selectByText(sizeDropdown, getRandomOption(), "SIZE DROPDOWN");
     }
 
+    public String getProductPageTitle(){
+        return getPageTitle();
+    }
 
     public class RelatedProducts{}
 }

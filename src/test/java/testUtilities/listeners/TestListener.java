@@ -16,7 +16,6 @@ import java.io.IOException;
 public class TestListener extends BaseTest implements ITestListener {
      StepsLogger log = new StepsLogger();
 
-     private static ThreadLocal<ExtentTest> parallel = new ThreadLocal<ExtentTest>();
 
     @Override
     public void onStart(ITestContext context) {
@@ -32,8 +31,8 @@ public class TestListener extends BaseTest implements ITestListener {
 
 
         System.out.println(("*** Test Suite " + context.getName() + " ending ***"));
-        ExtentTestManager.endTest();
-        ExtentReporterManager.getInstance().flush();
+//        ExtentTestManager.endTest();
+//        ExtentReporterManager.getInstance().flush();
     }
 
     @Override
@@ -41,36 +40,36 @@ public class TestListener extends BaseTest implements ITestListener {
         System.out.println(("*** Running test method " + result.getMethod().getMethodName() + "..." +
                 "\nTEST STEPS"));
 
-        parallel.set(ExtentTestManager.startTest(result.getTestClass().getName() + " | " + result.getMethod().getMethodName()));
+       //ExtentTestManager.startTest(result.getTestClass().getName() + " | " + result.getMethod().getMethodName());
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
         System.out.println("*** Executed " + result.getMethod().getMethodName() + " test successfully...");
 
-       parallel.get().log(Status.PASS, "PASSED");
+      // ExtentTestManager.getTest().log(Status.PASS, "PASSED");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
         System.out.println("*** Test execution " + result.getMethod().getMethodName() + " failed...");
-        parallel.get().log(Status.FAIL, "FAILED");
-        parallel.get().log(Status.FAIL, result.getThrowable());
+//        ExtentTestManager.getTest().log(Status.FAIL, "FAILED");
+//        ExtentTestManager.getTest().log(Status.FAIL, result.getThrowable());
 
-        Object testClass = result.getInstance();
-        WebDriver driver = ((BaseTest) testClass).getDriver();
-
-        try {
-            parallel.get().addScreenCaptureFromPath(getScreenshotPath(result.getMethod().getMethodName(), driver), result.getMethod().getMethodName());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        Object testClass = result.getInstance();
+//        WebDriver driver = ((BaseTest) testClass).getDriver();
+//
+//        try {
+//            ExtentTestManager.getTest().addScreenCaptureFromPath(getScreenshotPath(result.getMethod().getMethodName(), driver), result.getMethod().getMethodName());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
         System.out.println("*** Test " + result.getMethod().getMethodName() + " skipped...");
-        ExtentTestManager.getTest().log(Status.SKIP, "SKIPPED");
+       // ExtentTestManager.getTest().log(Status.SKIP, "SKIPPED");
     }
 
     @Override

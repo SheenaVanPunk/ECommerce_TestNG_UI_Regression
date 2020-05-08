@@ -4,6 +4,7 @@ import com.aventstack.extentreports.AnalysisStrategy;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.testng.annotations.Parameters;
 
 import java.io.File;
 
@@ -18,12 +19,12 @@ public class ExtentReporterManager {
 
 
     public static ExtentReports getInstance(){
-        if(extent == null){
-            var extent = createInstance();
-        }
+        if(extent == null)
+            createInstance();
+
         return extent;
     }
-
+    @Parameters("browser")
     public static ExtentReports createInstance() {
 
         String path = System.getProperty("user.home" + "\\TestReport\\report.html");
@@ -40,6 +41,7 @@ public class ExtentReporterManager {
 
         extent.setAnalysisStrategy(AnalysisStrategy.TEST);
         extent.setSystemInfo("Environment", "LAB");
+        extent.setSystemInfo("Browser", "browser");
 
         return extent;
     }
