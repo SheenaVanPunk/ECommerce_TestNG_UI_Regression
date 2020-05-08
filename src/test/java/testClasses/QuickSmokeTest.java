@@ -23,14 +23,14 @@ public class QuickSmokeTest extends BaseTest {
     public void testIsDisclaimerCoveringHeader() {
         Header header = new Header(driver);
 
-        assertFalse(header.isDisclaimerDisplayed());
+        assertTrue(header.isDisclaimerDisplayed());
     }
 
     @Test(groups = "smoke", enabled = false)
     public void selectSizeForARandomProduct() {
         ps = new HomePageProductSection(driver);
         ProductPage pp = ps.clickOnRandomProduct();
-        String ppTitle = pp.getPageTitle();
+        String ppTitle = pp.getProductPageTitle();
         String size = pp.getRandomOption();
         pp.selectSizeFromDropdown(size);
 

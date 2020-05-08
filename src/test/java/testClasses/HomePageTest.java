@@ -21,7 +21,7 @@ public class HomePageTest extends BaseTest {
         assertTrue(actualText.contains(expectedTextInSearchField));
     }
 
-    @Test(priority = 1, groups = "regression")
+    @Test(groups = "regression")
     public void testGetCartText() {
         String actualText = hp.getCartText();
 

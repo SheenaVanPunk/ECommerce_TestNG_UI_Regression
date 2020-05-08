@@ -8,22 +8,31 @@
         <listener class-name="testUtilities.listeners.TestListener"/>
 <!--       <listener class-name="testUtilities.listeners.AnnotationTransformer"/>-->
     </listeners>
-    <parameter name="browser" value="chrome"/>
 
     <parameter name="url" value="http://shop.demoqa.com/"/>
     <parameter name="expectedTextInSearchField" value="Search"/>
     <parameter name="itemForSearch" value="dress"/>
 
-    <test name="Regression1">
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="smoke"/>-->
-<!--            </run>-->
-<!--        </groups>-->
+    <test name="Quick Smoke Test in Chrome">
+        <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
         <classes>
 <!--            <class name="testClasses.SearchTest"/>-->
-<!--            <class name="testClasses.HomePageTest"/>-->
-            <class name="testClasses.QuickSmokeTest"/>
+            <class name="testClasses.HomePageTest"/>
+<!--            <class name="testClasses.QuickSmokeTest"/>-->
        </classes>
     </test>
+
+<!--    <test name="Quick Smoke Test in Firefox">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--            &lt;!&ndash;            <class name="testClasses.SearchTest"/>&ndash;&gt;-->
+<!--            &lt;!&ndash;            <class name="testClasses.HomePageTest"/>&ndash;&gt;-->
+<!--            <class name="testClasses.QuickSmokeTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>

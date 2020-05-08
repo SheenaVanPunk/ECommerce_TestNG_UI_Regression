@@ -11,7 +11,9 @@ public class SearchPage extends Page {
         super(driver);
     }
 
-
+    public String getSearchPageTitle(){
+        return getPageTitle();
+    }
 
 //private List<HtmlElement> getSearchResultsList(By locator){
 //     driver.findElements(locator);
