@@ -14,7 +14,6 @@ import java.io.IOException;
 
 
 public class TestListener extends BaseTest implements ITestListener {
-
     private static ExtentReports extent = ExtentReporterManager.createInstance();
     private static ThreadLocal<ExtentTest> extentParallel = new ThreadLocal<ExtentTest>();
 
@@ -29,6 +28,7 @@ public class TestListener extends BaseTest implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
         System.out.println("*** Test Suite " + context.getName() + " started ***");
+
     }
 
     @Override
@@ -65,16 +65,11 @@ public class TestListener extends BaseTest implements ITestListener {
                 getTestClassName(result),driver);
 
         try {
-            extentParallel.get().addScreenCaptureFromPath(screenshotPath, getTestMethodName(result));
+            extentParallel.get().fail("Screenshot taken: ",
+                    MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
         } catch (IOException e) {
             extentParallel.get().fail("Test failed, cannot attach screenshot.");
         }
-//        try {
-//           extentParallel.get().fail("Screenshot path: "+ screenshotPath,
-//                    MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
-//        } catch (IOException e) {
-//            extentParallel.get().fail("Test failed, cannot attach screenshot.");
-//        }
         extentParallel.get().log(Status.FAIL, result.getThrowable());
         System.out.println("*** Test execution " + result.getMethod().getMethodName() + " failed...");
         Markup stylizedStatus = MarkupHelper.createLabel("FAILED", ExtentColor.RED);
