@@ -2,7 +2,7 @@
 
 ## FRAMEWORK COMPONENTS
 - WebDriver is instantiated before a test method and quit after the method.
-1. A screenshot feature: taking a screenshot when a test methood fails - TODO
+1. A screenshot feature: a screenshot is taken after a test methood fails.
 2. StepLogger - used for wrapping shared methods. It logs readable test steps with meaningful hardcoded element names. 
     - TODO: save them in external file
 3. TestListener - extends TestNG class TestListenerAdapter. IT logs specific information about test method status and sums up the build.
