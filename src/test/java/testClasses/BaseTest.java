@@ -1,16 +1,10 @@
 package testClasses;
-
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.utils.FileUtil;
-import com.google.common.io.Files;
+import com.aventstack.extentreports.AnalysisStrategy;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import pageObjects.HomePage;
@@ -20,7 +14,7 @@ import testUtilities.BrowserFactory;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.LocalTime;
+
 import java.util.Arrays;
 
 
@@ -33,9 +27,10 @@ public class BaseTest {
         return driver;
     }
 
+
     @BeforeMethod(alwaysRun = true, description = "Initializing driver, launching the browser, opening home page and creating its instance")
     @Parameters({"url", "browser"})
-    public HomePage initDriverAndGoToHomePage(String url, String browser) {
+    public WebDriver initDriverAndGoToHomePage(String url, String browser) {
         try {
             BrowserFactory.getDriver(browser);
         } catch (Exception e) {
@@ -45,7 +40,7 @@ public class BaseTest {
         driver.get(url);
         hp = new HomePage(driver);
         driver.manage().window().maximize();
-        return new HomePage(driver);
+        return driver;
     }
 
     @AfterMethod(alwaysRun = true)

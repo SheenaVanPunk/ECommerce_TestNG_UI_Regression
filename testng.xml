@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Regression UI Suite" verbose="1">
+<suite name="Regression UI Suite" verbose="1" parallel="tests" thread-count="1">
 
     <!--    <suite name="Regression UI Suite" verbose="1" parallel="methods" thread-count = "7">-->
     <listeners>
-        <listener class-name="testUtilities.listeners.TestListener"/>
-<!--       <listener class-name="testUtilities.listeners.AnnotationTransformer"/>-->
+        <listener class-name="testUtilities.TestListener"/>
+<!--       <listener class-name="testUtilities.AnnotationTransformer"/>-->
     </listeners>
 
     <parameter name="url" value="http://shop.demoqa.com/"/>
     <parameter name="expectedTextInSearchField" value="Search"/>
     <parameter name="itemForSearch" value="dress"/>
 
-    <test name="Quick Smoke Test in Chrome">
-        <parameter name="browser" value="chrome"/>
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="regression"/>-->
-<!--            </run>-->
-<!--        </groups>-->
+<!--    <test name="Quick Smoke Test in Chrome">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--&lt;!&ndash;        <groups>&ndash;&gt;-->
+<!--&lt;!&ndash;            <run>&ndash;&gt;-->
+<!--&lt;!&ndash;                <include name="regression"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            </run>&ndash;&gt;-->
+<!--&lt;!&ndash;        </groups>&ndash;&gt;-->
+<!--        <classes>-->
+<!--            <class name="testClasses.SearchTest"/>-->
+<!--            <class name="testClasses.HomePageTest"/>-->
+<!--            <class name="testClasses.QuickSmokeTest"/>-->
+<!--       </classes>-->
+<!--    </test>-->
+
+    <test name="Quick Smoke Test in Firefox">
+        <parameter name="browser" value="firefox"/>
         <classes>
 <!--            <class name="testClasses.SearchTest"/>-->
 <!--            <class name="testClasses.HomePageTest"/>-->
             <class name="testClasses.QuickSmokeTest"/>
-       </classes>
+        </classes>
     </test>
-
-<!--    <test name="Quick Smoke Test in Firefox">-->
-<!--        <parameter name="browser" value="firefox"/>-->
-<!--        <classes>-->
-<!--            &lt;!&ndash;            <class name="testClasses.SearchTest"/>&ndash;&gt;-->
-<!--            &lt;!&ndash;            <class name="testClasses.HomePageTest"/>&ndash;&gt;-->
-<!--            <class name="testClasses.QuickSmokeTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
 </suite>
