@@ -30,7 +30,7 @@ public class BaseTest {
 
     @BeforeMethod(alwaysRun = true, description = "Initializing driver, launching the browser, opening home page and creating its instance")
     @Parameters({"url", "browser"})
-    public WebDriver initDriverAndGoToHomePage(String url, String browser) {
+    public HomePage initDriverAndGoToHomePage(String url, String browser) {
         try {
             BrowserFactory.getDriver(browser);
         } catch (Exception e) {
@@ -40,7 +40,7 @@ public class BaseTest {
         driver.get(url);
         hp = new HomePage(driver);
         driver.manage().window().maximize();
-        return driver;
+        return hp;
     }
 
     @AfterMethod(alwaysRun = true)
