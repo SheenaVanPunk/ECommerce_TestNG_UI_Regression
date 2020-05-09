@@ -1,4 +1,4 @@
-package testUtilities.extentReportsClasses;
+package testUtilities;
 
 import com.aventstack.extentreports.AnalysisStrategy;
 import com.aventstack.extentreports.ExtentReports;
@@ -15,9 +15,8 @@ import java.util.Date;
 
 public class ExtentReporterManager {
     private static ExtentReports extent;
-    private static ITestResult result;
     private static String relativePathToReportFolder = "\\resources\\failedTestScreenshots\\" + LocalDate.now() +
-            "\\QuickSmokeTest\\";
+            "\\";
 
     public static ExtentReports getInstance(){
         if(extent == null) {
@@ -42,7 +41,7 @@ public class ExtentReporterManager {
         extent = new ExtentReports();
         extent.attachReporter(reporter);
 
-        extent.setAnalysisStrategy(AnalysisStrategy.TEST);
+        extent.setAnalysisStrategy(AnalysisStrategy.CLASS);
         extent.setSystemInfo("Environment", "LAB");
         extent.setSystemInfo("Browser", "browser");
 
@@ -55,23 +54,5 @@ public class ExtentReporterManager {
                         + d.toString()
                         .replace(" ", "_") + ".html";
     }
-
-
-    //Create the report path
-//    private static String getReportPath (String path) {
-//        File testDirectory = new File(path);
-//        if (!testDirectory.exists()) {
-//            if (testDirectory.mkdir()) {
-//                System.out.println("Directory: " + path + " is created!" );
-//                return reportFileLocation;
-//            } else {
-//                System.out.println("Failed to create directory: " + path);
-//                return System.getProperty("user.home");
-//            }
-//        } else {
-//            System.out.println("Directory already exists: " + path);
-//        }
-//        return reportFileLocation;
-//    }
 
 }

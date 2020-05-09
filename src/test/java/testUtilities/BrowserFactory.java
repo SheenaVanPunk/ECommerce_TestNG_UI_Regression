@@ -54,6 +54,7 @@ public class BrowserFactory extends BaseTest {
         FirefoxOptions options = new FirefoxOptions();
         FirefoxBinary binary = new FirefoxBinary();
         binary.addCommandLineOptions("--headless");
+        options.addArguments("--window-size=1366x626");
         options.setBinary(binary);
         return options;
     }
