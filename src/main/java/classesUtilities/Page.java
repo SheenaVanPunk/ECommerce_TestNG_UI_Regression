@@ -15,7 +15,7 @@ public class Page {
 
     public Page(WebDriver driver) {
         Page.driver = driver;
-        Page.wait = new WebDriverWait(driver, 15);
+        wait = new WebDriverWait(driver, 15);
     }
 
     protected WebElement getWebElement(By locator, String elementName) {

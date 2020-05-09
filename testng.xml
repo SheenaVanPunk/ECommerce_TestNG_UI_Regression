@@ -15,15 +15,15 @@
 
     <test name="Quick Smoke Test in Chrome">
         <parameter name="browser" value="chrome"/>
-        <groups>
-            <run>
-                <include name="regression"/>
-            </run>
-        </groups>
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="regression"/>-->
+<!--            </run>-->
+<!--        </groups>-->
         <classes>
 <!--            <class name="testClasses.SearchTest"/>-->
-            <class name="testClasses.HomePageTest"/>
-<!--            <class name="testClasses.QuickSmokeTest"/>-->
+<!--            <class name="testClasses.HomePageTest"/>-->
+            <class name="testClasses.QuickSmokeTest"/>
        </classes>
     </test>
 

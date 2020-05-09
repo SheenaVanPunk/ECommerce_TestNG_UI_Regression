@@ -2,27 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e646b72d-563d-4f71-a299-786045a49d57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/testData/exampleClassExampleMethod.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testUtilities/BrowserFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/SearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classesUtilities/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/HomePageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/QuickSmokeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/QuickSmokeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/SearchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentReporterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentReporterManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/extentReportsClasses/ExtentTestManager.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/listeners/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/classesUtilities/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classesUtilities/Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage$RelatedProducts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage$RelatedProducts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/SearchPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/SearchPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/E-CommerceUIRegression.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/HomePageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/HomePageTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/QuickSmokeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/QuickSmokeTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/SearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/SearchTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/testUtilities/extentReportsClasses/ExtentReporterManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testUtilities/extentReportsClasses/ExtentReporterManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testUtilities/extentReportsClasses/ExtentTestManager.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/testUtilities/listeners/TestListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testUtilities/listeners/TestListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
@@ -206,11 +197,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="505" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1588779990994" />
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588884986754">
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588988834658">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1946" y="-153" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588802237930" />
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1588884986754" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1588988834658" />
     <state x="430" y="208" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1588960468942">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -219,54 +210,54 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588787352890" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1588969132448">
+    <state width="1323" height="133" key="GridCell.Tab.0.bottom" timestamp="1588994975452">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
     <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588969132448" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1588969132448">
+    <state width="1323" height="133" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588994975452" />
+    <state width="1323" height="133" key="GridCell.Tab.0.center" timestamp="1588994975452">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.center/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
     <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588969132448" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1588969132447">
+    <state width="1323" height="133" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588994975452" />
+    <state width="1323" height="133" key="GridCell.Tab.0.left" timestamp="1588994975452">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.left/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
     <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588969132447" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1588969132448">
+    <state width="1323" height="133" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588994975452" />
+    <state width="1323" height="133" key="GridCell.Tab.0.right" timestamp="1588994975452">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.right/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
     <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588969132448" />
-    <state width="1323" height="244" key="GridCell.Tab.1.bottom" timestamp="1588960156648">
+    <state width="1323" height="133" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588994975452" />
+    <state width="1323" height="133" key="GridCell.Tab.1.bottom" timestamp="1588994975453">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
     <state width="1877" height="170" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402876" />
-    <state width="1323" height="244" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588960156648" />
-    <state width="1323" height="244" key="GridCell.Tab.1.center" timestamp="1588960156648">
+    <state width="1323" height="133" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588994975453" />
+    <state width="1323" height="133" key="GridCell.Tab.1.center" timestamp="1588994975452">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.center/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
     <state width="1877" height="170" key="GridCell.Tab.1.center/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402875" />
-    <state width="1323" height="244" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1588960156648" />
-    <state width="1323" height="244" key="GridCell.Tab.1.left" timestamp="1588960156648">
+    <state width="1323" height="133" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1588994975452" />
+    <state width="1323" height="133" key="GridCell.Tab.1.left" timestamp="1588994975452">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.left/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
     <state width="1877" height="170" key="GridCell.Tab.1.left/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402875" />
-    <state width="1323" height="244" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1588960156648" />
-    <state width="1323" height="244" key="GridCell.Tab.1.right" timestamp="1588960156648">
+    <state width="1323" height="133" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1588994975452" />
+    <state width="1323" height="133" key="GridCell.Tab.1.right" timestamp="1588994975452">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.right/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
     <state width="1877" height="170" key="GridCell.Tab.1.right/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402875" />
-    <state width="1323" height="244" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588960156648" />
+    <state width="1323" height="133" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588994975452" />
     <state x="426" y="0" key="Maven.ArtifactSearchDialog" timestamp="1588799514981">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -289,27 +280,6 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="389" y="111" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1588703837777" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/testUtilities/listeners/TestListener.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/testUtilities/BrowserFactory.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/E_CommerceUIRegression$HomePageTest.ic" NAME="HomePageTest Coverage Results" MODIFIED="1588653282352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

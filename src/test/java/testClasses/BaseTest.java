@@ -1,7 +1,9 @@
 package testClasses;
+
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.utils.FileUtil;
 import com.google.common.io.Files;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.TakesScreenshot;
@@ -17,6 +19,8 @@ import testUtilities.BrowserFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Arrays;
 
 
@@ -25,10 +29,9 @@ public class BaseTest {
     protected SoftAssert soft = new SoftAssert();
     protected static HomePage hp;
 
-
-//    public WebDriver getDriver() {
-//        return driver;
-//    }
+    public WebDriver getDriver() {
+        return driver;
+    }
 
     @BeforeMethod(alwaysRun = true, description = "Initializing driver, launching the browser, opening home page and creating its instance")
     @Parameters({"url", "browser"})
@@ -45,26 +48,37 @@ public class BaseTest {
         return new HomePage(driver);
     }
 
-        @AfterMethod (alwaysRun = true)
-        public void tearDown () {
-            driver.manage().deleteAllCookies();
-            driver.quit();
-
-        }
-
-        public WindowManager getWindowManager () {
-            return new WindowManager(driver);
-        }
-
-        public String getScreenshotPath(String testCaseName, WebDriver driver) throws IOException {
-            TakesScreenshot camera = (TakesScreenshot) driver;
-            File screenshot = camera.getScreenshotAs(OutputType.FILE);
-            String screenshotPath = System.getProperty("user.home") + "\\TestReports\\" + testCaseName + ".png";
-            File file = new File(screenshotPath);
-            Files.move(screenshot, file);
-            return screenshotPath;
-        }
-
-
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() {
+        driver.manage().deleteAllCookies();
+        driver.quit();
 
     }
+
+    public WindowManager getWindowManager() {
+        return new WindowManager(driver);
+    }
+
+    public String getScreenshotPath(String testCaseName, String testClassName, WebDriver driver) {
+        String screenshotFolderPath = "\\resources\\failedTestScreenshots\\"+ LocalDate.now() +"\\" + testClassName + "\\";
+        try {
+            File file = new File(screenshotFolderPath);
+            if(!file.exists())
+            System.out.println("New folder for storing screenshots created " + file);
+            file.mkdir();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        TakesScreenshot camera = (TakesScreenshot) driver;
+        File screenshot = camera.getScreenshotAs(OutputType.FILE);
+        String screenshotPath = System.getProperty("user.dir") + screenshotFolderPath + testCaseName + ".png";
+        File file = new File(screenshotPath);
+        try {
+            FileUtils.copyFile(screenshot, file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return screenshotPath;
+    }
+}

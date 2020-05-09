@@ -23,7 +23,7 @@ public class QuickSmokeTest extends BaseTest {
     public void testIsDisclaimerCoveringHeader() {
         Header header = new Header(driver);
 
-        assertTrue(header.isDisclaimerDisplayed());
+        assertFalse(header.isDisclaimerDisplayed());
     }
 
     @Test(groups = "smoke", enabled = false)
