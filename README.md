@@ -1,7 +1,7 @@
 # ECommerce_TestNG_UI_Regression
 
 ## FRAMEWORK COMPONENTS
-- WebDriver is instantiated before class and quit after class; should try out the solution @BeforeMethod and @AfterMethod
+- WebDriver is instantiated before a test method and quit after the method.
 1. A screenshot feature: taking a screenshot when a test methood fails - TODO
 2. StepLogger - used for wrapping shared methods. It logs readable test steps with meaningful hardcoded element names. 
     - TODO: save them in external file
