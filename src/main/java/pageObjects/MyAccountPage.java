@@ -10,9 +10,10 @@ public class MyAccountPage extends Page {
     private By usernameField = By.id("reg_username");
     private By emailField = By.id("reg_email");
     private By passwordField = By.id("reg_password");
-    private By registerButton = By.cssSelector("button[name='register']");
+    private By registerButtonLoc = By.cssSelector("button[name='register']");
     private By errorMessage = By.cssSelector("ul.woocommerce-error li");
-    private By passwordStrength = By.cssSelector("div.woocommerce-password-strength");
+    private By passwordValidation = By.cssSelector("div.woocommerce-password-strength");
+    private By passwordValidatorHint = By.cssSelector("small.woocommerce-password-hint");
 
 
     public MyAccountPage(WebDriver driver) {
@@ -32,8 +33,7 @@ public class MyAccountPage extends Page {
     }
 
     public void clickOnRegisterButton(){
-        clickOnElement(registerButton, "REGISTER BUTTON");
-
+        clickOnElement(registerButtonLoc, "REGISTER BUTTON");
     }
 
     public WordPressPage enterUserDataAndClickAButton(String username, String email, String password) {
@@ -42,11 +42,12 @@ public class MyAccountPage extends Page {
         }
 
         if (driver.findElement(usernameField).isDisplayed()) {
-            type(usernameField, "USERNAME FIELD", username);
-            type(emailField, "EMAIL FIELD", email);
-            type(passwordField, "PASSWORD FIELD", password);
+            setUsername(username);
+            setEmail(email);
+            setPassword(password);
+            checkIfPasswordIsValidated(getPasswordStrengthAttribute());
+            //if password is validated then:
             clickOnRegisterButton();
-           // checkIfPasswordIsValidated();
         } else {
             new StepsLogger().error("The page isn't scrolled to the registration section.");
         }
@@ -54,7 +55,7 @@ public class MyAccountPage extends Page {
     }
 
     public String getPasswordStrengthAttribute(){
-        return driver.findElement(passwordStrength).getAttribute("class").substring(30);
+        return driver.findElement(passwordValidation).getAttribute("class").substring(30);
     }
 
     public boolean checkIfPasswordIsValidated(String passwordStrength){
@@ -66,19 +67,21 @@ public class MyAccountPage extends Page {
         return getWebElementText(errorMessage, "ERROR MESSAGE");
     }
 
-//    public boolean isCorrectErrorMessageDisplayed(){
-//
-//    }
-    /*
+    public boolean isPasswordValidatorPresent(String passwordStrength) {
+        return isElementDisplayed(passwordValidation, "PASSWORD VALIDATOR", 2);
+    }
 
-----------------------------------------
-Error: An account is already registered with that username. Please choose another.
-Error: Please provide a valid email address.
-Error: Please enter a valid account username.
-Error: Please enter an account password.
+    public String isRegisterButtonEnabled() {
+        var registerButton = getWebElement(registerButtonLoc, "REGISTER BUTTON");
+        String isEnabled = registerButton.isEnabled() ? "enabled" : "disabled";
+        return isEnabled;
+    }
+
+    public void clearPasswordField() {
+        clearField(passwordField, "PASSWORD FIELD");
+    }
 
 
-     */
 
 
 }

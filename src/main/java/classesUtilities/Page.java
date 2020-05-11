@@ -68,19 +68,19 @@ public class Page {
 
     protected void clearField(By locator, String elementName) {
         waitForElementClickability(locator);
-        getWebElement(locator, elementName).click();
+        getWebElement(locator, elementName).clear();
         log.step("Clear the field " + elementName);
     }
 
-    protected void type(By locator, String elementName, String text) {
+    protected void type(By locator, String text, String elementName) {
         waitForElementVisibility(driver.findElement(locator));
         getWebElement(locator, elementName).sendKeys(text);
         log.step("Send text " + "\"" + text + "\"" + " to " + elementName);
     }
 
-    protected boolean isElementDisplayed(By locator, String elementName) {
+    protected boolean isElementDisplayed(By locator, String elementName, Integer... timeoutInSeconds) {
         boolean displayed = getWebElement(locator, elementName).isDisplayed();
-        waitForElementVisibility(driver.findElement(locator));
+        waitForElementVisibility(driver.findElement(locator), timeoutInSeconds);
         String text = displayed ? " is displayed." : " is not displayed.";
         log.info(elementName + text);
 
@@ -110,15 +110,11 @@ public class Page {
     }
 
     protected void waitForElementVisibility(WebElement element, Integer... timeoutInSeconds) {
-        int attempts = 0;
-        while(attempts < 2) {
-            try {
+        try {
                 waitUntil(ExpectedConditions.visibilityOf(element), timeoutInSeconds.length > 0 ? timeoutInSeconds[0] : null);
             } catch (TimeoutException e) {
                 log.error("Timeout - the wait time expired and the element is still not visible.");
             }
-            attempts++;
-        }
     }
 
     protected void waitForElementClickability(By locator, Integer... timeoutInSeconds) {
