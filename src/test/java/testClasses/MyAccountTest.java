@@ -5,7 +5,6 @@ import pageObjects.MyAccountPage;
 import pageObjects.WordPressPage;
 import testUtilities.CsvParser;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import static org.testng.Assert.*;
@@ -13,7 +12,7 @@ import static testUtilities.TestListener.extentParallel;
 
 public class MyAccountTest extends BaseTest{
 
-    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class, enabled = false)
+    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class)
     public void testSuccessfulRegistration(Map<String, String> testData){
         String testCaseNo = testData.get("testCaseNo");
         String username = testData.get("username");
@@ -30,7 +29,7 @@ public class MyAccountTest extends BaseTest{
                 "up on the WordPress page.");
     }
 
-    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class, enabled = false)
+    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class)
     public void testUnsuccessfulRegistration(Map<String, String> testData){
         String testCaseNo = testData.get("testCaseNo");
         String username = testData.get("username");
@@ -47,7 +46,7 @@ public class MyAccountTest extends BaseTest{
                 "up on the WordPress page.");
     }
 
-    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class)
+    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class, enabled = false)
     public void testErrorMessages(Map<String, String> testData){
 
         String testCaseNo = testData.get("testCaseNo");
@@ -65,32 +64,31 @@ public class MyAccountTest extends BaseTest{
                                                             .format(actualErrorMessage, expectedMessage));
     }
 
-    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class)
+    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class, enabled = false)
     public void testPasswordStrengthValidation(Map<String, String> testData){
         String testCaseNo = testData.get("testCaseNo");
         String description = testData.get("description");
         String password = testData.get("password");
+        String expectedPasswordStrength = testData.get("validation");
+        String expectedButtonState = testData.get("buttonState");
 
         extentParallel.get().info("Test Case no. " + testCaseNo + ": " + description);
         MyAccountPage ap = new MyAccountPage(driver);
-        ap.setPassword(password);
-        boolean actualPasswordValidatorPresence = ap.isPasswordValidatorPresent();
-        String passwordStrength = ap.getPasswordStrengthAttribute();
-        boolean actualRegisterButtonState = ap.isRegisterButtonEnabled();
-        ap.clearPasswordField();
-        boolean actualPasswordValidatorAbsence = ap.isPasswordValidatorPresent();
-        /*
-        type a password
-        verify that the password validator shows
-        get password strength
-        verify if register button is enabled
-        clear field
-        verify that the password validator ribbon in not displayed anymore
-        repeat
-         */
-        soft.assertTrue(passwordValidator.isDisplayed(), "The password validator is not displayed");
-        soft.assertEquals(registerButton.isEnabled(), expectedButtonState, "The register button state does not match the expected "
-                + expectedState);
-        soft.assertFalse(passwordValidator.isDisplayed(), "The password validator is still visible.");
+            ap.setPassword(password); //type a password
+            String actualPasswordStrength = ap.getPasswordStrengthAttribute(); //get password strength
+            boolean actualPasswordValidatorPresence = ap.isPasswordValidatorPresent(actualPasswordStrength); //get info if pwd validator is displayed
+            String actualRegisterButtonState = ap.isRegisterButtonEnabled(); // get button state
+            ap.clearPasswordField(); //clear field
+            boolean actualPasswordValidatorAbsence = ap.isPasswordValidatorPresent(actualPasswordStrength);
+
+
+            soft.assertTrue(actualPasswordValidatorPresence, "The password validator is not displayed"); //verify that the password validator shows up
+            soft.assertEquals(actualPasswordStrength, expectedPasswordStrength, "Displayed validation level does not match the expected " +
+                    expectedPasswordStrength); //verify if the password validation level is appropriate
+            soft.assertEquals(actualRegisterButtonState, expectedButtonState, "The register button state does not match the expected"); //verify if register button is enabled
+            soft.assertFalse(actualPasswordValidatorAbsence, "The password validator is still visible."); // verify that the password validator ribbon in not displayed anymore
+
+            soft.assertAll();
+
     }
 }
