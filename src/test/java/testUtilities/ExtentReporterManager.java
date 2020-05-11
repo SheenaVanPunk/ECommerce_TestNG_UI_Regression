@@ -4,13 +4,10 @@ import com.aventstack.extentreports.AnalysisStrategy;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import net.bytebuddy.asm.Advice;
-import org.testng.ITestResult;
-import testClasses.QuickSmokeTest;
 
 import java.io.File;
 import java.time.LocalDate;
-import java.util.Date;
+
 
 
 public class ExtentReporterManager {

@@ -1,10 +1,9 @@
 package classesUtilities;
 
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 
 public class StepsLogger {
+
 
     public StepsLogger() {}
 
@@ -12,13 +11,9 @@ public class StepsLogger {
     public void step(String text) {
         if (text.contains("\n")){
             System.out.println("STEP — " + text.replace("\n", " "));
-
-
         }else{
             System.out.println("STEP — " + text);
-
         }
-
     }
 
     public void info(String text) {
@@ -27,7 +22,6 @@ public class StepsLogger {
 
         }else{
             System.out.println("-> INFO — " + text);
-
         }
     }
 

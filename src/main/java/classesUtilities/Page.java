@@ -6,12 +6,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Arrays;
 
 
 public class Page {
     protected static WebDriver driver;
     protected static WebDriverWait wait;
-    private static final StepsLogger log = new StepsLogger();
+    protected static final StepsLogger log = new StepsLogger();
 
     public Page(WebDriver driver) {
         Page.driver = driver;
@@ -128,6 +129,8 @@ public class Page {
             } catch (TimeoutException e) {
                 log.error("Timeout - the wait time expired and the element is still not clickable.");
                 e.getMessage();
+            } catch (ElementClickInterceptedException e){
+                log.error("Element cannot be clicked at the moment." + Arrays.toString(e.getStackTrace()));
             }
             attempts++;
         }
@@ -165,7 +168,6 @@ public class Page {
         log.info("Scrolling to element..." );
         waitForElementVisibility(element);
         ((JavascriptExecutor) driver).executeScript(script, element);
-
     }
 
     protected String getTabHandle() {
