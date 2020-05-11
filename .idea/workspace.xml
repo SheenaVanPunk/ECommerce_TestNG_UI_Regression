@@ -2,15 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e646b72d-563d-4f71-a299-786045a49d57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/testData/MyAccountTest_testErrorMessages.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/WordPressPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testUtilities/CsvParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-09/QuickSmokeTest/testIsDisclaimerCoveringHeader.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-09/QuickSmokeTest/testIsDisclaimerCoveringHeader.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-09/Test Report_2020-05-09.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-09/Test Report_2020-05-09.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-09/QuickSmokeTest/testIsDisclaimerCoveringHeader.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-09/SearchTest/testSearchForItem.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-09/Test Report_2020-05-09.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/testData/MyAccountPage_dataProvider_negativeCases.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/testData/MyAccountTest_testUnsuccessfulRegistration.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/testData/MyAccountPage_dataProvider_positiveCase.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/testData/MyAccountTest_testSuccessfulRegistration.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classesUtilities/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/classesUtilities/StepsLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/StepsLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/ExtentReporterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/ExtentReporterManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/E-CommerceUIRegression.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/classesUtilities/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classesUtilities/Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/classesUtilities/StepsLogger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classesUtilities/StepsLogger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/MyAccountPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/MyAccountPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/MyAccountTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/MyAccountTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testUtilities/ExtentReporterManager.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/testUtilities/TestListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testUtilities/TestListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +69,10 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Nena\IdeaProjects\E-CommerceUIRegression\src\main\java\utilities\ExtentReports" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pageObjects" />
+      <recent name="testUtilities.listeners" />
+      <recent name="utilities" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Nena\IdeaProjects\E-CommerceUIRegression\resources\testData" />
@@ -60,13 +80,24 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="utilities" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="testUtilities.listeners" />
-      <recent name="pageObjects" />
-      <recent name="utilities" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nena\IdeaProjects\E-CommerceUIRegression\src\main\java\utilities\ExtentReports" />
     </key>
   </component>
   <component name="RunManager" selected="TestNG.C:/Users/Nena/IdeaProjects/E-CommerceUIRegression/testng.xml">
+    <configuration name="MyAccountPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pageObjects.MyAccountPage" />
+      <module name="E-CommerceUIRegression" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pageObjects.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/Nena/IdeaProjects/E-CommerceUIRegression/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-CommerceUIRegression" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
@@ -77,7 +108,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomePageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MyAccountTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-CommerceUIRegression" />
       <extension name="coverage">
         <pattern>
@@ -86,7 +117,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.HomePageTest" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.MyAccountTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -94,7 +125,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomePageTest.testAddRandomNumberOfProductToWishlist" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MyAccountTest.testErrorMessages" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-CommerceUIRegression" />
       <extension name="coverage">
         <pattern>
@@ -103,8 +134,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.HomePageTest" />
-      <option name="METHOD_NAME" value="testAddRandomNumberOfProductToWishlist" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.MyAccountTest" />
+      <option name="METHOD_NAME" value="testErrorMessages" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -112,7 +143,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomePageTest.testGetCartText" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MyAccountTest.testTryinOutMethods" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-CommerceUIRegression" />
       <extension name="coverage">
         <pattern>
@@ -121,29 +152,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.HomePageTest" />
-      <option name="METHOD_NAME" value="testGetCartText" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.MyAccountTest" />
+      <option name="METHOD_NAME" value="testTryinOutMethods" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchTest.testSearchForItem (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="E-CommerceUIRegression" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testClasses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
-      <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.SearchTest" />
-      <option name="METHOD_NAME" value="testSearchForItem" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="0" />
       <properties />
       <listeners />
       <method v="2">
@@ -153,10 +164,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/Nena/IdeaProjects/E-CommerceUIRegression/testng.xml" />
-        <item itemvalue="TestNG.SearchTest.testSearchForItem (1)" />
-        <item itemvalue="TestNG.HomePageTest.testAddRandomNumberOfProductToWishlist" />
-        <item itemvalue="TestNG.HomePageTest" />
-        <item itemvalue="TestNG.HomePageTest.testGetCartText" />
+        <item itemvalue="TestNG.MyAccountTest.testErrorMessages" />
+        <item itemvalue="TestNG.MyAccountTest.testTryinOutMethods" />
+        <item itemvalue="Application.MyAccountPage" />
+        <item itemvalue="TestNG.MyAccountTest" />
       </list>
     </recent_temporary>
   </component>
@@ -174,6 +185,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="449" y="68" key="#Auto_Import" timestamp="1589049412482">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="449" y="68" key="#Auto_Import/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1589049412482" />
     <state x="568" y="226" key="#Notifications" timestamp="1588789030617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -212,67 +227,72 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589037340238" />
-    <state width="1323" height="273" key="GridCell.Tab.0.bottom" timestamp="1589040901648">
+    <state width="1323" height="198" key="GridCell.Tab.0.bottom" timestamp="1589179716335">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
-    <state width="1323" height="273" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589040901648" />
-    <state width="1323" height="273" key="GridCell.Tab.0.center" timestamp="1589040901648">
+    <state width="1877" height="312" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936251" />
+    <state width="1323" height="198" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589179716335" />
+    <state width="1323" height="198" key="GridCell.Tab.0.center" timestamp="1589179716334">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.center/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
-    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
-    <state width="1323" height="273" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589040901648" />
-    <state width="1323" height="273" key="GridCell.Tab.0.left" timestamp="1589040901648">
+    <state width="1877" height="312" key="GridCell.Tab.0.center/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936251" />
+    <state width="1323" height="198" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589179716334" />
+    <state width="1323" height="198" key="GridCell.Tab.0.left" timestamp="1589179716334">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.left/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
-    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
-    <state width="1323" height="273" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589040901648" />
-    <state width="1323" height="273" key="GridCell.Tab.0.right" timestamp="1589040901648">
+    <state width="1877" height="312" key="GridCell.Tab.0.left/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936251" />
+    <state width="1323" height="198" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589179716334" />
+    <state width="1323" height="198" key="GridCell.Tab.0.right" timestamp="1589179716334">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.right/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
-    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588819457478" />
-    <state width="1323" height="273" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589040901648" />
-    <state width="1323" height="2" key="GridCell.Tab.1.bottom" timestamp="1589038188960">
+    <state width="1877" height="312" key="GridCell.Tab.0.right/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936251" />
+    <state width="1323" height="198" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589179716334" />
+    <state width="1323" height="198" key="GridCell.Tab.1.bottom" timestamp="1589179716335">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
-    <state width="1877" height="170" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402876" />
-    <state width="1323" height="2" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589038188960" />
-    <state width="1323" height="2" key="GridCell.Tab.1.center" timestamp="1589038188960">
+    <state width="1877" height="312" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936252" />
+    <state width="1323" height="198" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589179716335" />
+    <state width="1323" height="198" key="GridCell.Tab.1.center" timestamp="1589179716335">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.center/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
-    <state width="1877" height="170" key="GridCell.Tab.1.center/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402875" />
-    <state width="1323" height="2" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589038188960" />
-    <state width="1323" height="2" key="GridCell.Tab.1.left" timestamp="1589038188960">
+    <state width="1877" height="312" key="GridCell.Tab.1.center/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936251" />
+    <state width="1323" height="198" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589179716335" />
+    <state width="1323" height="198" key="GridCell.Tab.1.left" timestamp="1589179716335">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.left/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
-    <state width="1877" height="170" key="GridCell.Tab.1.left/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402875" />
-    <state width="1323" height="2" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589038188960" />
-    <state width="1323" height="2" key="GridCell.Tab.1.right" timestamp="1589038188960">
+    <state width="1877" height="312" key="GridCell.Tab.1.left/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936251" />
+    <state width="1323" height="198" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589179716335" />
+    <state width="1323" height="198" key="GridCell.Tab.1.right" timestamp="1589179716335">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.right/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
-    <state width="1877" height="170" key="GridCell.Tab.1.right/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588809402875" />
-    <state width="1323" height="2" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589038188960" />
-    <state x="426" y="0" key="Maven.ArtifactSearchDialog" timestamp="1588799514981">
+    <state width="1877" height="312" key="GridCell.Tab.1.right/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936252" />
+    <state width="1323" height="198" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589179716335" />
+    <state x="426" y="0" key="Maven.ArtifactSearchDialog" timestamp="1589067746027">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="426" y="0" key="Maven.ArtifactSearchDialog/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588799514981" />
+    <state x="426" y="0" key="Maven.ArtifactSearchDialog/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1589067746027" />
     <state x="426" y="0" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1588908738326" />
-    <state x="347" y="5" key="SettingsEditor" timestamp="1588737296888">
+    <state x="347" y="5" key="SettingsEditor" timestamp="1589047969879">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="347" y="5" key="SettingsEditor/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1589047969879" />
     <state x="347" y="5" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588737296888" />
-    <state x="65" y="64" width="1236" height="600" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588885601844">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1458" y="-220" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1589141597074">
+      <screen x="1366" y="-312" width="1920" height="1040" />
     </state>
-    <state x="1458" y="-220" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1588804155706" />
+    <state x="1458" y="-220" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141597074" />
+    <state x="1458" y="-220" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589141923118">
+      <screen x="1366" y="-312" width="1920" height="1040" />
+    </state>
+    <state x="1458" y="-220" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141923118" />
     <state x="65" y="64" width="1236" height="600" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1588885601844" />
     <state x="502" y="191" key="export.test.results" timestamp="1588642072125">
       <screen x="0" y="0" width="1366" height="728" />
@@ -287,9 +307,29 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/classesUtilities/StepsLogger.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/classesUtilities/Page.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/HomePage.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="7" />
+          <line>42</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -303,5 +343,6 @@
     <SUITE FILE_PATH="coverage/E_CommerceUIRegression$HomePageTest.ic" NAME="HomePageTest Coverage Results" MODIFIED="1588653282352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>utilities.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/E_CommerceUIRegression$C__Users_Nena_IdeaProjects_E_CommerceUIRegression_testng_xml.ic" NAME="$PROJECT_DIR$/testng.xml Coverage Results" MODIFIED="1589179064429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

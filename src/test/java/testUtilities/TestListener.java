@@ -8,14 +8,12 @@ import org.openqa.selenium.WebDriver;
 import org.testng.*;
 import testClasses.BaseTest;
 
-import testUtilities.ExtentReporterManager;
-
 import java.io.IOException;
 
 
 public class TestListener extends BaseTest implements ITestListener {
     private static ExtentReports extent = ExtentReporterManager.createInstance();
-    private static ThreadLocal<ExtentTest> extentParallel = new ThreadLocal<ExtentTest>();
+    public static ThreadLocal<ExtentTest> extentParallel = new ThreadLocal<ExtentTest>();
 
     private static String getTestMethodName(ITestResult iTestResult) {
         return iTestResult.getMethod().getConstructorOrMethod().getName();
