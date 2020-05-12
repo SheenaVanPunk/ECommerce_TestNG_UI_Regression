@@ -15,25 +15,19 @@ public class MyAccountPage extends Page {
     private By passwordValidation = By.cssSelector("div.woocommerce-password-strength");
     private By passwordValidatorHint = By.cssSelector("small.woocommerce-password-hint");
 
+    private By forgotPasswordLink = By.cssSelector("p.lost_password a");
+
 
     public MyAccountPage(WebDriver driver) {
         super(driver);
     }
 
-    public void setUsername(String username){
-        type(usernameField, username, "USERNAME FIELD");
-    }
-
-    public void setEmail(String email){
-        type(emailField, email, "EMAIL FIELD");
+    public void clickOnRegisterButton(){
+        clickOnElement(registerButtonLoc, "REGISTER BUTTON", 3);
     }
 
     public void setPassword(String password){
         type(passwordField, password, "PASSWORD FIELD");
-    }
-
-    public void clickOnRegisterButton(){
-        clickOnElement(registerButtonLoc, "REGISTER BUTTON", 3);
     }
 
     public WordPressPage enterUserDataAndClickAButton(String username, String email, String password) {
@@ -42,8 +36,8 @@ public class MyAccountPage extends Page {
         }
 
         if (driver.findElement(usernameField).isDisplayed()) {
-            setUsername(username);
-            setEmail(email);
+            type(usernameField, username, "USERNAME FIELD");
+            type(emailField, email, "EMAIL FIELD");
             setPassword(password);
             clickOnRegisterButton();
         } else {
@@ -51,26 +45,6 @@ public class MyAccountPage extends Page {
         }
         return new WordPressPage(driver);
     }
-
-//    public WordPressPage enterUserDataAndClickAButtonWithPasswordValidation(String username, String email, String password) {
-//        if (driver.getTitle().contains("My Account")) {
-//            scrollUntilElement(getWebElement(registrationAndLoginSection, "REGISTRATION SECTION"));
-//        }
-//
-//        if (driver.findElement(usernameField).isDisplayed()) {
-//            setUsername(username);
-//            setEmail(email);
-//            setPassword(password);
-//            if(isPasswordValidatorPresent()) {
-//                checkIfPasswordIsValidated(getPasswordStrengthAttribute());
-//            }
-//            clickOnRegisterButton();
-//        } else {
-//            new StepsLogger().error("The page isn't scrolled to the registration section.");
-//        }
-//        return new WordPressPage(driver);
-//    }
-
 
     public String getPasswordStrengthAttribute(){
         return driver.findElement(passwordValidation).getAttribute("class").substring(30);
@@ -99,6 +73,11 @@ public class MyAccountPage extends Page {
         clearField(passwordField, "PASSWORD FIELD");
     }
 
+    public ForgotPasswordPage clickOnForgotPassword(){
+        scrollUntilElement(getWebElement(forgotPasswordLink, "LOST YOUR PASSWORD LINK"));
+        clickOnElement(forgotPasswordLink, "LOST YOUR PASSWORD LINK");
+        return new ForgotPasswordPage(driver);
+    }
 
 
 
