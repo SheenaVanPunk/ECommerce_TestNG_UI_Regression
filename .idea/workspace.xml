@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e646b72d-563d-4f71-a299-786045a49d57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/testData/MyAccountPage_testForgotPassword.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/testData/MyAccountTest_testLoginErrorMessages.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/testData/MyAccountTest_testSuccessfulLogin.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ForgotPasswordPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-11/MyAccountTest/testErrorMessages.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-11/MyAccountTest/testErrorMessages.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-11/MyAccountTest/testPasswordStrengthValidation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-11/MyAccountTest/testUnsuccessfulRegistration.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-11/Test Report_2020-05-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-11/Test Report_2020-05-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/testData/MyAccountTest_testErrorMessages.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/testData/MyAccountTest_testErrorMessages.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/testData/MyAccountTest_testSuccessfulRegistration.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/testData/MyAccountTest_testSuccessfulRegistration.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/testData/MyAccountTest_testUnsuccessfulRegistration.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classesUtilities/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/testData/MyAccountTest_testErrorMessages.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/testData/MyAccountTest_testRegistrationErrorMessages.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/MyAccountPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/MyAccountPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/MyAccountTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/MyAccountTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,11 +50,13 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Nena\IdeaProjects\E-CommerceUIRegression\src\main\java\utilities\ExtentReports" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pageObjects" />
+      <recent name="testUtilities.listeners" />
+      <recent name="utilities" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Nena\IdeaProjects\E-CommerceUIRegression\resources\testData" />
@@ -63,10 +64,8 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="utilities" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="pageObjects" />
-      <recent name="testUtilities.listeners" />
-      <recent name="utilities" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nena\IdeaProjects\E-CommerceUIRegression\src\main\java\utilities\ExtentReports" />
     </key>
   </component>
   <component name="RunManager" selected="TestNG.C:/Users/Nena/IdeaProjects/E-CommerceUIRegression/testng.xml">
@@ -218,73 +217,73 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589037340238" />
-    <state width="1877" height="379" key="GridCell.Tab.0.bottom" timestamp="1589242210071">
+    <state width="1877" height="341" key="GridCell.Tab.0.bottom" timestamp="1589248078776">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
     <state width="1877" height="312" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936251" />
     <state width="1323" height="88" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589225601215" />
-    <state width="1877" height="379" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589242210071" />
-    <state width="1877" height="379" key="GridCell.Tab.0.center" timestamp="1589242210070">
+    <state width="1877" height="341" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589248078776" />
+    <state width="1877" height="341" key="GridCell.Tab.0.center" timestamp="1589248078776">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.center/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
     <state width="1877" height="312" key="GridCell.Tab.0.center/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936251" />
     <state width="1323" height="88" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589225601215" />
-    <state width="1877" height="379" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589242210070" />
-    <state width="1877" height="379" key="GridCell.Tab.0.left" timestamp="1589242210070">
+    <state width="1877" height="341" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589248078776" />
+    <state width="1877" height="341" key="GridCell.Tab.0.left" timestamp="1589248078775">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.left/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
     <state width="1877" height="312" key="GridCell.Tab.0.left/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936251" />
     <state width="1323" height="88" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589225601215" />
-    <state width="1877" height="379" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589242210070" />
-    <state width="1877" height="379" key="GridCell.Tab.0.right" timestamp="1589242210071">
+    <state width="1877" height="341" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589248078775" />
+    <state width="1877" height="341" key="GridCell.Tab.0.right" timestamp="1589248078776">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.0.right/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801386004" />
     <state width="1877" height="312" key="GridCell.Tab.0.right/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936251" />
     <state width="1323" height="88" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589225601215" />
-    <state width="1877" height="379" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589242210071" />
-    <state width="1877" height="245" key="GridCell.Tab.1.bottom" timestamp="1589242099906">
+    <state width="1877" height="341" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589248078776" />
+    <state width="1877" height="341" key="GridCell.Tab.1.bottom" timestamp="1589248094178">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
     <state width="1877" height="312" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936252" />
     <state width="1323" height="269" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589225475963" />
-    <state width="1877" height="245" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589242099906" />
-    <state width="1877" height="245" key="GridCell.Tab.1.center" timestamp="1589242099905">
+    <state width="1877" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589248094178" />
+    <state width="1877" height="341" key="GridCell.Tab.1.center" timestamp="1589248094178">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.center/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
     <state width="1877" height="312" key="GridCell.Tab.1.center/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936251" />
     <state width="1323" height="269" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589225475963" />
-    <state width="1877" height="245" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589242099905" />
-    <state width="1877" height="245" key="GridCell.Tab.1.left" timestamp="1589242099905">
+    <state width="1877" height="341" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589248094178" />
+    <state width="1877" height="341" key="GridCell.Tab.1.left" timestamp="1589248094177">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.left/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
     <state width="1877" height="312" key="GridCell.Tab.1.left/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936251" />
     <state width="1323" height="269" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589225475963" />
-    <state width="1877" height="245" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589242099905" />
-    <state width="1877" height="245" key="GridCell.Tab.1.right" timestamp="1589242099906">
+    <state width="1877" height="341" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589248094177" />
+    <state width="1877" height="341" key="GridCell.Tab.1.right" timestamp="1589248094178">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="170" key="GridCell.Tab.1.right/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1588801368794" />
     <state width="1877" height="312" key="GridCell.Tab.1.right/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141936252" />
     <state width="1323" height="269" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589225475963" />
-    <state width="1877" height="245" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589242099906" />
+    <state width="1877" height="341" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589248094178" />
     <state x="426" y="0" key="Maven.ArtifactSearchDialog" timestamp="1589067746027">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="426" y="0" key="Maven.ArtifactSearchDialog/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1589067746027" />
     <state x="426" y="0" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1588908738326" />
-    <state x="2408" y="7" key="SettingsEditor" timestamp="1589238918247">
+    <state x="2408" y="7" key="SettingsEditor" timestamp="1589243953548">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="347" y="5" key="SettingsEditor/0.0.1366.728/1366.-312.1920.1040@0.0.1366.728" timestamp="1589047969879" />
     <state x="347" y="5" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588737296888" />
-    <state x="2408" y="7" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589238918247" />
+    <state x="2408" y="7" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589243953548" />
     <state x="1854" y="7" key="SettingsEditor/1366.0.1920.1040/0.0.1366.728@1366.0.1920.1040" timestamp="1589238398998" />
     <state x="1458" y="-220" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1589141597074">
       <screen x="1366" y="-312" width="1920" height="1040" />
@@ -295,6 +294,10 @@
     </state>
     <state x="1458" y="-220" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728/1366.-312.1920.1040@1366.-312.1920.1040" timestamp="1589141923118" />
     <state x="65" y="64" width="1236" height="600" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1588885601844" />
+    <state x="2689" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589243967037">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2689" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589243967037" />
     <state x="502" y="191" key="export.test.results" timestamp="1588642072125">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -308,24 +311,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPage.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java</url>
           <line>88</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/classesUtilities/Page.java</url>
-          <line>113</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/classesUtilities/Page.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="54" />
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

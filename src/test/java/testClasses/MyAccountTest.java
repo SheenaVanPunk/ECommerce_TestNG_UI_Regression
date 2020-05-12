@@ -1,6 +1,7 @@
 package testClasses;
 
 import org.testng.annotations.Test;
+import pageObjects.ForgotPasswordPage;
 import pageObjects.MyAccountPage;
 import pageObjects.WordPressPage;
 import testUtilities.CsvParser;
@@ -12,7 +13,7 @@ import static testUtilities.TestListener.extentParallel;
 
 public class MyAccountTest extends BaseTest{
 
-    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class)
+    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class,groups = "user registration tests",enabled = false)
     public void testSuccessfulRegistration(Map<String, String> testData){
         String testCaseNo = testData.get("testCaseNo");
         String username = testData.get("username");
@@ -30,8 +31,8 @@ public class MyAccountTest extends BaseTest{
     }
 
 
-    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class)
-    public void testErrorMessages(Map<String, String> testData){
+    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class, groups = "user registration tests", enabled = false)
+    public void testRegistrationErrorMessages(Map<String, String> testData){
 
         String testCaseNo = testData.get("testCaseNo");
         String username = testData.get("username");
@@ -48,7 +49,7 @@ public class MyAccountTest extends BaseTest{
                                                             .format(actualErrorMessage, expectedMessage));
     }
 
-    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class)
+    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class, groups = "user registration tests", enabled = false)
     public void testPasswordStrengthValidation(Map<String, String> testData){
         String testCaseNo = testData.get("testCaseNo");
         String description = testData.get("description");
@@ -74,5 +75,17 @@ public class MyAccountTest extends BaseTest{
 
             soft.assertAll();
 
+    }
+
+    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class, groups = "user login tests", enabled = false)
+    public void testUserLogin(Map<String, String> testData){
+
+    }
+
+    @Test(groups = "user login tests")
+    public void testForgotPassword(){
+        MyAccountPage ap = new MyAccountPage(driver);
+        ForgotPasswordPage fp = ap.clickOnForgotPassword();
+        fp.setUsername("DidonZenevjev87");
     }
 }
