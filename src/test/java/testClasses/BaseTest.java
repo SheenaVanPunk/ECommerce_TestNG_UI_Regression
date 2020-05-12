@@ -1,50 +1,77 @@
 package testClasses;
-
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import utilities.HtmlElement;
-import utilities.Page;
-import utilities.WindowManager;
+import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
+import pageObjects.HomePage;
+import classesUtilities.WindowManager;
+import testUtilities.BrowserFactory;
+
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDate;
+
+import java.util.Arrays;
+
 
 public class BaseTest {
     protected static WebDriver driver;
-    protected static WebDriverWait wait;
-    private static String url = "";
+    protected SoftAssert soft = new SoftAssert();
+    protected static HomePage hp;
 
-    @BeforeClass
-    public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
-        driver = new ChromeDriver(getChromeDriverOptions());
-        wait = new WebDriverWait(driver, 8);
-
-       Page page = new Page(driver, wait);
-   }
-
-        @BeforeMethod
-        public void goToHomePage () {
-            driver.get(url);
-            driver.manage().window().maximize();
-        }
-
-
-        private ChromeOptions getChromeDriverOptions () {
-            ChromeOptions options = new ChromeOptions();
-            options.setHeadless(true);
-            options.addArguments("--silent");
-            return options;
-        }
-
-        public WindowManager getWindowManager () {
-            return new WindowManager(driver, wait);
-        }
-
-        @AfterClass
-        public void tearDown () {
-            driver.quit();
-        }
+    public WebDriver getDriver() {
+        return driver;
     }
+
+
+    @BeforeMethod(alwaysRun = true, description = "Initializing driver, launching the browser, opening home page and creating its instance")
+    @Parameters({"url", "browser"})
+    public HomePage initDriverAndGoToHomePage(String url, String browser) {
+        try {
+            BrowserFactory.getDriver(browser);
+        } catch (Exception e) {
+            System.out.println("Error....." + Arrays.toString(e.getStackTrace()));
+        }
+
+        driver.get(url);
+        hp = new HomePage(driver);
+        driver.manage().window().maximize();
+        return hp;
+    }
+
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() {
+        driver.manage().deleteAllCookies();
+        driver.quit();
+
+    }
+
+    public WindowManager getWindowManager() {
+        return new WindowManager(driver);
+    }
+
+    public String getScreenshotPath(String testCaseName, String testClassName, WebDriver driver) {
+        String screenshotFolderPath = "\\resources\\failedTestScreenshots\\"+ LocalDate.now() +"\\" + testClassName + "\\";
+        try {
+            File file = new File(screenshotFolderPath);
+            if(!file.exists())
+            System.out.println("New folder for storing screenshots created " + file);
+            file.mkdir();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        TakesScreenshot camera = (TakesScreenshot) driver;
+        File screenshot = camera.getScreenshotAs(OutputType.FILE);
+        String screenshotPath = System.getProperty("user.dir") + screenshotFolderPath + testCaseName + ".png";
+        File file = new File(screenshotPath);
+        try {
+            FileUtils.copyFile(screenshot, file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return screenshotPath;
+    }
+}

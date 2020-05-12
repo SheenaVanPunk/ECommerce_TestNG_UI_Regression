@@ -1,0 +1,16 @@
+pageObjects\Footer.class
+utilities\WindowManager.class
+utilities\TestListener.class
+pageObjects\HomePage.class
+pageObjects\Header.class
+pageObjects\MyAccountPage.class
+pageObjects\ProductPage$RelatedProducts.class
+pageObjects\BlogPage.class
+pageObjects\ProductPage.class
+utilities\Page.class
+pageObjects\WishlistPage.class
+utilities\LoggingFileSetup.class
+utilities\StepsLogger.class
+pageObjects\CartPage.class
+pageObjects\SubCategoryPage.class
+pageObjects\SearchPage.class
