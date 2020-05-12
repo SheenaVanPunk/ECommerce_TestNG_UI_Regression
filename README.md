@@ -19,4 +19,4 @@
 14. Jenkins automated pipeline - TODO
 15. Connection with a MySql for DDT
 16. A recorder of failed tests - TBD, lowest priority
-
+17. Factory - parallel test execution
