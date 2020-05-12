@@ -1,7 +1,0 @@
-testCaseNo,username,email,password,description
-1,,,,noDataProvided
-2,neVenIta423!,nevena@yopmail, Test@123,invalidEmailValidPassword
-3,neVenIta423!,nevena1@yopmail.com, IIIIIIIaaa,invalidPasswordValidEmail
-4,neVenIta423!,nevena@yopmail.com,Test@234,existingEmail
-5,sarah,aneven@yopmail.com,Test@123,existingUsernameValidPasswordAndEmail
-6,;/78rui;',aneven@yopmail.com,Test@123,invalidUsernameValidPasswordAndEmail
