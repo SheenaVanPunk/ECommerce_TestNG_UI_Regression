@@ -52,26 +52,6 @@ public class MyAccountPage extends Page {
         return new WordPressPage(driver);
     }
 
-//    public WordPressPage enterUserDataAndClickAButtonWithPasswordValidation(String username, String email, String password) {
-//        if (driver.getTitle().contains("My Account")) {
-//            scrollUntilElement(getWebElement(registrationAndLoginSection, "REGISTRATION SECTION"));
-//        }
-//
-//        if (driver.findElement(usernameField).isDisplayed()) {
-//            setUsername(username);
-//            setEmail(email);
-//            setPassword(password);
-//            if(isPasswordValidatorPresent()) {
-//                checkIfPasswordIsValidated(getPasswordStrengthAttribute());
-//            }
-//            clickOnRegisterButton();
-//        } else {
-//            new StepsLogger().error("The page isn't scrolled to the registration section.");
-//        }
-//        return new WordPressPage(driver);
-//    }
-
-
     public String getPasswordStrengthAttribute(){
         return driver.findElement(passwordValidation).getAttribute("class").substring(30);
     }
