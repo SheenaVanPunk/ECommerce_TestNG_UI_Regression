@@ -46,8 +46,8 @@ public class Page {
         return pt;
     }
 
-    protected void clickOnElement(By locator, String elementName) {
-            waitForElementClickability(locator);
+    protected void clickOnElement(By locator, String elementName, Integer... timeoutInSeconds) {
+            waitForElementClickability(locator, timeoutInSeconds);
             getWebElement(locator, elementName).click();
             log.step("Click on " + "\"" + elementName + "\"");
     }

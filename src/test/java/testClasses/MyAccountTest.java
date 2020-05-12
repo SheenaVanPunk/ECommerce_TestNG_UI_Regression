@@ -29,24 +29,8 @@ public class MyAccountTest extends BaseTest{
                 "up on the WordPress page.");
     }
 
+
     @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class)
-    public void testUnsuccessfulRegistration(Map<String, String> testData){
-        String testCaseNo = testData.get("testCaseNo");
-        String username = testData.get("username");
-        String email = testData.get("email");
-        String password = testData.get("password");
-        String description = testData.get("description");
-
-        MyAccountPage ap = new MyAccountPage(driver);
-        extentParallel.get().info("Test Case no. " + testCaseNo + ": " + description);
-
-        WordPressPage wp = ap.enterUserDataAndClickAButton(username, email, password);
-
-        assertEquals(wp.getActualPageTitle(), wp.getExpectedPageTitle(), "Registration process has not end" +
-                "up on the WordPress page.");
-    }
-
-    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class, enabled = false)
     public void testErrorMessages(Map<String, String> testData){
 
         String testCaseNo = testData.get("testCaseNo");
@@ -64,7 +48,7 @@ public class MyAccountTest extends BaseTest{
                                                             .format(actualErrorMessage, expectedMessage));
     }
 
-    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class, enabled = false)
+    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class)
     public void testPasswordStrengthValidation(Map<String, String> testData){
         String testCaseNo = testData.get("testCaseNo");
         String description = testData.get("description");
@@ -76,10 +60,10 @@ public class MyAccountTest extends BaseTest{
         MyAccountPage ap = new MyAccountPage(driver);
             ap.setPassword(password); //type a password
             String actualPasswordStrength = ap.getPasswordStrengthAttribute(); //get password strength
-            boolean actualPasswordValidatorPresence = ap.isPasswordValidatorPresent(actualPasswordStrength); //get info if pwd validator is displayed
+            boolean actualPasswordValidatorPresence = ap.isPasswordValidatorPresent(); //get info if pwd validator is displayed
             String actualRegisterButtonState = ap.isRegisterButtonEnabled(); // get button state
             ap.clearPasswordField(); //clear field
-            boolean actualPasswordValidatorAbsence = ap.isPasswordValidatorPresent(actualPasswordStrength);
+            boolean actualPasswordValidatorAbsence = ap.isPasswordValidatorPresent();
 
 
             soft.assertTrue(actualPasswordValidatorPresence, "The password validator is not displayed"); //verify that the password validator shows up
