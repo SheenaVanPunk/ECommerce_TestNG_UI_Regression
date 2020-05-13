@@ -1,8 +1,10 @@
 package testClasses;
+import classesUtilities.nadaEmailApiClasses.NadaEmailService;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import pageObjects.HomePage;
@@ -21,13 +23,14 @@ public class BaseTest {
     protected SoftAssert soft = new SoftAssert();
     protected static HomePage hp;
 
+
     public WebDriver getDriver() {
         return driver;
     }
 
-
-    @BeforeMethod(alwaysRun = true, description = "Initializing driver, launching the browser, opening home page and creating its instance")
     @Parameters({"url", "browser"})
+    @BeforeMethod(alwaysRun = true, description = "Initializing driver, launching the browser, opening home page and creating its instance")
+
     public HomePage initDriverAndGoToHomePage(String url, String browser) {
         try {
             BrowserFactory.getDriver(browser);

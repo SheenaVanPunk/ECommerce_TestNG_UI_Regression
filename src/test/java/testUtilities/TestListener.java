@@ -1,5 +1,6 @@
 package testUtilities;
 
+import classesUtilities.nadaEmailApiClasses.NadaEmailService;
 import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
@@ -7,6 +8,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import org.openqa.selenium.WebDriver;
 import org.testng.*;
 import testClasses.BaseTest;
+import testClasses.MyAccountTest;
 
 import java.io.IOException;
 
@@ -14,6 +16,7 @@ import java.io.IOException;
 public class TestListener extends BaseTest implements ITestListener {
     private static ExtentReports extent = ExtentReporterManager.createInstance();
     public static ThreadLocal<ExtentTest> extentParallel = new ThreadLocal<ExtentTest>();
+    protected NadaEmailService nada;
 
     private static String getTestMethodName(ITestResult iTestResult) {
         return iTestResult.getMethod().getConstructorOrMethod().getName();
