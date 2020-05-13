@@ -4,6 +4,7 @@ import classesUtilities.StepsLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import classesUtilities.Page;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MyAccountPage extends Page {
     private By registrationAndLoginSection = By.cssSelector("div.woocommerce");
@@ -40,6 +41,7 @@ public class MyAccountPage extends Page {
             type(emailField, email, "EMAIL FIELD");
             setPassword(password);
             clickOnRegisterButton();
+//            waitUntil(ExpectedConditions.);
         } else {
             new StepsLogger().error("The page isn't scrolled to the registration section.");
         }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Regression UI Suite" verbose="1" parallel="tests" thread-count="1">
-
+<suite name="Regression UI Suite" verbose="1" parallel="methods" thread-count="1">
+<!--    <suite name="Class1Suite" parallel="methods" group-by-instances="true" object-factory="testUtilities.ObjectFactory">-->
     <!--    <suite name="Regression UI Suite" verbose="1" parallel="methods" thread-count = "7">-->
     <listeners>
         <listener class-name="testUtilities.TestListener"/>
