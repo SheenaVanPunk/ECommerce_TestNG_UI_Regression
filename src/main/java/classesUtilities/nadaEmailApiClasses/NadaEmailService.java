@@ -10,6 +10,8 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class NadaEmailService {
     private static final String NADA_EMAIL_DOMAIN = "@getnada.com";
@@ -105,6 +107,13 @@ public class NadaEmailService {
                     .map(EmailInbox::getMessageId)
                     .map(this::getMessageById)
                     .orElseThrow(IllegalArgumentException::new);
+    }
+
+    public String getLinkFromValidationEmail(String emailSubjectLine){
+        String emailContent = getMessageWithSubjectStartsWith(emailSubjectLine).getEmailContent();
+        Matcher matcher = Pattern.compile("(<a [^>]+>)"+"Click here to reset your password"+"</a>").matcher(emailContent);
+        String aTag = matcher.group(1);
+        return aTag;
     }
 
 }

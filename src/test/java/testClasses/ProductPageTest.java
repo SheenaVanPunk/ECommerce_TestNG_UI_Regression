@@ -1,4 +1,4 @@
 package testClasses;
 
-public class ProductPageTest extends BaseTest{
+public class ProductPageTest extends BaseTest {
 }

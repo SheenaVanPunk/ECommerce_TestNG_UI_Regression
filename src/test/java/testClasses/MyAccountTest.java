@@ -13,14 +13,15 @@ import java.util.Map;
 import static org.testng.Assert.*;
 import static testUtilities.TestListener.extentParallel;
 
-public class MyAccountTest extends BaseTest{
+public class MyAccountTest extends BaseTest {
     private static NadaEmailService nada = new NadaEmailService();
+    private static String email;
 
     @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class,groups = "user registration tests")
     public void testSuccessfulRegistration(Map<String, String> testData) throws JsonProcessingException, InterruptedException {
         String testCaseNo = testData.get("testCaseNo");
         String username = nada.generateUsername();
-        String email = nada.getEmailId();
+        email = nada.getEmailId();
         String password = nada.generatePassword();
         String description = testData.get("description");
 
@@ -28,7 +29,7 @@ public class MyAccountTest extends BaseTest{
         extentParallel.get().info("Test Case no. " + testCaseNo + ": " + description);
 
         WordPressPage wp = ap.enterUserDataAndClickAButton(username, email, password);
-        Thread.sleep(4000);
+        Thread.sleep(5000);
         String emailContent = nada.getMessageWithSubjectStartsWith("Your ToolsQA Demo Site account has been created!").getEmailContent();
 
 
@@ -36,8 +37,6 @@ public class MyAccountTest extends BaseTest{
                 "up on the WordPress page.");
         soft.assertTrue(emailContent.contains("Thanks for creating an account on ToolsQA Demo Site. Your username is"));
         soft.assertTrue(emailContent.contains(username));
-        System.out.println(username);
-        System.out.println(emailContent);
 
         soft.assertAll();
     }
@@ -93,11 +92,21 @@ public class MyAccountTest extends BaseTest{
 
     }
 
-    @Test(groups = "user login tests", enabled = false)
+    @Test(groups = "user login tests" )
+//dependsOnMethods = "testSuccessfulRegistration"
+//@Parameters("url")
     public void testForgotPassword(){
+        this.email = "n4vbzzsqjx@getnada.com";
         MyAccountPage ap = new MyAccountPage(driver);
         ForgotPasswordPage fp = ap.clickOnForgotPassword();
-        fp.setUsername("DidonZenevjev87");
+        fp.sendPasswordReset(email);
+
+        String resetLinkFromValidationEmail = nada.getLinkFromValidationEmail("Password Reset Request for ToolsQA Demo Site");
+
+        soft.assertTrue(fp.getConfirmationMessageText().contains("Password reset email has been sent."));
+        soft.assertTrue(fp.getResetQueryStringFromEndpoint().contains("?reset-link-sent=true"));
+
+        soft.assertAll();
     }
     /*
     test cases for checking the email:
