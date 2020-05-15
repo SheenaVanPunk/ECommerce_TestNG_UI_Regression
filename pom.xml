@@ -107,6 +107,13 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.10</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup  html parser from json reponses-->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.13.1</version>
+        </dependency>
+
 
 
     </dependencies>

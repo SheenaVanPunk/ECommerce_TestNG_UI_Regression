@@ -12,6 +12,10 @@ public class ForgotPasswordPage extends Page {
     private By errorMessage = By.cssSelector("ul.woocommerce-error li");
     private By confirmationMessage = By.id("post-8");
 
+    private By newPasswordField = By.id("password_1");
+    private By repeatPasswordField = By.id("password_2");
+    private By saveButton = By.cssSelector("button[value='Save']");
+
     public ForgotPasswordPage(WebDriver driver) {
         super(driver);
     }
@@ -50,4 +54,16 @@ public class ForgotPasswordPage extends Page {
     }
 
 
+    public void setNewPassword(String password) {
+        type(newPasswordField, password, "NEW PASSWORD FIELD");
+    }
+
+    public void repeatNewPassword(String password) {
+        type(repeatPasswordField, password, "REPEAT PASSWORD FIELD");
+    }
+
+    public MyAccountPage saveNewPassword() {
+        clickOnElement(saveButton, "SAVE BUTTON");
+        return new MyAccountPage(driver);
+    }
 }
