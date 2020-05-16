@@ -13,7 +13,7 @@ public class BrowserFactory extends BaseTest {
     private static final String chromeDriverPath = "resources/chromedriver.exe";
     private static final String firefoxDriverPath = "resources/geckodriver.exe";
 
-    public static WebDriver getDriver (String browserType){
+    public WebDriver getDriver (String browserType){
         switch (browserType) {
             case "chrome" -> driver = initChromeDriver();
             case "firefox" -> driver = initFirefoxDriver();
@@ -25,7 +25,7 @@ public class BrowserFactory extends BaseTest {
         return driver;
     }
 
-    private static WebDriver initChromeDriver () {
+    private WebDriver initChromeDriver () {
         System.out.println("Launching a new instance of Google Chrome...");
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         System.setProperty("webdriver.chrome.silentOutput", "true");
@@ -33,7 +33,7 @@ public class BrowserFactory extends BaseTest {
         return driver;
     }
 
-    private static WebDriver initFirefoxDriver () {
+    private WebDriver initFirefoxDriver () {
         System.out.println("Launching a new instance of Firefox browser..");
         System.setProperty("webdriver.gecko.driver", firefoxDriverPath);
 

@@ -19,7 +19,7 @@ import java.util.Arrays;
 
 
 public class BaseTest {
-    protected static WebDriver driver;
+    protected WebDriver driver;
     protected SoftAssert soft = new SoftAssert();
     protected static HomePage hp;
 
@@ -33,7 +33,8 @@ public class BaseTest {
 
     public HomePage initDriverAndGoToHomePage(String url, String browser) {
         try {
-            BrowserFactory.getDriver(browser);
+            BrowserFactory factory = new BrowserFactory();
+            driver = factory.getDriver(browser);
         } catch (Exception e) {
             System.out.println("Error....." + Arrays.toString(e.getStackTrace()));
         }

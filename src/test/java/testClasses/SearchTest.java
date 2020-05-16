@@ -1,7 +1,5 @@
 package testClasses;
 
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.SearchPage;

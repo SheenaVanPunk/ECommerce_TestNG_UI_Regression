@@ -8,7 +8,6 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import org.openqa.selenium.WebDriver;
 import org.testng.*;
 import testClasses.BaseTest;
-import testClasses.MyAccountTest;
 
 import java.io.IOException;
 
@@ -47,6 +46,7 @@ public class TestListener extends BaseTest implements ITestListener {
                                             + " | "
                                             + getTestMethodName(result));
         extentParallel.set(test);
+
     }
 
     @Override

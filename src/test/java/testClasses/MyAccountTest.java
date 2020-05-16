@@ -1,5 +1,6 @@
 package testClasses;
 
+import classesUtilities.nadaEmailApiClasses.EmailMessage;
 import classesUtilities.nadaEmailApiClasses.NadaEmailService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.testng.annotations.Test;
@@ -8,36 +9,35 @@ import pageObjects.MyAccountPage;
 import pageObjects.WordPressPage;
 import testUtilities.CsvParser;
 
+import java.io.IOException;
 import java.util.Map;
 
 import static org.testng.Assert.*;
 import static testUtilities.TestListener.extentParallel;
 
-public class MyAccountTest extends BaseTest{
+public class MyAccountTest extends BaseTest {
     private static NadaEmailService nada = new NadaEmailService();
+    private String email = nada.getEmailId();
 
-    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class,groups = "user registration tests")
+    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class,groups = "user registration tests", enabled=false)
     public void testSuccessfulRegistration(Map<String, String> testData) throws JsonProcessingException, InterruptedException {
         String testCaseNo = testData.get("testCaseNo");
         String username = nada.generateUsername();
-        String email = nada.getEmailId();
-        String password = nada.generatePassword();
+        String password = nada.generateUserPassword();
         String description = testData.get("description");
 
         MyAccountPage ap = new MyAccountPage(driver);
         extentParallel.get().info("Test Case no. " + testCaseNo + ": " + description);
 
         WordPressPage wp = ap.enterUserDataAndClickAButton(username, email, password);
-        Thread.sleep(4000);
-        String emailContent = nada.getMessageWithSubjectStartsWith("Your ToolsQA Demo Site account has been created!").getEmailContent();
+        Thread.sleep(9000);
+        String emailContent = nada.getMessageForEmailWithSubjectStartsWith("Your ToolsQA Demo Site account has been created!", email).getEmailContent();
 
 
         soft.assertEquals(wp.getActualPageTitle(), wp.getExpectedPageTitle(), "Registration process has not end" +
                 "up on the WordPress page.");
         soft.assertTrue(emailContent.contains("Thanks for creating an account on ToolsQA Demo Site. Your username is"));
         soft.assertTrue(emailContent.contains(username));
-        System.out.println(username);
-        System.out.println(emailContent);
 
         soft.assertAll();
     }
@@ -57,6 +57,7 @@ public class MyAccountTest extends BaseTest{
         MyAccountPage ap = new MyAccountPage(driver);
         ap.enterUserDataAndClickAButton(username, email, password);
         String actualErrorMessage = ap.getErrorMessage();
+
         assertEquals(actualErrorMessage, expectedMessage, "The actual error message %s doesn't match expected %s"
                                                             .format(actualErrorMessage, expectedMessage));
     }
@@ -94,24 +95,50 @@ public class MyAccountTest extends BaseTest{
     }
 
     @Test(groups = "user login tests", enabled = false)
-    public void testForgotPassword(){
+            //dependsOnMethods = "testSuccessfulRegistration" )
+
+    public void testSendPasswordReset() throws InterruptedException, IOException {
         MyAccountPage ap = new MyAccountPage(driver);
         ForgotPasswordPage fp = ap.clickOnForgotPassword();
-        fp.setUsername("DidonZenevjev87");
+        fp.sendPasswordReset("1oe71nuwm0@getnada.com");
+
+        Thread.sleep(7000);
+        EmailMessage resetEmail = nada.getMessageForEmailWithSubjectStartsWith("Password Reset Request for ToolsQA Demo Site", "1oe71nuwm0@getnada.com");
+
+        soft.assertTrue(fp.getConfirmationMessageText().contains("Password reset email has been sent."));
+        soft.assertTrue(fp.getResetQueryStringFromEndpoint().contains("?reset-link-sent=true"));
+        soft.assertNotNull(resetEmail);
+
+        soft.assertAll();
+    }
+
+    @Test
+    public void testResetPasswordWithResetLink() throws IOException {
+        String newPassword = nada.generateUserPassword();
+
+        String resetLinkFromValidationEmail = nada.getLinkFromValidationEmail("Password Reset Request for ToolsQA Demo Site", "1oe71nuwm0@getnada.com");
+        getWindowManager().goToUrl(resetLinkFromValidationEmail); //click on a reset link
+        ForgotPasswordPage fp = new ForgotPasswordPage(driver);
+        fp.setNewPassword(newPassword);
+        fp.repeatNewPassword(newPassword);
+        MyAccountPage ap = fp.saveNewPassword();
+
+        assertTrue(ap.getErrorMessage().contains("Your password has been reset successfully."));
+        assertTrue(fp.getResetQueryStringFromEndpoint().contains("?password-reset=true"));
+    }
+
+    @Test(dataProvider = "csvParser", dataProviderClass = CsvParser.class)
+    public void testUnsuccessfulPasswordResetAttempts(Map<String, String> testData){
+        String invalidUserID = testData.get("invalidEmailOrUsername");
+        String expectedErrorMessage = testData.get("message");
+
+        MyAccountPage ap = new MyAccountPage(driver);
+        ForgotPasswordPage fp = ap.clickOnForgotPassword();
+        fp.sendPasswordReset(invalidUserID);
+
+        assertEquals(fp.getErrorMessage(), expectedErrorMessage, "A correct error message is not displayed.");
     }
     /*
-    test cases for checking the email:
-    1 - forgot password email "Password Reset Request"
-        - send the email
-        - fetch the email, confirm the title, username and click on the reset link
-
-        Hi Kokoska@34567,
-        Someone has requested a new password for the following account on ToolsQA Demo Site:
-        Username: Kokoska@34567
-        If you didn't make this request, just ignore this email. If you'd like to proceed:
-        Click here to reset your password
-        Thanks for reading.
-
 
     2 - new user registration
         - set ne user credentials

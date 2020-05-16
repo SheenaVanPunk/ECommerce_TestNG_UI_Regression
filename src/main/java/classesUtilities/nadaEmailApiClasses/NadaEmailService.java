@@ -6,12 +6,16 @@ import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 
-public class NadaEmailService {
+public class NadaEmailService{
     private static final String NADA_EMAIL_DOMAIN = "@getnada.com";
     private static final String INBOX_MESSAGE_KEY_NAME = "msgs";
     private static final String EMAIL_ID_ROUTE_PARAM = "email-id";
@@ -27,11 +31,12 @@ public class NadaEmailService {
     private String username;
     private String password;
 
+
     public String generateUsername(){
         this.username = RandomStringUtils.randomAlphanumeric(USERNAME_CHARS_LENGTH);
         return this.username;
     }
-    public String generatePassword(){
+    public String generateUserPassword(){
         this.password = RandomStringUtils.randomAlphanumeric(PASSWORD_CHARS_LENGTH);
         return this.password;
     }
@@ -55,26 +60,26 @@ public class NadaEmailService {
         this.emailId = null;
     }
 
-    public List<EmailInbox> getInbox(){
-        String msgs = null;
-        try {
-            msgs = Unirest.get(NADA_EMAIL_INBOX_API)
-                                 .routeParam(EMAIL_ID_ROUTE_PARAM, this.getEmailId())
-                                 .asJson()
-                                 .getBody()
-                                 .getObject()
-                                 .getJSONArray(INBOX_MESSAGE_KEY_NAME)
-                                 .toString();
-        } catch (UnirestException e) {
-            e.printStackTrace();
-        }
-        try {
-            return MAPPER.readValue(msgs, new TypeReference<List<EmailInbox>>() {});
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
+//    public List<EmailInbox> getInbox(){
+//        String msgs = null;
+//        try {
+//            msgs = Unirest.get(NADA_EMAIL_INBOX_API)
+//                                 .routeParam(EMAIL_ID_ROUTE_PARAM, this.getEmailId())
+//                                 .asJson()
+//                                 .getBody()
+//                                 .getObject()
+//                                 .getJSONArray(INBOX_MESSAGE_KEY_NAME)
+//                                 .toString();
+//        } catch (UnirestException e) {
+//            e.printStackTrace();
+//        }
+//        try {
+//            return MAPPER.readValue(msgs, new TypeReference<List<EmailInbox>>() {});
+//        } catch (JsonProcessingException e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+//    }
 
     public EmailMessage getMessageById(final String messageId) {
         String msgs = null;
@@ -96,15 +101,51 @@ public class NadaEmailService {
         return null;
     }
 
-    public EmailMessage getMessageWithSubjectStartsWith(final String subjectLine){
+//    public EmailMessage getMessageWithSubjectStartsWith(final String subjectLine){
+//        return this.getInbox()
+//                    .stream()
+//                    .filter(ie -> ie.getSubjectLine().startsWith(subjectLine))
+//                    .findFirst()
+//                    .map(EmailInbox::getMessageId)
+//                    .map(this::getMessageById)
+//                    .orElseThrow(IllegalArgumentException::new);
+//    }
 
-        return this.getInbox()
-                    .stream()
-                    .filter(ie -> ie.getSubjectLine().startsWith(subjectLine))
-                    .findFirst()
-                    .map(EmailInbox::getMessageId)
-                    .map(this::getMessageById)
-                    .orElseThrow(IllegalArgumentException::new);
+    public String getLinkFromValidationEmail(final String subjectLine, String email) throws IOException {
+        Document doc = Jsoup.parse(getMessageForEmailWithSubjectStartsWith(subjectLine, email).getEmailContent());
+        Element result = doc.select("a.link").first();
+        return result.attr("href");
+    }
+
+    public EmailMessage getMessageForEmailWithSubjectStartsWith(final String subjectLine, String email){
+        return this.getInboxForExistingEmail(email)
+                .stream()
+                .filter(ie -> ie.getSubjectLine().startsWith(subjectLine))
+                .findFirst()
+                .map(EmailInbox::getMessageId)
+                .map(this::getMessageById)
+                .orElseThrow(IllegalArgumentException::new);
+    }
+
+    public List<EmailInbox> getInboxForExistingEmail(String email){
+        String msgs = null;
+        try {
+            msgs = Unirest.get(NADA_EMAIL_INBOX_API)
+                    .routeParam(EMAIL_ID_ROUTE_PARAM, email)
+                    .asJson()
+                    .getBody()
+                    .getObject()
+                    .getJSONArray(INBOX_MESSAGE_KEY_NAME)
+                    .toString();
+        } catch (UnirestException e) {
+            e.printStackTrace();
+        }
+        try {
+            return MAPPER.readValue(msgs, new TypeReference<List<EmailInbox>>() {});
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }
