@@ -4,8 +4,6 @@ import classesUtilities.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.util.List;
-
 public class ForgotPasswordPage extends Page {
     private By inputField = By.id("user_login");
     private By resetPasswordButton = By.cssSelector("button[value = 'Reset password']");
@@ -28,7 +26,7 @@ public class ForgotPasswordPage extends Page {
         if (getPageFromUrlEndpoint().equals("lost-password")) {
             setUsername(username);
             clickOnElement(resetPasswordButton, "RESET PASSWORD BUTTON");
-        }else{
+        } else {
             log.error("Currently not on reset password page.");
         }
     }
@@ -37,17 +35,29 @@ public class ForgotPasswordPage extends Page {
         return getWebElementText(errorMessage, "ERROR MESSAGE");
     }
 
-    private List<String> parseUrlToStrings() {
-        return List.of(driver.getCurrentUrl().split("/"));
+    private String[] parseUrlToStrings() {
+        return driver.getCurrentUrl().split("/");
     }
 
     public String getPageFromUrlEndpoint() {
-        return parseUrlToStrings().get(4);
+        int lastIndex = parseUrlToStrings().length-1;
+       String page = parseUrlToStrings()[lastIndex];
+       if(page.startsWith("?")){
+           page = parseUrlToStrings()[lastIndex-1];
+       }
+       return page;
     }
 
-    public String getResetQueryStringFromEndpoint(){
-        return parseUrlToStrings().get(5);
+    public String getResetQueryStringFromEndpoint() {
+        for (String urlString : parseUrlToStrings()) {
+            if (urlString.contains("?")) {
+                return urlString;
+            }
+        }
+        return null;
     }
+
+
 
     public String getConfirmationMessageText() {
         return getWebElementText(confirmationMessage, "CONFIRMATION MESSAGE");

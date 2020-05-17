@@ -56,7 +56,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">Monday, May 11, 2020, 09:44 PM (EDT)</span>
+                    <span class="badge badge-primary">Sunday, May 17, 2020, 12:48 AM (EDT)</span>
                 </a>
             </li>
         </ul>
@@ -72,15 +72,7 @@
           <span class="title">Tests</span>
         </a>
       </li>
-            <li class="nav-item dropdown" onclick="toggleView('exception-view')">
-        <a id="nav-ex" class="dropdown-toggle" href="exception.html">
-          <span class="icon-holder">
-            <i class="fa fa-bug"></i>
-          </span>
-          <span class="title">Exception</span>
-        </a>
-      </li>
-      <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+            <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
         <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
           <span class="icon-holder">
             <i class="fa fa-bar-chart"></i>
@@ -108,8 +100,8 @@
 					<i class="fa fa-exclamation-circle"></i>
 					</a>
 					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+						<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success pull-right"></span></a>
 						
-						<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
 						
 						
 						
@@ -122,28 +114,28 @@
 		</div>
 		<div class="test-list-wrapper scrollable">
 			<ul class="test-list-item">
-				<li class="test-item"  status="fail" test-id="1"
+				<li class="test-item"  status="pass" test-id="1"
 					author=""
 					tag=""
 					device="">
-					<div class="status-avatar fail-bg">
-						<i class="fa fa-times text-white"></i>
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">MyAccountTest | testForgotPassword</p>
-							<p class="duration text-sm">0h 0m 12s+499ms</p>
-							<span class="datetime">21:44:38 PM</span>
+							<p class="name">MyAccountTest | testSuccessfulRegistration</p>
+							<p class="duration text-sm">0h 0m 8s+992ms</p>
+							<span class="datetime">00:49:08 AM</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-fail">MyAccountTest | testForgotPassword</h5>
-									<span class='badge badge-success'>05.11.2020 21:44:38</span>
-									<span class='badge badge-danger'>05.11.2020 21:44:51</span>
-									<span class='badge badge-default'>0h 0m 12s+499ms</span>
+									<h5 class="test-status text-pass">MyAccountTest | testSuccessfulRegistration</h5>
+									<span class='badge badge-success'>05.17.2020 00:49:08</span>
+									<span class='badge badge-danger'>05.17.2020 00:49:17</span>
+									<span class='badge badge-default'>0h 0m 8s+992ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -159,76 +151,31 @@
 	</tr></thead>
 	<tbody>
 			<tr class="event-row">
-				<td><i class="fa fa-times text-fail"></i></td>
-				<td>9:44:51 PM</td>
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:49:08 AM</td>
 				<td>
-						Screenshot taken:
-						<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Nena\IdeaProjects\E-CommerceUIRegression\resources\failedTestScreenshots\2020-05-11\MyAccountTest\testForgotPassword.png' src='C:\Users\Nena\IdeaProjects\E-CommerceUIRegression\resources\failedTestScreenshots\2020-05-11\MyAccountTest\testForgotPassword.png'>
+						Test Case no. 1: Valid user data
 				</td>
 			</tr>
 			<tr class="event-row">
-				<td><i class="fa fa-times text-fail"></i></td>
-				<td>9:44:51 PM</td>
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:49:11 AM</td>
 				<td>
-						<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#user_login"}
-  (Session info: chrome=81.0.4044.138)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NENA', ip: '192.168.44.185', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: C:\Users\Nena\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:54802}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 10173f9f6918f6cd1faef87c29e3cdb5
-*** Element info: {Using=id, value=user_login}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at classesUtilities.Page.type(Page.java:76)
-	at pageObjects.ForgotPasswordPage.setUsername(ForgotPasswordPage.java:15)
-	at testClasses.MyAccountTest.testForgotPassword(MyAccountTest.java:89)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-	at org.testng.TestRunner.privateRun(TestRunner.java:766)
-	at org.testng.TestRunner.run(TestRunner.java:587)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-</textarea>
+						Submitted new user credentials: smLl8gwL uugnfb0aw6@getnada.com Kxk7wr3sPLQvl
 				</td>
 			</tr>
 			<tr class="event-row">
-				<td><i class="fa fa-times text-fail"></i></td>
-				<td>9:44:51 PM</td>
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:49:17 AM</td>
 				<td>
-						<span class='badge white-text red'>FAILED</span>
+						Fetched the validation email with subject "Your ToolsQA Demo Site account has been created!"
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:49:17 AM</td>
+				<td>
+						<span class='badge white-text green'>PASSED</span>
 				</td>
 			</tr>
 	</tbody>
@@ -236,76 +183,225 @@ Session ID: 10173f9f6918f6cd1faef87c29e3cdb5
 </div>
 					</div>
 				</li>
-			</ul>
-		</div>
-	</div>
-	<div class="test-content scrollable">
-		<div class="test-content-tools">
-			<ul>
-				<li>
-					<a class="back-to-test" href="javascript:void(0)">
-					<i class="fa fa-arrow-left"></i>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="test-content-detail">
-			<div class="detail-body"></div>
-		</div>
-	</div>
-</div><div class="test-wrapper row exception-view attributes-view">
-	<div class="test-list">
-		<div class="test-list-tools">
-			<ul class="tools pull-left">
-				<li>
-					<a href="">
-					<span class="font-size-14">Exception</span>
-					</a>
-				</li>
-			</ul>
-			<ul class="tools text-right">
-				<li>
-					<a href="#">
-					<span class="badge badge-primary">1</span>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="test-list-wrapper scrollable">
-			<ul class="test-list-item">
-				<li class="test-item">
+				<li class="test-item"  status="pass" test-id="2"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">org.openqa.selenium.NoSuchElementException</p>
-							<p class="duration text-sm">1 tests</p>
+							<p class="name">MyAccountTest | testSendPasswordReset</p>
+							<p class="duration text-sm">0h 0m 13s+536ms</p>
+							<span class="datetime">00:49:28 AM</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
-						<div class="info">
-							<h4>org.openqa.selenium.NoSuchElementException</h4>
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">MyAccountTest | testSendPasswordReset</h5>
+									<span class='badge badge-success'>05.17.2020 00:49:28</span>
+									<span class='badge badge-danger'>05.17.2020 00:49:42</span>
+									<span class='badge badge-default'>0h 0m 13s+536ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
 						</div>
-						<table class='table table-sm mt-4'>
-							<thead>
-								<tr>
-									<th class="status-col">Status</th>
-									<th class="timestamp-col">Timestamp</th>
-									<th>TestName</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										<div class='status-avatar fail-bg'>
-											<i class="fa fa-times text-white"></i>
-										</div>
-									</td>
-									<td>21:44:38 PM</td>
-									<td class='linked' test-id='1'>
-										MyAccountTest | testForgotPassword
-									</td>
-								</tr>
-							</tbody>
-						</table>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:49:29 AM</td>
+				<td>
+						Scrolled to the login section and clicked on LOST YOUR PASSWORD link
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:49:31 AM</td>
+				<td>
+						Entered the registered email address uugnfb0aw6@getnada.com and sent a password reset e-mail
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:49:42 AM</td>
+				<td>
+						Fetched the password reset email.
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:49:42 AM</td>
+				<td>
+						<span class='badge white-text green'>PASSED</span>
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="3"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">MyAccountTest | testSuccessfulLogin</p>
+							<p class="duration text-sm">0h 0m 1s+667ms</p>
+							<span class="datetime">00:49:54 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">MyAccountTest | testSuccessfulLogin</h5>
+									<span class='badge badge-success'>05.17.2020 00:49:54</span>
+									<span class='badge badge-danger'>05.17.2020 00:49:56</span>
+									<span class='badge badge-default'>0h 0m 1s+667ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:49:54 AM</td>
+				<td>
+						Entered username smLl8gwL
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:49:54 AM</td>
+				<td>
+						Entered password Kxk7wr3sPLQvl
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:49:56 AM</td>
+				<td>
+						Clicked on the login button
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:49:56 AM</td>
+				<td>
+						<span class='badge white-text green'>PASSED</span>
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="4"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">MyAccountTest | testSuccessfulPasswordResetWithResetLink</p>
+							<p class="duration text-sm">0h 0m 8s+965ms</p>
+							<span class="datetime">00:50:08 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">MyAccountTest | testSuccessfulPasswordResetWithResetLink</h5>
+									<span class='badge badge-success'>05.17.2020 00:50:08</span>
+									<span class='badge badge-danger'>05.17.2020 00:50:17</span>
+									<span class='badge badge-default'>0h 0m 8s+965ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:50:13 AM</td>
+				<td>
+						Fetched the reset link from received e-mail: http://shop.demoqa.com/my-account/lost-password/?key=8IC0AHufCLqF0TOIfMtN&id=3740
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:50:15 AM</td>
+				<td>
+						Opened the reset link in a browser.
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:50:15 AM</td>
+				<td>
+						Entered new password for the 1st time: r4wsbiKg38WLP
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:50:16 AM</td>
+				<td>
+						Repeated new password.
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:50:17 AM</td>
+				<td>
+						Saved new password.
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:50:17 AM</td>
+				<td>
+						<span class='badge white-text green'>PASSED</span>
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
 					</div>
 				</li>
 			</ul>
@@ -339,12 +435,12 @@ Session ID: 10173f9f6918f6cd1faef87c29e3cdb5
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='0%'>
-						<b>0</b> class passed
+					<div><small data-tooltip='100%'>
+						<b>4</b> class passed
 						</small>
 					</div>
 					<div>
-						<small data-tooltip='100%'><b>1</b> class failed, 
+						<small data-tooltip='0%'><b>0</b> class failed, 
 						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
@@ -362,10 +458,10 @@ Session ID: 10173f9f6918f6cd1faef87c29e3cdb5
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
+					<div><small data-tooltip='22.222%'><b>4</b> events passed</small></div>
 					<div>
-						<small data-tooltip='100%'><b>3</b> events failed, 
-						<b data-tooltip='0%'>0</b> others
+						<small data-tooltip='0%'><b>0</b> events failed, 
+						<b data-tooltip='77.778%'>14</b> others
 						</small>
 					</div>
 				</div>
@@ -379,10 +475,10 @@ Session ID: 10173f9f6918f6cd1faef87c29e3cdb5
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Class</h6>
-							<h2 class="font-size-28 font-weight-light mt-3">1</h2>
+							<h2 class="font-size-28 font-weight-light mt-3">4</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-							<span>.00%</span>
+							<span>100.00%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -398,7 +494,7 @@ Session ID: 10173f9f6918f6cd1faef87c29e3cdb5
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Start</h6>
-							<h4 class="font-weight-light mt-4">Monday, May 11, 2020, 09:44 PM (EDT)</h4>
+							<h4 class="font-weight-light mt-4">Sunday, May 17, 2020, 12:48 AM (EDT)</h4>
 							<span class="text-semibold text-success font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -414,7 +510,7 @@ Session ID: 10173f9f6918f6cd1faef87c29e3cdb5
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Duration</h6>
-							<h4 class="font-weight-light mt-4">0h 0m 26s+335ms</h4>
+							<h4 class="font-weight-light mt-4">0h 1m 23s+168ms</h4>
 							<span class="text-semibold font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -471,14 +567,14 @@ Session ID: 10173f9f6918f6cd1faef87c29e3cdb5
 </div>
 <script>
 	var statusGroup = {
-	    parentCount: 1,
-		passParent: 0,
-		failParent: 1,
+	    parentCount: 4,
+		passParent: 4,
+		failParent: 0,
 		fatalParent: 0,
 		errorParent: 0,
 		warningParent: 0,
 		skipParent: 0,
-		exceptionsParent: 1,
+		exceptionsParent: 0,
 		childCount: 0,
 		passChild: 0,
 		failChild: 0,
@@ -499,21 +595,21 @@ Session ID: 10173f9f6918f6cd1faef87c29e3cdb5
 		infoGrandChild: 0,
 		debugGrandChild: 0,
 		exceptionsGrandChild: 0,
-		eventsCount: 3,
-		passEvents: 0,
-		failEvents: 3,
+		eventsCount: 18,
+		passEvents: 4,
+		failEvents: 0,
 		fatalEvents: 0,
 		errorEvents: 0,
 		warningEvents: 0,
 		skipEvents: 0,
-		infoEvents: 0,
+		infoEvents: 14,
 		debugEvents: 0,
 		exceptionsEvents: 0
 	};
 </script>
 <script>
 	var timeline = {
-	        "MyAccountTest | testForgotPassword":12.499
+	        "MyAccountTest | testSuccessfulRegistration":8.992,"MyAccountTest | testSendPasswordReset":13.536,"MyAccountTest | testSuccessfulLogin":1.667,"MyAccountTest | testSuccessfulPasswordResetWithResetLink":8.965
 	};
 </script>
                 </div>

@@ -1,20 +1,20 @@
 package testClasses;
-import classesUtilities.nadaEmailApiClasses.NadaEmailService;
+
+import classesUtilities.WindowManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.testng.ITestContext;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 import pageObjects.HomePage;
-import classesUtilities.WindowManager;
 import testUtilities.BrowserFactory;
 
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
-
 import java.util.Arrays;
 
 
@@ -27,6 +27,7 @@ public class BaseTest {
     public WebDriver getDriver() {
         return driver;
     }
+
 
     @Parameters({"url", "browser"})
     @BeforeMethod(alwaysRun = true, description = "Initializing driver, launching the browser, opening home page and creating its instance")
@@ -57,11 +58,11 @@ public class BaseTest {
     }
 
     public String getScreenshotPath(String testCaseName, String testClassName, WebDriver driver) {
-        String screenshotFolderPath = "\\resources\\failedTestScreenshots\\"+ LocalDate.now() +"\\" + testClassName + "\\";
+        String screenshotFolderPath = "\\resources\\failedTestScreenshots\\" + LocalDate.now() + "\\" + testClassName + "\\";
         try {
             File file = new File(screenshotFolderPath);
-            if(!file.exists())
-            System.out.println("New folder for storing screenshots created " + file);
+            if (!file.exists())
+                System.out.println("New folder for storing screenshots created " + file);
             file.mkdir();
         } catch (Exception e) {
             e.printStackTrace();

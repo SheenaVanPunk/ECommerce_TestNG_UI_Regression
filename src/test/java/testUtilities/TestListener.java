@@ -1,12 +1,16 @@
 package testUtilities;
 
-import classesUtilities.nadaEmailApiClasses.NadaEmailService;
-import com.aventstack.extentreports.*;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import org.openqa.selenium.WebDriver;
-import org.testng.*;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
 import testClasses.BaseTest;
 
 import java.io.IOException;
@@ -15,7 +19,7 @@ import java.io.IOException;
 public class TestListener extends BaseTest implements ITestListener {
     private static ExtentReports extent = ExtentReporterManager.createInstance();
     public static ThreadLocal<ExtentTest> extentParallel = new ThreadLocal<ExtentTest>();
-    protected NadaEmailService nada;
+
 
     private static String getTestMethodName(ITestResult iTestResult) {
         return iTestResult.getMethod().getConstructorOrMethod().getName();
@@ -46,7 +50,6 @@ public class TestListener extends BaseTest implements ITestListener {
                                             + " | "
                                             + getTestMethodName(result));
         extentParallel.set(test);
-
     }
 
     @Override
@@ -71,7 +74,7 @@ public class TestListener extends BaseTest implements ITestListener {
         } catch (IOException e) {
             extentParallel.get().fail("Test failed, cannot attach screenshot.");
         }
-        extentParallel.get().log(Status.FAIL, result.getThrowable());
+        extentParallel.get().error(result.getThrowable());
         System.out.println("*** Test execution " + result.getMethod().getMethodName() + " failed...");
         Markup stylizedStatus = MarkupHelper.createLabel("FAILED", ExtentColor.RED);
         extentParallel.get().log(Status.FAIL, stylizedStatus);
