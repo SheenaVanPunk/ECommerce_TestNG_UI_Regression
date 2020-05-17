@@ -2,25 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5b8cafb-861e-40e1-ba6f-d76fa3a00295" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/testData/MyAccountTest_testUnsuccessfulPasswordResetAttemps.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-14/MyAccountTest/testSuccessfulRegistration.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-14/MyAccountTest/testSuccessfulRegistration.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-14/Test Report_2020-05-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-14/Test Report_2020-05-14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-11/MyAccountTest/testErrorMessages.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-11/MyAccountTest/testForgotPassword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-11/MyAccountTest/testSuccessfulRegistration.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-11/Test Report_2020-05-11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-12/MyAccountTest/testPasswordStrengthValidation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-12/Test Report_2020-05-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-13/MyAccountTest/testForgotPassword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-13/MyAccountTest/testSuccessfulRegistration.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-13/Test Report_2020-05-13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-14/MyAccountTest/testForgotPassword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-14/MyAccountTest/testSendPasswordReset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-14/MyAccountTest/testSuccessfulRegistration.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-14/Test Report_2020-05-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/testData/MyAccountPage_testForgotPassword.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/testData/MyAccountTest_testLoginErrorMessages.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/testData/MyAccountTest_testLoginErrorMessages.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/testData/MyAccountTest_testRegistrationErrorMessages.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/testData/MyAccountTest_testRegistrationErrorMessages.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/testData/MyAccountTest_testSuccessfulRegistration.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/testData/MyAccountTest_testUnsuccessfulPasswordResetAttemps.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/testData/MyAccountTest_testUnsuccessfulPasswordResetAttemps.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/classesUtilities/nadaEmailApiClasses/NadaEmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/nadaEmailApiClasses/NadaEmailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ForgotPasswordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ForgotPasswordPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/E-CommerceUIRegression.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/TestListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/classesUtilities/nadaEmailApiClasses/NadaEmailService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classesUtilities/nadaEmailApiClasses/NadaEmailService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/classesUtilities/nadaEmailApiClasses/NadaEmailService$2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/classesUtilities/nadaEmailApiClasses/NadaEmailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classesUtilities/nadaEmailApiClasses/NadaEmailService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/ForgotPasswordPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ForgotPasswordPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/E-CommerceUIRegression.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/MyAccountPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/MyAccountPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/MyAccountTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/MyAccountTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -43,7 +64,12 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AaronTraining" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
   </component>
   <component name="RunManager">
     <configuration name="C:/Users/Nena/IdeaProjects/E-CommerceUIRegression/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
@@ -76,9 +102,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2610" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1589488210592">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="491" y="192" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1589679853561">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="491" y="192" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1589679853561" />
     <state x="2610" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589488210592" />
     <state x="2685" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1589341957223">
       <screen x="1920" y="0" width="1920" height="1040" />
@@ -89,71 +116,117 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2492" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589346334918" />
-    <state width="1877" height="328" key="GridCell.Tab.0.bottom" timestamp="1589500864628">
+    <state x="2637" y="379" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1589659646161">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="2637" y="379" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589659646161" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1589683733095">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1589683733095" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1589690643592">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589690643592" />
+    <state width="1323" height="212" key="GridCell.Tab.0.bottom" timestamp="1589690475890">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="212" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589690475890" />
     <state width="1877" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="328" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589500864628" />
-    <state width="1877" height="328" key="GridCell.Tab.0.center" timestamp="1589500864628">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663849271" />
+    <state width="1323" height="212" key="GridCell.Tab.0.center" timestamp="1589690475889">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="212" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589690475889" />
     <state width="1877" height="346" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="328" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589500864628" />
-    <state width="1877" height="328" key="GridCell.Tab.0.left" timestamp="1589500864627">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="294" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663849271" />
+    <state width="1323" height="212" key="GridCell.Tab.0.left" timestamp="1589690475889">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="212" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589690475889" />
     <state width="1877" height="346" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="328" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589500864627" />
-    <state width="1877" height="328" key="GridCell.Tab.0.right" timestamp="1589500864628">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="294" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663849271" />
+    <state width="1323" height="212" key="GridCell.Tab.0.right" timestamp="1589690475890">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="212" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589690475890" />
     <state width="1877" height="346" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="328" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589500864628" />
-    <state width="1877" height="328" key="GridCell.Tab.1.bottom" timestamp="1589500879183">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="294" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663849271" />
+    <state width="1323" height="212" key="GridCell.Tab.1.bottom" timestamp="1589690475645">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="212" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589690475645" />
     <state width="1877" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="328" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589500879183" />
-    <state width="1877" height="328" key="GridCell.Tab.1.center" timestamp="1589500879183">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="294" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663818463" />
+    <state width="1323" height="212" key="GridCell.Tab.1.center" timestamp="1589690475645">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="212" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589690475645" />
     <state width="1877" height="346" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="328" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589500879183" />
-    <state width="1877" height="328" key="GridCell.Tab.1.left" timestamp="1589500879183">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="294" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663818463" />
+    <state width="1323" height="212" key="GridCell.Tab.1.left" timestamp="1589690475645">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="212" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589690475645" />
     <state width="1877" height="346" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="328" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589500879183" />
-    <state width="1877" height="328" key="GridCell.Tab.1.right" timestamp="1589500879183">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="294" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663818462" />
+    <state width="1323" height="212" key="GridCell.Tab.1.right" timestamp="1589690475645">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="212" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589690475645" />
     <state width="1877" height="346" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="328" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589500879183" />
-    <state x="2381" y="164" key="SettingsEditor" timestamp="1589394880091">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="294" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663818463" />
+    <state x="326" y="0" key="SettingsEditor" timestamp="1589682376860">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="326" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589682376860" />
     <state x="2381" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589394880091" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1589489847983">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589489847983" />
-    <state x="2586" y="267" key="refactoring.ChangeSignatureDialog" timestamp="1589503244228">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="474" y="187" key="refactoring.ChangeSignatureDialog" timestamp="1589674318475">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="474" y="187" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1589674318475" />
     <state x="2586" y="267" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589503244228" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1589682574038">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1589682574038" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/ForgotPasswordPage.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/pageObjects/ForgotPasswordPage.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="34" />
+          <line>51</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/ForgotPasswordPage.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/ForgotPasswordPage.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPage.java</url>
+          <line>126</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
