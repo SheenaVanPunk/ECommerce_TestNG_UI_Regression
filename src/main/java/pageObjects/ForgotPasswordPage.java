@@ -13,6 +13,7 @@ public class ForgotPasswordPage extends Page {
     private By newPasswordField = By.id("password_1");
     private By repeatPasswordField = By.id("password_2");
     private By saveButton = By.cssSelector("button[value='Save']");
+    private By errorMessageLine = By.id("primary");
 
     public ForgotPasswordPage(WebDriver driver) {
         super(driver);
@@ -32,6 +33,7 @@ public class ForgotPasswordPage extends Page {
     }
 
     public String getErrorMessage() {
+        scrollUntilElement(getWebElement(errorMessageLine, "ERROR MESSAGE START"));
         return getWebElementText(errorMessage, "ERROR MESSAGE");
     }
 

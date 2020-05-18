@@ -24,6 +24,7 @@ public class MyAccountPage extends Page {
     private By usernameFieldLogin = By.id("username");
     private By usernameOnDashboard = By.cssSelector("strong");
     private By dashboardLinks = By.cssSelector("nav a");
+    private By errorMessageFrame = By.id("primary");
 
     private By forgotPasswordLink = By.cssSelector("p.lost_password a");
 
@@ -79,6 +80,7 @@ public class MyAccountPage extends Page {
     }
 
     public String getErrorMessage(){
+        scrollUntilElement(getWebElement(errorMessageFrame, "ERROR MESSAGE"));
         return getWebElementText(errorMessage, "ERROR MESSAGE");
     }
 

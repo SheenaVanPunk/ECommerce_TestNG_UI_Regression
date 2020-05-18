@@ -24,10 +24,15 @@ public class Page {
         try {
             waitForThePresenceOfElementInDom(locator);
             element = driver.findElement(locator);
+            if (driver instanceof JavascriptExecutor) {
+                ((JavascriptExecutor) driver)
+                        .executeScript("arguments[0].style.border='5px solid red'", element);
+            }
         } catch (StaleElementReferenceException e) {
             log.error("Element " + elementName + "cannot be located on the page.");
             e.printStackTrace();
         }
+
         return element;
     }
 
