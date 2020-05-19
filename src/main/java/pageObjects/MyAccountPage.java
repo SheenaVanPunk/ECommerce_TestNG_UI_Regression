@@ -1,69 +1,62 @@
 package pageObjects;
 
 import classesUtilities.Page;
-import classesUtilities.StepsLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class MyAccountPage extends Page {
-    private By registrationAndLoginSection = By.cssSelector("div.woocommerce");
-    private By usernameFieldRegistration = By.id("reg_username");
+
+    private static final String usernameField_FORMAT = "%susername";
+    private static final String passwordField_FORMAT = "%spassword";
     private By emailFieldRegistration = By.id("reg_email");
-    private By passwordFieldRegistration = By.id("reg_password");
-    private String buttonLoc = "button[name='%s']";
+    private String button_FORMAT = "button[name='%s']";
     private By errorMessage = By.cssSelector("ul.woocommerce-error li");
     private By validationMessage = By.cssSelector("div[role='alert']");
     private By passwordValidation = By.cssSelector("div.woocommerce-password-strength");
     private By passwordValidatorHint = By.cssSelector("small.woocommerce-password-hint");
-    private By passwordFieldLogin = By.id("password");
-    private By usernameFieldLogin = By.id("username");
-    private By usernameOnDashboard = By.cssSelector("strong");
-    private By dashboardLinks = By.cssSelector("nav a");
     private By errorMessageFrame = By.id("primary");
-
     private By forgotPasswordLink = By.cssSelector("p.lost_password a");
-
+    private By rememberMeCheckbox = By.id("rememberme");
 
     public MyAccountPage(WebDriver driver) {
         super(driver);
     }
 
-    public void clickOnButton(String type){
-        // type: register or login
-        clickOnElement(By.cssSelector(String.format(buttonLoc, type)), "REGISTER BUTTON", 3);
+    public void clickOnButton(String buttonType){
+       clickOnElement(By.cssSelector(String.format(button_FORMAT, buttonType)), buttonType.toUpperCase()+" BUTTON", 3);
     }
 
-    public void setPasswordForRegistration(String password){
-        type(passwordFieldRegistration, password, "PASSWORD FIELD");
-    }
-
-    public void setLoginUserName(String username){
-        type(usernameFieldLogin, username, "LOGIN USERNAME FIELD");
-    }
-
-    public void setLoginPassword(String password){
-        type(passwordFieldLogin, password, "LOGIN PASSWORD FIELD");
-    }
-
-    public WordPressPage enterUserDataAndClickAButton(String username, String email, String password) {
+    //log in user
+    public DashboardPage enterUserDataAndClickLoginButton(String email, String password) {
         if (driver.getTitle().contains("My Account")) {
-            scrollUntilElement(getWebElement(registrationAndLoginSection, "REGISTRATION SECTION"));
+            scrollUntilElement(getWebElement(errorMessageFrame, "LOGIN SECTION"));
         }
 
-        if (driver.findElement(usernameFieldRegistration).isDisplayed()) {
-            type(usernameFieldRegistration, username, "USERNAME FIELD");
+        By usernameField = By.id(String.format(usernameField_FORMAT, ""));
+        By passwordField = By.id(String.format(passwordField_FORMAT, ""));
+        if (driver.findElement(usernameField).isDisplayed()) {
+            type(usernameField, email, "EMAIL FIELD");
+            type(passwordField, password, "PASSWORD FIELD");
+            clickOnButton("login");
+        }
+        return new DashboardPage(driver);
+    }
+
+    //register user
+    public WordPressPage enterUserDataAndClickLoginButton(String username, String email, String password) {
+        if (driver.getTitle().contains("My Account")) {
+            scrollUntilElement(getWebElement(errorMessageFrame, "REGISTRATION SECTION"));
+        }
+        String authType = "reg_";
+        By usernameField = By.id(String.format(usernameField_FORMAT, authType));
+        By passwordField = By.id(String.format(passwordField_FORMAT, authType));
+        if (driver.findElement(usernameField).isDisplayed()) {
+            type(usernameField, username, "USERNAME FIELD");
             type(emailFieldRegistration, email, "EMAIL FIELD");
-            setPasswordForRegistration(password);
+            type(passwordField, password, "PASSWORD FIELD");
             clickOnButton("register");
-        } else {
-            new StepsLogger().error("The page isn't scrolled to the registration section.");
         }
-
         return new WordPressPage(driver);
     }
 
@@ -74,10 +67,10 @@ public class MyAccountPage extends Page {
             throw new StaleElementReferenceException("The password validator is not displayed.");
         }
     }
-
-    public boolean checkIfPasswordIsValidated(String passwordStrength){
-        return passwordStrength != "short" || passwordStrength != "bad" ? true : false;
-    }
+//    this method is not in use at the moment
+//    public boolean checkIfPasswordIsValidated(String passwordStrength){
+//        return passwordStrength != "short" || passwordStrength != "bad" ? true : false;
+//    }
 
     public String getErrorMessage(){
         scrollUntilElement(getWebElement(errorMessageFrame, "ERROR MESSAGE"));
@@ -89,49 +82,67 @@ public class MyAccountPage extends Page {
     }
 
     public boolean isPasswordValidatorPresent() {
-        if(driver.findElement(passwordValidation).getText().contains("")) {
-            return isElementDisplayed(passwordValidation, "PASSWORD VALIDATOR", 2);
-        }else{
-            System.out.println("The password field is not empty.");
-        }
-        return true;
+        getWebElement(passwordValidation, "PASSWORD VALIDATOR");
+        return isElementDisplayed(passwordValidation, "PASSWORD VALIDATOR", 2);
     }
 
     public String isButtonEnabled(String type) {
-        var registerButton = getWebElement(By.cssSelector(String.format(buttonLoc, type)), "REGISTER BUTTON");
-        return registerButton.isEnabled() ? "enabled" : "disabled";
+        var button = getWebElement(By.cssSelector(String.format(button_FORMAT, type)), type.toUpperCase() + " BUTTON");
+        return button.isEnabled() ? "enabled" : "disabled";
     }
 
     public void clearPasswordField() {
-        clearField(passwordFieldRegistration, "PASSWORD FIELD");
+        clearField(By.id(String.format(passwordField_FORMAT,"reg_")), "PASSWORD FIELD");
     }
 
     public ForgotPasswordPage clickOnForgotPassword(){
-        scrollUntilElement(getWebElement(usernameFieldLogin, "LOST YOUR PASSWORD LINK"));
+        By usernameField = By.id(String.format(usernameField_FORMAT, ""));
+        scrollUntilElement(getWebElement(usernameField, "LOST YOUR PASSWORD LINK"));
         clickOnElement(forgotPasswordLink, "LOST YOUR PASSWORD LINK");
         return new ForgotPasswordPage(driver);
     }
 
-    public String getUsernameAfterLogin(){
-        return getWebElementText(usernameOnDashboard, "USERNAME");
+
+    public void setPasswordForRegistration(String password) {
+        type(By.id(String.format(passwordField_FORMAT, "reg_")), password, "PASSWORD FIELD");
     }
 
-    private List<WebElement> getDashboardLinks(){
-        return driver.findElements(dashboardLinks);
+    public boolean clickOnCheckbox(){
+        clickOnElement(rememberMeCheckbox, "REMEMBER ME CHECKBOX");
+        return driver.findElement(rememberMeCheckbox).isSelected();
     }
 
-    public int countDashboardLinks(){
-       return getDashboardLinks().size();
-    }
 
-    public List<String> getDashboardLinksNames(){
-
-        for (WebElement link : getDashboardLinks()){
-            return Arrays.asList(link.getText());
+    public void enterEmailAndPassword(String email, String password) {
+        if (driver.getTitle().contains("My Account")) {
+            scrollUntilElement(getWebElement(errorMessageFrame, "LOGIN SECTION"));
         }
-        return null;
+
+        By usernameField = By.id(String.format(usernameField_FORMAT, ""));
+        By passwordField = By.id(String.format(passwordField_FORMAT, ""));
+        if (driver.findElement(usernameField).isDisplayed()) {
+            type(usernameField, email, "EMAIL FIELD");
+            type(passwordField, password, "PASSWORD FIELD");
+        }
+    }
+
+    public String getUsernameFromField() {
+        scrollUntilElement(driver.findElement(errorMessageFrame));
+        return getWebElement(By.id(String.format(usernameField_FORMAT,"")), "USERNAME FIELD LOGIN")
+                .getAttribute("value");
+    }
+
+    public DashboardPage clickOnLoginButton() {
+        clickOnElement(By.cssSelector(String.format(button_FORMAT,"login")), "LOGIN BUTTON");
+        return new DashboardPage(driver);
+    }
+
+    public void clearUsernameLoginField(){
+        clearField(By.id(String.format(usernameField_FORMAT,"")), "USERNAME FIELD FOR LOGIN");
     }
 
 
-
+    public boolean onMyAccountPage() {
+        return getPageFromUrlEndpoint().contains("my-account");
+    }
 }

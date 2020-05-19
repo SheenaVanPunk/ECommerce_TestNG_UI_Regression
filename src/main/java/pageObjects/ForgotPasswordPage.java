@@ -3,6 +3,10 @@ package pageObjects;
 import classesUtilities.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class ForgotPasswordPage extends Page {
     private By inputField = By.id("user_login");
@@ -10,8 +14,7 @@ public class ForgotPasswordPage extends Page {
     private By errorMessage = By.cssSelector("ul.woocommerce-error li");
     private By confirmationMessage = By.id("post-8");
 
-    private By newPasswordField = By.id("password_1");
-    private By repeatPasswordField = By.id("password_2");
+    private final String passwordField_FORMAT = "input#password_%s";
     private By saveButton = By.cssSelector("button[value='Save']");
     private By errorMessageLine = By.id("primary");
 
@@ -23,41 +26,24 @@ public class ForgotPasswordPage extends Page {
         type(inputField, username, "USERNAME FIELD");
     }
 
-    public void sendPasswordReset(String username) {
+    public void sendPasswordReset(String email) {
         if (getPageFromUrlEndpoint().equals("lost-password")) {
-            setUsername(username);
+            setUsername(email);
             clickOnElement(resetPasswordButton, "RESET PASSWORD BUTTON");
         } else {
             log.error("Currently not on reset password page.");
         }
     }
 
-    public String getErrorMessage() {
-        scrollUntilElement(getWebElement(errorMessageLine, "ERROR MESSAGE START"));
-        return getWebElementText(errorMessage, "ERROR MESSAGE");
+    public List<String> getErrorMessages() {
+        scrollUntilElement(getWebElement(errorMessageLine, "ERROR MESSAGE LINE"));
+        return driver.findElements(errorMessage).stream().map(WebElement::getText).collect(Collectors.toList());
     }
 
-    private String[] parseUrlToStrings() {
-        return driver.getCurrentUrl().split("/");
-    }
 
-    public String getPageFromUrlEndpoint() {
-        int lastIndex = parseUrlToStrings().length-1;
-       String page = parseUrlToStrings()[lastIndex];
-       if(page.startsWith("?")){
-           page = parseUrlToStrings()[lastIndex-1];
-       }
-       return page;
-    }
 
-    public String getResetQueryStringFromEndpoint() {
-        for (String urlString : parseUrlToStrings()) {
-            if (urlString.contains("?")) {
-                return urlString;
-            }
-        }
-        return null;
-    }
+
+
 
 
 
@@ -66,12 +52,13 @@ public class ForgotPasswordPage extends Page {
     }
 
 
-    public void setNewPassword(String password) {
-        type(newPasswordField, password, "NEW PASSWORD FIELD");
-    }
-
-    public void repeatNewPassword(String password) {
-        type(repeatPasswordField, password, "REPEAT PASSWORD FIELD");
+    public void setNewPasswordInField(String password, int fieldNumber) {
+        if(getQueryStringFromEndpoint().contains("?show-reset-form=true")) {
+            scrollUntilElement(getWebElement(errorMessageLine, "ERROR MESSAGE LINE"));
+            type(By.cssSelector(String.format(passwordField_FORMAT, String.valueOf(fieldNumber))), password, "PASSWORD FIELD " + fieldNumber);
+        }else{
+            log.error("Not on a Create new password page!");
+        }
     }
 
     public MyAccountPage saveNewPassword() {

@@ -113,8 +113,9 @@ public class NadaEmailService {
     }
 
     private void waitForEmailToBeReceived(String email){
-        await().atMost(12, TimeUnit.SECONDS)
-                .pollDelay(5, TimeUnit.SECONDS)
+
+        await().atMost(10, TimeUnit.SECONDS)
+                .pollDelay(8, TimeUnit.SECONDS)
                 .pollInterval(1, TimeUnit.SECONDS)
                 .until(() -> {
                     return isEmailReceived(email);

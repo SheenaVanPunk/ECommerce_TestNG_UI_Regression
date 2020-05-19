@@ -36,6 +36,27 @@ public class Page {
         return element;
     }
 
+    private String[] parseUrlToStrings() {
+        return driver.getCurrentUrl().split("/");
+    }
+
+    public String getPageFromUrlEndpoint() {
+        int lastIndex = parseUrlToStrings().length-1;
+        String page = parseUrlToStrings()[lastIndex];
+        if(page.startsWith("?")){
+            page = parseUrlToStrings()[lastIndex-1];
+        }
+        return page;
+    }
+
+    public String getQueryStringFromEndpoint() {
+        for (String urlString : parseUrlToStrings()) {
+            if (urlString.contains("?")) {
+                return urlString;
+            }
+        }
+        return null;
+    }
 
     protected String getWebElementText(By locator, String elementName) {
         waitForThePresenceOfElementInDom(locator);
@@ -116,7 +137,7 @@ public class Page {
 
     protected void waitForElementVisibility(WebElement element, Integer... timeoutInSeconds) {
         try {
-                waitUntil(ExpectedConditions.visibilityOf(element), timeoutInSeconds.length > 0 ? timeoutInSeconds[0] : null);
+                waitUntil(ExpectedConditions.visibilityOf(element), timeoutInSeconds.length > 0 ? timeoutInSeconds[0] : 5);
             } catch (TimeoutException e) {
                 log.error("Timeout - the wait time expired and the element is still not visible.");
             }
@@ -126,7 +147,7 @@ public class Page {
         int attempts = 0;
         while(attempts < 2) {
             try {
-                waitUntil(ExpectedConditions.elementToBeClickable(locator), timeoutInSeconds.length > 0 ? timeoutInSeconds[0] : null);
+                waitUntil(ExpectedConditions.elementToBeClickable(locator), timeoutInSeconds.length > 0 ? timeoutInSeconds[0] : 5);
             } catch (TimeoutException e) {
                 log.error("Timeout - the wait time expired and the element is still not clickable.");
                 e.getMessage();

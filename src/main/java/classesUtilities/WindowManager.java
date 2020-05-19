@@ -4,6 +4,7 @@ package classesUtilities;
 import org.openqa.selenium.WebDriver;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class WindowManager extends Page {
 
@@ -28,6 +29,7 @@ public class WindowManager extends Page {
 
     public void goToUrl(String url) {
         driver.navigate().to(url);
+        driver.manage().timeouts().pageLoadTimeout(4, TimeUnit.SECONDS);
         new StepsLogger().info("Navigated to URL " + url);
     }
 
