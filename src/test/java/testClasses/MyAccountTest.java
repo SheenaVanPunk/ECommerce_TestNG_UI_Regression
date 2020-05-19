@@ -262,7 +262,7 @@ public class MyAccountTest extends BaseTest {
         String savedUsernameOnLoginForm = ap.getUsernameFromField();
 
         soft.assertTrue(isCheckboxSelected, "Checkbox Remember me was not selected.");
-        soft.assertEquals(savedUsernameOnLoginForm, "smLl8gwL", "Username is not remembered on login form.");
+        soft.assertEquals(savedUsernameOnLoginForm, username, "Username is not remembered on login form.");
 
         soft.assertAll();
     }
