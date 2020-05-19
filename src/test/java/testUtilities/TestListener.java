@@ -21,8 +21,9 @@ public class TestListener extends BaseTest implements ITestListener {
     public static ThreadLocal<ExtentTest> extentParallel = new ThreadLocal<ExtentTest>();
 
 
-    private static String getTestMethodName(ITestResult iTestResult) {
-        return iTestResult.getMethod().getConstructorOrMethod().getName();
+    private static String getTestMethodNameForScreenShot(ITestResult iTestResult) {
+        String invocationCount = String.valueOf(iTestResult.getMethod().getCurrentInvocationCount());
+        return iTestResult.getMethod().getConstructorOrMethod().getName() + "_" + invocationCount;
     }
 
     private static String getTestClassName(ITestResult iTestResult){
@@ -52,38 +53,42 @@ public class TestListener extends BaseTest implements ITestListener {
         extentParallel.set(test);
     }
 
+    private String getTestMethodName(ITestResult result) {
+        return result.getMethod().getConstructorOrMethod().getName();
+    }
+
     @Override
     public void onTestSuccess(ITestResult result) {
-        System.out.println("*** Executed " + result.getMethod().getMethodName() + " test successfully...");
         String logText = "PASSED";
+        System.out.println(logText + " - " + result.getMethod().getMethodName());
         Markup stylizedStatus = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
         extentParallel.get().log(Status.PASS, stylizedStatus);
     }
 
+
     @Override
     public void onTestFailure(ITestResult result) {
-
         Object testClass = result.getInstance();
         WebDriver driver = ((BaseTest) testClass).getDriver();
-        String screenshotPath = getScreenshotPath(getTestMethodName(result),
+        String screenshotPath = getScreenshotPath(getTestMethodNameForScreenShot(result),
                 getTestClassName(result),driver);
 
         try {
             extentParallel.get().fail("Screenshot taken: ",
                     MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
         } catch (IOException e) {
-            extentParallel.get().fail("Test failed, cannot attach screenshot.");
+            extentParallel.get().fail("Cannot attach screenshot.");
         }
         extentParallel.get().error(result.getThrowable());
-        System.out.println("*** Test execution " + result.getMethod().getMethodName() + " failed...");
+        System.out.println("FAILED - " + result.getMethod().getMethodName());
         Markup stylizedStatus = MarkupHelper.createLabel("FAILED", ExtentColor.RED);
         extentParallel.get().log(Status.FAIL, stylizedStatus);
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        System.out.println("*** Test " + result.getMethod().getMethodName() + " skipped...");
         String logText = "SKIPPED";
+        System.out.println(logText + " - " + result.getMethod().getMethodName());
         Markup stylizedStatus = MarkupHelper.createLabel(logText, ExtentColor.ORANGE);
         extentParallel.get().log(Status.SKIP, stylizedStatus);
     }

@@ -113,15 +113,16 @@ public class NadaEmailService {
     }
 
     private void waitForEmailToBeReceived(String email){
-        await().atMost(12, TimeUnit.SECONDS)
-                .pollDelay(5, TimeUnit.SECONDS)
+
+        await().atMost(20, TimeUnit.SECONDS)
+                .pollDelay(10, TimeUnit.SECONDS)
                 .pollInterval(1, TimeUnit.SECONDS)
                 .until(() -> {
                     return isEmailReceived(email);
                 });
     }
 
-    public EmailMessage getMessageWithSubjectStartsWith(final String subjectLine, String email){
+    public EmailMessage getNewMessageWithSubject(final String subjectLine, String email){
        waitForEmailToBeReceived(email);
        return this.getInboxForEmail(email)
                 .stream()
@@ -132,8 +133,24 @@ public class NadaEmailService {
                 .orElseThrow(IllegalArgumentException::new);
     }
 
-    public String getLinkFromValidationEmail(final String subjectLine, String email) throws IOException {
-        Document doc = Jsoup.parse(getMessageWithSubjectStartsWith(subjectLine, email).getEmailContent());
+    public EmailMessage getOldMessageWithSubject(final String subjectLine, String email){
+        return this.getInboxForEmail(email)
+                .stream()
+                .filter(ie -> ie.getSubjectLine().startsWith(subjectLine))
+                .findFirst()
+                .map(EmailInbox::getMessageId)
+                .map(this::getMessageById)
+                .orElseThrow(IllegalArgumentException::new);
+    }
+
+    public String getNewLinkFromResetEmail(final String subjectLine, String email) throws IOException {
+        Document doc = Jsoup.parse(getNewMessageWithSubject(subjectLine, email).getEmailContent());
+        Element result = doc.select("a.link").first();
+        return result.attr("href");
+    }
+
+    public String getLinkFromOldResetEmail(final String subjectLine, String email) throws IOException {
+        Document doc = Jsoup.parse(getOldMessageWithSubject(subjectLine, email).getEmailContent());
         Element result = doc.select("a.link").first();
         return result.attr("href");
     }

@@ -1,7 +1,0 @@
-testCaseNo,usernameOrEmail,password,message,description
-1,,,Error: Username is required.,No credentials are entered
-2,nevena@yopmail.com,,ERROR: The password field is empty.,Password not entered
-3,,Brabonjak435,Error: Username is required.,No username/email provided.
-4,nevena@yopmail.com,Brabonjak543,ERROR: The username or password you entered is incorrect. Lost your password?,Correct email with old password
-5,Kokoska@34567,Brabonjak543,ERROR: The username or password you entered is incorrect. Lost your password?,Correct username with old password
-6,neve@yo.com,Brabonjici384,ERROR: The username or password you entered is incorrect. Lost your password?,User credentials do not exist

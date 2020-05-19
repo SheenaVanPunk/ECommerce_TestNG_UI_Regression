@@ -7,4 +7,4 @@ testCaseNo,username,email,password,description,message
 6,neVenIta43!,nevena@yopmail.com,Kokoska@34567,Existing email,Error: An account is already registered with your email address. Please log in.
 7,sarah,aneven@yopmail.com,Kokoska@34567,Existing username,Error: An account is already registered with that username. Please choose another.
 8,;/78rui;',nevena90@yopmail.com,Kokoska@34567,Invalid username,Error: Please enter a valid account username.
-9,;/78rui;',nevena@yopmail,Kokoska@34567,Invalid username and email,Error: Please enter a valid email address.
+9,;/78rui;',nevena@yopmail,Kokoska@34567,Invalid username and email,Error: Please provide a valid email address.

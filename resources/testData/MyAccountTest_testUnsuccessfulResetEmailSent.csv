@@ -1,0 +1,4 @@
+testCaseNo,invalidEmailOrUsername,description,message
+1, ,Email/username is not entered,Enter a username or email address.
+2,popo@po.com,Entered email doesn't exist,Invalid username or email.
+3,popopo986,Entered username doesn't exist,Invalid username or email.
