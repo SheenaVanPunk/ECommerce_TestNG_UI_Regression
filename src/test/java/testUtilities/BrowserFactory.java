@@ -45,7 +45,7 @@ public class BrowserFactory extends BaseTest {
         ChromeOptions options = new ChromeOptions();
         //options.addArguments("start-maximized");
         options.addArguments("--window-size=1366x626");
-        //options.setHeadless(true);
+        options.setHeadless(true);
         options.setPageLoadStrategy(PageLoadStrategy.EAGER);
         return options;
     }
