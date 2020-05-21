@@ -40,7 +40,7 @@
 <!--</suite>-->
         <test name="ProductPage - screenshot comparison">
             <parameter name="browser" value="chrome"/>
-            <parameter name="url" value="http://shop.demoqa.com/product/black-cross-back-maxi-dress/"/>
+            <parameter name="url" value="http://shop.demoqa.com/product/black-satin-one-shoulder-cut-out-midi-dress/"/>
             <classes>
     <!--            <class name="testClasses.SearchTest"/>-->
     <!--            <class name="testClasses.HomePageTest"/>-->

@@ -8,7 +8,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 @Snap("productPageSnap.png")
@@ -18,18 +22,17 @@ public class ProductPage extends Page {
     private By productTitle = By.cssSelector("h1.product_title");
     private By relatedProductContainer = By.cssSelector("div.noo-product-item");
     private By productContent = By.cssSelector("div.single-product-content");
+    private By galleryImages = By.cssSelector("div.noo-woo-thumbnails__slide");
+    private By originalPrice = By.cssSelector("p.price del");
+    private By promotionalPrice = By.cssSelector("p.price ins");
 
-    public ProductPage(WebDriver driver){
+
+    public ProductPage(WebDriver driver) {
         super(driver);
+        //PageFactory.initElements(driver, this);
     }
 
-    public OcularResult compareSS(){
-        return Ocular.snapshot().from(ProductPage.class)
-                      .sample().using(driver)
-                      .compare();
-    }
-
-    public void selectSizeFromDropdown(String text){
+    public void selectSizeFromDropdown(String text) {
         scrollUntilElement(getWebElement(productFrame, "PRODUCT FRAME"));
         selectByText(sizeDropdown, text, "SIZE");
     }
@@ -41,27 +44,23 @@ public class ProductPage extends Page {
                 .equals(value);
     }
 
-    public int getNumberOfSizeOptions(){
+    public int getNumberOfSizeOptions() {
         return createSelectElement(sizeDropdown).getOptions().size();
     }
 
-    public String getRandomOption(){
+    public String getRandomOption() {
         Random random = new Random();
         int randomIndex = random.nextInt(3);
         scrollUntilElement(getWebElement(sizeDropdown, "SIZE DROPDOWN"));
-        String option = createSelectElement(sizeDropdown).getOptions().get(randomIndex).getText();
-        return option;
+        return createSelectElement(sizeDropdown).getOptions().get(randomIndex).getText();
     }
 
-    public void selectRandomOptionFromDropdown(){
-        selectByText(sizeDropdown, getRandomOption(), "SIZE DROPDOWN");
-    }
 
-    public String getProductPageTitle(){
+    public String getProductPageTitle() {
         return getPageTitle();
     }
 
-    public boolean isAt(){
+    public boolean isAt() {
         String titleExtension = " – ToolsQA Demo Site";
         return getProductName()
                 .toLowerCase()
@@ -69,49 +68,77 @@ public class ProductPage extends Page {
                 .contains(getPageTitle());
     }
 
-    public String getProductName(){
+    public String getProductName() {
         return getWebElementText(productTitle, "PRODUCT TITLE");
     }
 
-    private List<WebElement> getAllRelatedProducts(){
+    private List<WebElement> getAllRelatedProducts() {
         return driver.findElements(relatedProductContainer);
     }
-//  this method has a problem with comparing WebElement and RelatedProduct, latter cannot be casted to product
-//    public boolean checkIFAllProductsHaveImages(){
-//        List<Boolean> isImgShown = new ArrayList<Boolean>();
-//        scrollUntilElement(driver.findElement(By.cssSelector(".title-related")));
-//        for(RelatedProduct product : getAllRelatedProducts()){
-//            boolean imgShown = product.getProductThumbnail().isDisplayed();
-//            isImgShown.add(imgShown);
-//        }
-//        boolean allShown = isImgShown.listIterator().hasNext() == true ? true : false;
-//        return allShown;
-//    }
 
-    public void toggleThroughGalleryImages(){
-        //fetch the list of all gallery photos
-        //toogle through all of them
-        //take ss of each photo and compare it with previous
+    public boolean verifyImage(String fileName) {
+        Path path = Paths.get(fileName);
+        OcularResult result = Ocular.snapshot()
+                .from(path)
+                .sample()
+                .using(driver)
+                .compare();
+
+        return result.isEqualsImages();
     }
 
-    public void scrollToProductSection(){
-        scrollUntilElement(driver.findElement(productContent));
+    public List<Boolean> toggleThroughGalleryImagesAndCompareSS() {
+        /**
+         *  fetch the list of all gallery photos
+         *  toogle through all of them
+         *  take ss of each photo and compare it with previous
+         */
+        Map<String, String> fileNames = Map.of("img#1", "img1.png", "img#2",
+                "img2.png", "img#3", "img3.png",
+                "img#4", "img4.png", "img#5", "img5.png");
+
+        List<Boolean> areImagesCorrectlyDisplayed = new ArrayList<Boolean>();
+        scrollToProductSection();
+        List<WebElement> imgs = driver.findElements(galleryImages);
+        int i = 1;
+
+        for (WebElement img : imgs) {
+            String filename = fileNames.get("img#" + i);
+            clickOnElement(img, "IMAGE #" + i);
+            boolean isCorrectlyDisplayed = verifyImage(filename);
+            areImagesCorrectlyDisplayed.add(isCorrectlyDisplayed);
+            i++;
+        }
+        return areImagesCorrectlyDisplayed;
+    }
+
+    public void scrollToProductSection() {
+        scrollUntilElement(getWebElement(productContent, "PRODUCT CONTENT SECTION"));
+    }
+
+    public double getPrice(By locator){
+        String priceWithoutCurrency = driver.findElement(locator).getText().replace("₹", "");
+        return Double.parseDouble(priceWithoutCurrency);
+    }
+
+    public boolean isPromotionalLower() {
+        return getPrice(originalPrice) > getPrice(promotionalPrice);
     }
 
 
-    public class RelatedProduct{
+    public class RelatedProduct {
         private By productTitle = By.cssSelector("div h3");
         private By productThumbnail = By.cssSelector("div.noo-product-thumbnail");
         private By productPrice = By.cssSelector("span.price");
 
-        protected RelatedProduct getProduct(){
+        protected RelatedProduct getProduct() {
             getProductTitle();
             getProductThumbnail();
             getProductPrice();
             return new RelatedProduct();
         }
 
-        private String getProductTitle(){
+        private String getProductTitle() {
             return driver.findElement(productTitle).getText();
         }
 
@@ -119,7 +146,7 @@ public class ProductPage extends Page {
             return driver.findElement(productThumbnail);
         }
 
-        private String getProductPrice(){
+        private String getProductPrice() {
             return driver.findElement(productPrice).getText();
         }
     }

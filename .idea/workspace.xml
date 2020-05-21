@@ -2,24 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5b8cafb-861e-40e1-ba6f-d76fa3a00295" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/testClasses/CheckoutTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classesUtilities/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/CompareProductsPopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CompareProductsPopUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-17/MyAccountTest/testSendPasswordReset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-17/MyAccountTest/testSuccessfulRegistration.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-17/Test Report_2020-05-17.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-18/MyAccountTest/testLogOut_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-18/MyAccountTest/testLoginErrors_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-18/MyAccountTest/testRememberLoginDetails_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-18/MyAccountTest/testSuccessfulLogin_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-18/MyAccountTest/testUnsuccessfulCreateNewPasswordAttempts_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-18/Test Report_2020-05-18.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-20/MyAccountTest/testRememberLoginDetails_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-20/ProductPageTest/compareGalleryImages_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-20/ProductPageTest/testOpenProductPage_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-20/Test Report_2020-05-20.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ssComparison/actual/productPageSnap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ssComparison/baseline/productPageSnap.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/HomePageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/ProductPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/ProductPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/BrowserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/BrowserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/classesUtilities/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classesUtilities/Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/classesUtilities/nadaEmailApiClasses/NadaEmailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classesUtilities/nadaEmailApiClasses/NadaEmailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/CompareProductsPopUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/CompareProductsPopUp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/HomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/E-CommerceUIRegression.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/QuickSmokeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage$RelatedProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage$RelatedProduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/MyAccountTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/MyAccountTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testUtilities/BrowserFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testUtilities/BrowserFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/ProductPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/ProductPageTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +100,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyAccountTest.testUnsuccessfulCreateNewPasswordAttempts" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-CommerceUIRegression" />
       <extension name="coverage">
         <pattern>
@@ -101,8 +109,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.MyAccountTest" />
-      <option name="METHOD_NAME" value="testUnsuccessfulCreateNewPasswordAttempts" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.ProductPageTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductPageTest.compareGalleryImages" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="E-CommerceUIRegression" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testClasses" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.ProductPageTest" />
+      <option name="METHOD_NAME" value="compareGalleryImages" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -110,7 +135,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyAccountTest.testUnsuccessfulPasswordResetWithUsedResetLink" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductPageTest.createBaselineImages" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-CommerceUIRegression" />
       <extension name="coverage">
         <pattern>
@@ -119,8 +144,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.MyAccountTest" />
-      <option name="METHOD_NAME" value="testUnsuccessfulPasswordResetWithUsedResetLink" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.ProductPageTest" />
+      <option name="METHOD_NAME" value="createBaselineImages" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -131,9 +156,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/Nena/IdeaProjects/E-CommerceUIRegression/testng.xml" />
+        <item itemvalue="TestNG.ProductPageTest" />
+        <item itemvalue="TestNG.ProductPageTest.createBaselineImages" />
+        <item itemvalue="TestNG.ProductPageTest.compareGalleryImages" />
         <item itemvalue="TestNG.MyAccountTest.testSuccessfulLogin" />
-        <item itemvalue="TestNG.MyAccountTest.testUnsuccessfulCreateNewPasswordAttempts" />
-        <item itemvalue="TestNG.MyAccountTest.testUnsuccessfulPasswordResetWithUsedResetLink" />
       </list>
     </recent_temporary>
   </component>
@@ -185,54 +211,54 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590009721355" />
-    <state width="1323" height="235" key="GridCell.Tab.0.bottom" timestamp="1590027665295">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="293" key="GridCell.Tab.0.bottom" timestamp="1590100756727">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590027665295" />
+    <state width="1323" height="245" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590074568341" />
     <state width="1877" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663849271" />
-    <state width="1323" height="235" key="GridCell.Tab.0.center" timestamp="1590027665295">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
+    <state width="1877" height="293" key="GridCell.Tab.0.center" timestamp="1590100756727">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590027665295" />
+    <state width="1323" height="245" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590074568341" />
     <state width="1877" height="346" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="294" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663849271" />
-    <state width="1323" height="235" key="GridCell.Tab.0.left" timestamp="1590027665295">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="293" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
+    <state width="1877" height="293" key="GridCell.Tab.0.left" timestamp="1590100756727">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590027665295" />
+    <state width="1323" height="245" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590074568341" />
     <state width="1877" height="346" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="294" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663849271" />
-    <state width="1323" height="235" key="GridCell.Tab.0.right" timestamp="1590027665295">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="293" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
+    <state width="1877" height="293" key="GridCell.Tab.0.right" timestamp="1590100756727">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590027665295" />
+    <state width="1323" height="245" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590074568341" />
     <state width="1877" height="346" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="294" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663849271" />
-    <state width="1323" height="245" key="GridCell.Tab.1.bottom" timestamp="1590013750711">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="293" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
+    <state width="1877" height="293" key="GridCell.Tab.1.bottom" timestamp="1590100756727">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="245" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590013750711" />
+    <state width="1323" height="245" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590074560769" />
     <state width="1877" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="294" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663818463" />
-    <state width="1323" height="245" key="GridCell.Tab.1.center" timestamp="1590013750711">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="293" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
+    <state width="1877" height="293" key="GridCell.Tab.1.center" timestamp="1590100756727">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="245" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1590013750711" />
+    <state width="1323" height="245" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1590074560769" />
     <state width="1877" height="346" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="294" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663818463" />
-    <state width="1323" height="245" key="GridCell.Tab.1.left" timestamp="1590013750711">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="293" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
+    <state width="1877" height="293" key="GridCell.Tab.1.left" timestamp="1590100756727">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="245" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1590013750711" />
+    <state width="1323" height="245" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1590074560768" />
     <state width="1877" height="346" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="294" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663818462" />
-    <state width="1323" height="245" key="GridCell.Tab.1.right" timestamp="1590013750711">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="293" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
+    <state width="1877" height="293" key="GridCell.Tab.1.right" timestamp="1590100756727">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="245" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590013750711" />
+    <state width="1323" height="245" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590074560769" />
     <state width="1877" height="346" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="294" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663818463" />
+    <state width="1877" height="293" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
     <state x="326" y="0" key="SettingsEditor" timestamp="1590007089286">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -251,38 +277,24 @@
     </state>
     <state x="474" y="187" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1590010693719" />
     <state x="2586" y="267" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589503244228" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1590009750618">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="2406" y="70" width="945" height="969" key="search.everywhere.popup" timestamp="1590100383542">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1590009750618" />
+    <state x="2406" y="70" width="945" height="969" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100383542" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/classesUtilities/nadaEmailApiClasses/NadaEmailService.java</url>
-          <line>146</line>
-          <option name="timeStamp" value="87" />
+          <url>file://$PROJECT_DIR$/src/test/java/testClasses/ProductPageTest.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="122" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java</url>
-          <line>261</line>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/HomePage.java</url>
-          <line>116</line>
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/HomePage.java</url>
-          <line>109</line>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="105" />
+          <url>file://$PROJECT_DIR$/src/test/java/testClasses/ProductPageTest.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="125" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

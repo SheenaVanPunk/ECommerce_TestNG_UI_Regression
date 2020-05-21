@@ -33,14 +33,11 @@ public class BaseTest {
 
     @BeforeSuite
     public void setUpOcular(){
-        String pathToSSFolder =  "\\resources\\ssComparison\\";
+        String pathToSSFolder =  System.getProperty("user.dir") + "\\resources\\ssComparison\\";
         Ocular.config()
-                .resultPath(Paths.get("." + pathToSSFolder + "actual\\"))
-                .snapshotPath(Paths.get("." + pathToSSFolder + "baseline\\"))
-                .globalSimilarity(85)
-                .saveSnapshot(true);
+                .snapshotPath(Paths.get(pathToSSFolder + "baseline\\"))
+                .resultPath(Paths.get(pathToSSFolder + "actual\\"));
     }
-
 
     @Parameters({"url", "browser"})
     @BeforeMethod(alwaysRun = true, description = "Initializing driver, launching the browser, opening home page and creating its instance")
