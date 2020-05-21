@@ -1,12 +1,14 @@
 package testClasses;
 
 import classesUtilities.WindowManager;
+import com.testautomationguru.ocular.Ocular;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 import pageObjects.HomePage;
@@ -14,6 +16,7 @@ import testUtilities.BrowserFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.Arrays;
 
@@ -26,6 +29,16 @@ public class BaseTest {
 
     public WebDriver getDriver() {
         return driver;
+    }
+
+    @BeforeSuite
+    public void setUpOcular(){
+        String pathToSSFolder =  "\\resources\\ssComparison\\";
+        Ocular.config()
+                .resultPath(Paths.get("." + pathToSSFolder + "actual\\"))
+                .snapshotPath(Paths.get("." + pathToSSFolder + "baseline\\"))
+                .globalSimilarity(85)
+                .saveSnapshot(true);
     }
 
 
@@ -42,7 +55,6 @@ public class BaseTest {
 
         driver.get(url);
         hp = new HomePage(driver);
-        driver.manage().window().maximize();
         return hp;
     }
 

@@ -54,7 +54,7 @@ public class MyAccountTest extends BaseTest {
     }
 
 
-    @Test(priority = 1, dataProvider = "csvParser", dataProviderClass = CsvParser.class, groups = "registration")
+    @Test(priority = 1, dataProvider = "csvParser", dataProviderClass = CsvParser.class, groups = "registration", enabled = false)
     public void testRegistrationErrors(Map<String, String> testData) {
         String testCaseNo = testData.get("testCaseNo");
         String username = testData.get("username");
@@ -75,7 +75,7 @@ public class MyAccountTest extends BaseTest {
     }
 
 
-    @Test(priority = 2, groups = "registration", dataProvider = "csvParser", dataProviderClass = CsvParser.class)
+    @Test(priority = 2, groups = "registration", dataProvider = "csvParser", dataProviderClass = CsvParser.class, enabled = false)
     public void testPasswordStrengthValidation(Map<String, String> testData) {
         String testCaseNo = testData.get("testCaseNo");
         String description = testData.get("description");
@@ -105,7 +105,7 @@ public class MyAccountTest extends BaseTest {
     }
 
 
-    @Test(priority = 9, groups = "password reset", dependsOnMethods = "testSuccessfulLogin")
+    @Test(priority = 9, groups = "password reset", dependsOnMethods = "testSuccessfulLogin", enabled = false)
     public void testSuccessfulResetEmailSent() throws IOException {
         String expectedValidationMessage = "Password reset email has been sent.";
         String expectedQueryString = "?reset-link-sent=true";
@@ -146,7 +146,7 @@ public class MyAccountTest extends BaseTest {
     }
 
 
-    @Test(priority = 8, groups = "password reset", dependsOnMethods = "testSuccessfulResetEmailSent")
+    @Test(priority = 8, groups = "password reset", dependsOnMethods = "testSuccessfulResetEmailSent", enabled = false)
     public void testSuccessfulPasswordResetWithResetLink() throws IOException {
         String newPassword = nada.generateUserPassword();
         String expectedValidationMessage = "Your password has been reset successfully.";
@@ -172,7 +172,7 @@ public class MyAccountTest extends BaseTest {
     }
 
 
-    @Test(priority = 10, groups = "password reset", dependsOnMethods = "testSuccessfulPasswordResetWithResetLink")
+    @Test(priority = 10, groups = "password reset", dependsOnMethods = "testSuccessfulPasswordResetWithResetLink", enabled = false)
     public void testUnsuccessfulPasswordResetWithUsedResetLink() throws IOException {
         String expectedErrorMessage = "This key is invalid or has already been used. Please reset your password again if needed.";
         String expectedQueryString = "?show-reset-form=true";
@@ -190,7 +190,7 @@ public class MyAccountTest extends BaseTest {
     }
 
 
-    @Test(priority = 12, groups = "password reset", dataProvider = "csvParser", dataProviderClass = CsvParser.class)
+    @Test(priority = 12, groups = "password reset", dataProvider = "csvParser", dataProviderClass = CsvParser.class, enabled = false)
     public void testUnsuccessfulCreateNewPasswordAttempts(Map<String, String> testData) throws IOException {
         String testCaseNo = testData.get("testCaseNo");
         String newPassword = testData.get("newPassword");
@@ -225,7 +225,7 @@ public class MyAccountTest extends BaseTest {
     }
 
 
-    @Test(priority = 5, groups = "login", dependsOnMethods = "testSuccessfulRegistration")
+    @Test(priority = 5, groups = "login", dependsOnMethods = "testSuccessfulRegistration", enabled = false)
     public void testSuccessfulLogin() {
         int linksOnDashboardNo = 6;
         var expectedLinksOnDashboard = List.of("Dashboard", "Orders", "Downloads", "Addresses", "Account details", "Logout");
@@ -246,7 +246,7 @@ public class MyAccountTest extends BaseTest {
     }
 
 
-    @Test(priority = 6, groups = "login", dependsOnMethods = "testSuccessfulLogin")
+    @Test(priority = 6, groups = "login")
     public void testRememberLoginDetails() {
         String authType = "login";
         ap = new MyAccountPage(driver);
@@ -268,7 +268,7 @@ public class MyAccountTest extends BaseTest {
     }
 
 
-    @Test(priority = 7, groups = "login")
+    @Test(priority = 7, groups = "login", enabled = false)
     public void testLogOut() {
         ap = new MyAccountPage(driver);
         dp = ap.enterUserDataAndClickLoginButton(email, password);
@@ -280,7 +280,7 @@ public class MyAccountTest extends BaseTest {
     }
 
 
-    @Test(priority = 3, groups = "login", dataProvider = "csvParser", dataProviderClass = CsvParser.class)
+    @Test(priority = 3, groups = "login", dataProvider = "csvParser", dataProviderClass = CsvParser.class, enabled = false)
     public void testLoginErrors(Map<String, String> testData) {
         String testCaseNo = testData.get("testCaseNo");
         String userId = testData.get("usernameOrEmail");
@@ -300,7 +300,7 @@ public class MyAccountTest extends BaseTest {
         soft.assertAll();;
     }
 
-    @Test(priority = 11, groups = "login", dependsOnMethods = "testSuccessfulPasswordResetWithResetLink")
+    @Test(priority = 11, groups = "login", dependsOnMethods = "testSuccessfulPasswordResetWithResetLink", enabled = false)
     public void testUnsuccessfulLoginWithOldPasswordAfterReset() {
         String expectedErrorMessage = "ERROR: The username or password you entered is incorrect. Lost your password?";
         ap = new MyAccountPage(driver);

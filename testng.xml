@@ -13,21 +13,21 @@
     <parameter name="expectedTextInSearchField" value="Search"/>
     <parameter name="itemForSearch" value="dress"/>
 
-    <test name="Data Driven Test in Chrome">
-        <parameter name="browser" value="chrome"/>
-        <parameter name="url" value="http://shop.demoqa.com/my-account/"/>
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="regression"/>-->
-<!--            </run>-->
-<!--        </groups>-->
-        <classes>
-<!--            <class name="testClasses.SearchTest"/>-->
-<!--            <class name="testClasses.HomePageTest"/>-->
-<!--            <class name="testClasses.QuickSmokeTest"/>-->
-            <class name="testClasses.MyAccountTest"/>
-       </classes>
-    </test>
+<!--    <test name="MyAccountPage - registration, login and password reset">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="url" value="http://shop.demoqa.com/my-account/"/>-->
+<!--&lt;!&ndash;        <groups>&ndash;&gt;-->
+<!--&lt;!&ndash;            <run>&ndash;&gt;-->
+<!--&lt;!&ndash;                <include name="regression"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            </run>&ndash;&gt;-->
+<!--&lt;!&ndash;        </groups>&ndash;&gt;-->
+<!--        <classes>-->
+<!--&lt;!&ndash;            <class name="testClasses.SearchTest"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="testClasses.HomePageTest"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="testClasses.QuickSmokeTest"/>&ndash;&gt;-->
+<!--            <class name="testClasses.MyAccountTest"/>-->
+<!--       </classes>-->
+<!--    </test>-->
 
 <!--    <test name="Quick Smoke Test in Firefox">-->
 <!--        <parameter name="browser" value="firefox"/>-->
@@ -37,4 +37,14 @@
 <!--            <class name="testClasses.MyAccountTest"/>-->
 <!--        </classes>-->
 <!--    </test>-->
+<!--</suite>-->
+        <test name="ProductPage - screenshot comparison">
+            <parameter name="browser" value="chrome"/>
+            <parameter name="url" value="http://shop.demoqa.com/product/black-cross-back-maxi-dress/"/>
+            <classes>
+    <!--            <class name="testClasses.SearchTest"/>-->
+    <!--            <class name="testClasses.HomePageTest"/>-->
+                <class name="testClasses.ProductPageTest"/>
+            </classes>
+        </test>
 </suite>
