@@ -2,19 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5b8cafb-861e-40e1-ba6f-d76fa3a00295" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-21/ProductPageTest/compareGalleryImages_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-21/ProductPageTest/createBaselineImages_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-21/ProductPageTest/testConfirmThatAllGalleryImagesBelongToTheSameProduct_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-21/ProductPageTest/testIsPromotionalPriceLowerThanOriginal_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/failedTestScreenshots/2020-05-21/Test Report_2020-05-21.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ssComparison/actual/img1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ssComparison/actual/img1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ssComparison/actual/img2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ssComparison/actual/img2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ssComparison/actual/img3.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ssComparison/actual/img3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ssComparison/actual/img4.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ssComparison/actual/img4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/ProductPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/ProductPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage$RelatedProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage$RelatedProduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ProductPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/HomePageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/HomePageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/ProductPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testClasses/ProductPageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testClasses/QuickSmokeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/BrowserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/BrowserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +43,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ignore.preview.features.used" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../AaronTraining" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -68,24 +67,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyAccountTest.testSuccessfulLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="E-CommerceUIRegression" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testClasses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.MyAccountTest" />
-      <option name="METHOD_NAME" value="testSuccessfulLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProductPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-CommerceUIRegression" />
       <extension name="coverage">
@@ -97,24 +78,6 @@
       <option name="PACKAGE_NAME" value="testClasses" />
       <option name="MAIN_CLASS_NAME" value="testClasses.ProductPageTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductPageTest.compareGalleryImages" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="E-CommerceUIRegression" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testClasses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.ProductPageTest" />
-      <option name="METHOD_NAME" value="compareGalleryImages" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -139,13 +102,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductPageTest.testCanUserMultipleProductsAndSeeCorrectPriceInCart" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="E-CommerceUIRegression" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testClasses" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.ProductPageTest" />
+      <option name="METHOD_NAME" value="testCanUserMultipleProductsAndSeeCorrectPriceInCart" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductPageTest.testConfirmThatAllGalleryImagesBelongToTheSameProduct" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="E-CommerceUIRegression" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testClasses" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.ProductPageTest" />
+      <option name="METHOD_NAME" value="testConfirmThatAllGalleryImagesBelongToTheSameProduct" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/Nena/IdeaProjects/E-CommerceUIRegression/testng.xml" />
+        <item itemvalue="TestNG.ProductPageTest.testConfirmThatAllGalleryImagesBelongToTheSameProduct" />
+        <item itemvalue="TestNG.ProductPageTest.testCanUserMultipleProductsAndSeeCorrectPriceInCart" />
         <item itemvalue="TestNG.ProductPageTest" />
         <item itemvalue="TestNG.ProductPageTest.createBaselineImages" />
-        <item itemvalue="TestNG.ProductPageTest.compareGalleryImages" />
-        <item itemvalue="TestNG.MyAccountTest.testSuccessfulLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -197,59 +196,59 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590009721355" />
-    <state width="1323" height="515" key="GridCell.Tab.0.bottom" timestamp="1590121223873">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.0.bottom" timestamp="1590462494945">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="515" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590121223873" />
+    <state width="1323" height="251" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590456648755" />
     <state width="1877" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
-    <state width="1323" height="515" key="GridCell.Tab.0.center" timestamp="1590121223873">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462494945" />
+    <state width="1877" height="414" key="GridCell.Tab.0.center" timestamp="1590462494945">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="515" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590121223873" />
+    <state width="1323" height="251" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590456648755" />
     <state width="1877" height="346" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="293" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
-    <state width="1323" height="515" key="GridCell.Tab.0.left" timestamp="1590121223873">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462494945" />
+    <state width="1877" height="414" key="GridCell.Tab.0.left" timestamp="1590462494945">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="515" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590121223873" />
+    <state width="1323" height="251" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590456648755" />
     <state width="1877" height="346" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="293" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
-    <state width="1323" height="515" key="GridCell.Tab.0.right" timestamp="1590121223873">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462494945" />
+    <state width="1877" height="414" key="GridCell.Tab.0.right" timestamp="1590462494945">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="515" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590121223873" />
+    <state width="1323" height="251" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590456648755" />
     <state width="1877" height="346" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="293" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
-    <state width="1323" height="515" key="GridCell.Tab.1.bottom" timestamp="1590121223873">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462494945" />
+    <state width="1877" height="414" key="GridCell.Tab.1.bottom" timestamp="1590462429454">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="515" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590121223873" />
+    <state width="1323" height="251" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590456660768" />
     <state width="1877" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="293" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
-    <state width="1323" height="515" key="GridCell.Tab.1.center" timestamp="1590121223873">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462429454" />
+    <state width="1877" height="414" key="GridCell.Tab.1.center" timestamp="1590462429454">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="515" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1590121223873" />
+    <state width="1323" height="251" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1590456660768" />
     <state width="1877" height="346" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="293" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
-    <state width="1323" height="515" key="GridCell.Tab.1.left" timestamp="1590121223873">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462429454" />
+    <state width="1877" height="414" key="GridCell.Tab.1.left" timestamp="1590462429454">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="515" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1590121223873" />
+    <state width="1323" height="251" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1590456660767" />
     <state width="1877" height="346" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="293" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
-    <state width="1323" height="515" key="GridCell.Tab.1.right" timestamp="1590121223873">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462429454" />
+    <state width="1877" height="414" key="GridCell.Tab.1.right" timestamp="1590462429454">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="515" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590121223873" />
+    <state width="1323" height="251" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590456660768" />
     <state width="1877" height="346" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="293" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100756727" />
-    <state x="326" y="0" key="SettingsEditor" timestamp="1590007089286">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462429454" />
+    <state x="2381" y="164" key="SettingsEditor" timestamp="1590456935805">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="326" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590007089286" />
-    <state x="2381" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589394880091" />
+    <state x="2381" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590456935805" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1589489847983">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -273,19 +272,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="126" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="127" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/testClasses/ProductPageTest.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="128" />
+          <line>52</line>
+          <option name="timeStamp" value="147" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

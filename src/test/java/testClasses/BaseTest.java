@@ -36,7 +36,8 @@ public class BaseTest {
         String pathToSSFolder =  System.getProperty("user.dir") + "\\resources\\ssComparison\\";
         Ocular.config()
                 .snapshotPath(Paths.get(pathToSSFolder + "baseline\\"))
-                .resultPath(Paths.get(pathToSSFolder + "actual\\"));
+                .resultPath(Paths.get(pathToSSFolder + "actual\\"))
+                .globalSimilarity(75);
     }
 
     @Parameters({"url", "browser"})

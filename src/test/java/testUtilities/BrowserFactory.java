@@ -43,9 +43,9 @@ public class BrowserFactory extends BaseTest {
 
     private static ChromeOptions getChromeDriverOptions() {
         ChromeOptions options = new ChromeOptions();
-        //options.addArguments("start-maximized");
+        options.addArguments("start-maximized");
         options.addArguments("--window-size=1920x1080");
-        options.setHeadless(true);
+        //options.setHeadless(true);
         options.setPageLoadStrategy(PageLoadStrategy.EAGER);
         return options;
     }

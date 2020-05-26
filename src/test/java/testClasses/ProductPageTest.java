@@ -3,6 +3,9 @@ package testClasses;
 import org.testng.annotations.Test;
 import pageObjects.ProductPage;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.testng.Assert.*;
@@ -11,30 +14,31 @@ import static testUtilities.TestListener.extentParallel;
 public class ProductPageTest extends BaseTest {
     ProductPage pp;
 
-    @Test(enabled=false)
+    @Test(priority = 1)
     public void testOpenProductPage(){
-        pp = hp.clickOnARandomProduct();
 
         assertTrue(pp.isAt());
     }
 
-    @Test(enabled = false)
+    @Test(groups = "visual")
     public void createBaselineImages(){
        pp = new ProductPage(driver);
        pp.toggleThroughGalleryImagesAndCompareSS();
     }
 
-    @Test(dependsOnMethods = "createBaselineImages", enabled = false)
+    @Test(groups = "visual", dependsOnMethods = "createBaselineImages")
     public void testConfirmThatAllGalleryImagesBelongToTheSameProduct(){
-        var expectedBehavior = List.of(true, true, true, true, true);
-
         pp = new ProductPage(driver);
+
+        var expected = new ArrayList<Boolean>(Arrays.asList(new Boolean[pp.getThumbnailsNo()]));
+        Collections.fill(expected, Boolean.TRUE);
+
         var imgsDisplayedOk = pp.toggleThroughGalleryImagesAndCompareSS();
 
-        assertEquals(imgsDisplayedOk, expectedBehavior);
+        assertEquals(imgsDisplayedOk, expected);
     }
 
-    @Test(enabled=false)
+    @Test
     public void testIsPromotionalPriceLowerThanOriginal(){
         pp = new ProductPage(driver);
         extentParallel.get().info("Comparing the original and promotional price - promotional must be lower.");
@@ -43,8 +47,14 @@ public class ProductPageTest extends BaseTest {
     }
 
     @Test
-    public void testDoesTheMainPicChangeWhenClickedOnOtherThumbnail(){
+    public void testDoesTheMainPicChangeWhenClickedOnMatchingThumbnail(){
+        pp = new ProductPage(driver);
+        var expected = new ArrayList<Boolean>(Arrays.asList(new Boolean[pp.getThumbnailsNo()]));
+        Collections.fill(expected, Boolean.TRUE);
 
+        var actual = pp.doSelectedThumbnailAndBigPhotoMatch();
+
+        assertEquals(expected, actual, "There is a case where selected thumbnail image does not match the big image.");
     }
 
     @Test
@@ -71,16 +81,42 @@ public class ProductPageTest extends BaseTest {
 
     @Test
     public void testIsAtLeastOneOptionAvailableInDropdowns(){
+        pp = new ProductPage(driver);
 
+        soft.assertTrue(pp.selectSize());
+        soft.assertTrue(pp.selectColour());
+
+        soft.assertAll();
     }
 
 
     @Test
-    public void testCanUserAddProductToCart(){
+    public void testCanUserAddOneProductToCart(){
         pp = new ProductPage(driver);
-        pp.addProductToCart();
+        int expectedProductNo = 1;
+        pp.addProductToCart(expectedProductNo);
+        double expectedPrice = pp.getProductPrice() * expectedProductNo;
         int addedProductNo = pp.checkCartQuantity();
         double actualCartPrice = pp.checkCartPrice();
 
+        soft.assertEquals(addedProductNo, expectedProductNo, "Cart is not showing the expected number of added products.");
+        soft.assertEquals(actualCartPrice, expectedPrice, "Cart is not showing the correct price.");
+
+        soft.assertAll();
+    }
+
+    @Test
+    public void testCanUserMultipleProductsAndSeeCorrectPriceInCart(){
+        pp = new ProductPage(driver);
+        int expectedProductNo = 77;
+        pp.addProductToCart(expectedProductNo);
+        double expectedPrice = pp.getProductPrice() * expectedProductNo;
+        int addedProductNo = pp.checkCartQuantity();
+        double actualCartPrice = pp.checkCartPrice();
+
+        soft.assertEquals(addedProductNo, expectedProductNo, "Cart is not showing the expected number of added products.");
+        soft.assertEquals(actualCartPrice, expectedPrice, "Cart is not showing the correct price.");
+
+        soft.assertAll();
     }
 }

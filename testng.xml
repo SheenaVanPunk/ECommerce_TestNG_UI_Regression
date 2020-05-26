@@ -38,12 +38,15 @@
 <!--        </classes>-->
 <!--    </test>-->
 <!--</suite>-->
-        <test name="ProductPage - screenshot comparison">
+        <test name="ProductPageTest">
             <parameter name="browser" value="chrome"/>
             <parameter name="url" value="http://shop.demoqa.com/product/black-satin-one-shoulder-cut-out-midi-dress/"/>
+<!--         <groups>-->
+<!--             <run>-->
+<!--                 <include name="visual"/>-->
+<!--             </run>-->
+<!--         </groups>-->
             <classes>
-    <!--            <class name="testClasses.SearchTest"/>-->
-    <!--            <class name="testClasses.HomePageTest"/>-->
                 <class name="testClasses.ProductPageTest"/>
             </classes>
         </test>

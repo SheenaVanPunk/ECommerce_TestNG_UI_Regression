@@ -25,17 +25,22 @@ public class ProductPage extends Page {
     private By productTitle = By.cssSelector("h1.product_title");
     private By relatedProductContainer = By.cssSelector("div.noo-product-item");
     private By productContent = By.cssSelector("div.single-product-content");
-    //private By galleryImages = By.cssSelector("div.noo-woo-thumbnails__slide");
-    private By originalPrice = By.cssSelector("p.price del");
+    private By originalPrice = By.cssSelector("p.price span.amount");
     private By promotionalPrice = By.cssSelector("p.price ins");
     private By cartQuantity = By.cssSelector("span.cart-item span.cart-name-and-total");
     private By cartPrice = By.cssSelector("span.cart-item span.amount");
+    private By quantityField = By.cssSelector("input[name='quantity']");
+    private By thumbnailsSlider = By.cssSelector("div.noo-woo-thumbnails-wrap");
 
     @FindBy(css = "button.single_add_to_cart_button")
     private WebElement cartButton;
 
-    @FindBy(css = "div.noo-woo-thumbnails__slide")
+    @FindBy(css = "div.noo-woo-thumbnails__slide img")
     private List<WebElement> thumbnails;
+
+    public int getThumbnailsNo(){
+        return thumbnails.size();
+    }
 
     @FindBy(css = "table.variations")
     private WebElement colourAndSizeDropdowns;
@@ -45,43 +50,52 @@ public class ProductPage extends Page {
         PageFactory.initElements(driver, this);
     }
 
+    @FindBy(css = "div.noo-woo-images__slide--active img")
+    private WebElement bigImage;
+
+    public List<Boolean> doSelectedThumbnailAndBigPhotoMatch(){
+        List<Boolean> titleMatchingResults = new ArrayList<Boolean>();
+        if(getWebElement(thumbnailsSlider, "GALLERY SLIDER").isDisplayed()){
+            int i = 1;
+            for(WebElement thumbnail : thumbnails){
+                clickOnElement(thumbnail, "THUMBNAIL #" + i);
+                boolean titlesMatch = thumbnail.getAttribute("title").equals(bigImage.getAttribute("title"));
+                titleMatchingResults.add(titlesMatch);
+                i++;
+            }
+        }else{
+            System.out.println("There is only one large image available for this product - gallery slider is not displayed.");
+        }
+        return titleMatchingResults;
+    }
+
     /**
      * loop through all thumbnails and click on each of them
      * get a thumbnail name and compare it with big image name
      * @return boolean - do names match
      */
-//    @FindBy(css = )
-//    private WebElement bigImage;
-//
-//    public List<Boolean> isEveryThumbnailEnlargedAfterClick(){
-//        int i = 1;
-//        List<Boolean> titleMatchingResults = new ArrayList<Boolean>();
-//        for(WebElement thumbnail : thumbnails){
-//            clickOnElement(thumbnail, "THUMBNAIL #" + i);
-//            boolean titlesMatch = thumbnail.getAttribute("title").equals(bigImage.getAttribute("title"));
-//            titleMatchingResults.add(titlesMatch);
-//            i++;
-//        }
-//        return titleMatchingResults;
-//    }
+
 
     public boolean isCartButtonEnabled(){
         scrollToProductSection();
         return !cartButton.getAttribute("class").contains("disabled");
     }
 
-    public void addProductToCart(){
+    public void addProductToCart(int quantity){
         selectColour();
         selectSize();
+        setProductQuantity(quantity);
         clickOnElement(cartButton, "ADD TO CART BUTTON");
     }
 
-    public void selectColour() {
+    public boolean selectColour() {
         createSelectElement(colourDropdown).selectByIndex(1);
+        return createSelectElement(colourDropdown).getOptions().size() > 0;
     }
 
-    public void selectSize() {
+    public boolean selectSize() {
         createSelectElement(sizeDropdown).selectByIndex(1);
+        return createSelectElement(sizeDropdown).getOptions().size() > 0;
     }
 
     public int getNumberOfOptionsForSize() {
@@ -145,6 +159,9 @@ public class ProductPage extends Page {
 
     public double getPrice(By locator){
         String priceWithoutCurrency = driver.findElement(locator).getText().replace("₹", "");
+        if(priceWithoutCurrency.contains(",")){
+            priceWithoutCurrency = priceWithoutCurrency.replace(",", "");
+        }
         return Double.parseDouble(priceWithoutCurrency);
     }
 
@@ -159,12 +176,30 @@ public class ProductPage extends Page {
         }
 
     public int checkCartQuantity() {
-        String titleWithQuantity = driver.findElement(cartQuantity).getText().replace("Cart(", "").replace(")","");
-        return Integer.parseInt(titleWithQuantity);
+        String titleWithQuantity = driver.findElement(cartQuantity).
+                getText().
+                replace("Cart(", "").
+                replace(")","");
+        String quantity = titleWithQuantity.substring(0, titleWithQuantity.indexOf("₹")).trim();
+        return Integer.parseInt(quantity);
     }
 
     public double checkCartPrice(){
         return getPrice(cartPrice);
+    }
+
+
+    public double getProductPrice() {
+        if(getWebElement(promotionalPrice, "PROMO PRICE").isDisplayed()){
+            return getPrice(promotionalPrice);
+        }else{
+            return getPrice(originalPrice);
+        }
+    }
+
+    public void setProductQuantity(int quantity){
+        clearField(quantityField, "QUANTITY FIELD");
+        type(quantityField, String.valueOf(quantity), String.format("QUANTITY FIELD", String.valueOf(quantity)));
     }
 
     public class RelatedProduct {
