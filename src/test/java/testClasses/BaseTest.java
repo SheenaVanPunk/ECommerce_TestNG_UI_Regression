@@ -1,12 +1,14 @@
 package testClasses;
 
 import classesUtilities.WindowManager;
+import com.testautomationguru.ocular.Ocular;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 import pageObjects.HomePage;
@@ -14,6 +16,7 @@ import testUtilities.BrowserFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.Arrays;
 
@@ -28,6 +31,14 @@ public class BaseTest {
         return driver;
     }
 
+    @BeforeSuite
+    public void setUpOcular(){
+        String pathToSSFolder =  System.getProperty("user.dir") + "\\resources\\ssComparison\\";
+        Ocular.config()
+                .snapshotPath(Paths.get(pathToSSFolder + "baseline\\"))
+                .resultPath(Paths.get(pathToSSFolder + "actual\\"))
+                .globalSimilarity(75);
+    }
 
     @Parameters({"url", "browser"})
     @BeforeMethod(alwaysRun = true, description = "Initializing driver, launching the browser, opening home page and creating its instance")
@@ -42,7 +53,6 @@ public class BaseTest {
 
         driver.get(url);
         hp = new HomePage(driver);
-        driver.manage().window().maximize();
         return hp;
     }
 

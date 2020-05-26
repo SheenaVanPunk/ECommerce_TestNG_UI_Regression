@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5b8cafb-861e-40e1-ba6f-d76fa3a00295" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/classesUtilities/nadaEmailApiClasses/NadaEmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/classesUtilities/nadaEmailApiClasses/NadaEmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/MyAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ssComparison/actual/img1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ssComparison/actual/img1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ssComparison/actual/img2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ssComparison/actual/img2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ssComparison/actual/img3.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ssComparison/actual/img3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ssComparison/actual/img4.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ssComparison/actual/img4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/ProductPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/ProductPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testUtilities/BrowserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtilities/BrowserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +43,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ignore.preview.features.used" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../AaronTraining" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -58,7 +67,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyAccountTest.testSuccessfulLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-CommerceUIRegression" />
       <extension name="coverage">
         <pattern>
@@ -67,8 +76,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.MyAccountTest" />
-      <option name="METHOD_NAME" value="testSuccessfulLogin" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.ProductPageTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductPageTest.createBaselineImages" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="E-CommerceUIRegression" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testClasses" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.ProductPageTest" />
+      <option name="METHOD_NAME" value="createBaselineImages" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -76,7 +102,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyAccountTest.testUnsuccessfulCreateNewPasswordAttempts" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductPageTest.testCanUserMultipleProductsAndSeeCorrectPriceInCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-CommerceUIRegression" />
       <extension name="coverage">
         <pattern>
@@ -85,8 +111,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.MyAccountTest" />
-      <option name="METHOD_NAME" value="testUnsuccessfulCreateNewPasswordAttempts" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.ProductPageTest" />
+      <option name="METHOD_NAME" value="testCanUserMultipleProductsAndSeeCorrectPriceInCart" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -94,7 +120,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyAccountTest.testUnsuccessfulPasswordResetWithUsedResetLink" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductPageTest.testConfirmThatAllGalleryImagesBelongToTheSameProduct" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="E-CommerceUIRegression" />
       <extension name="coverage">
         <pattern>
@@ -103,8 +129,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testClasses" />
-      <option name="MAIN_CLASS_NAME" value="testClasses.MyAccountTest" />
-      <option name="METHOD_NAME" value="testUnsuccessfulPasswordResetWithUsedResetLink" />
+      <option name="MAIN_CLASS_NAME" value="testClasses.ProductPageTest" />
+      <option name="METHOD_NAME" value="testConfirmThatAllGalleryImagesBelongToTheSameProduct" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -115,9 +141,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/Nena/IdeaProjects/E-CommerceUIRegression/testng.xml" />
-        <item itemvalue="TestNG.MyAccountTest.testSuccessfulLogin" />
-        <item itemvalue="TestNG.MyAccountTest.testUnsuccessfulCreateNewPasswordAttempts" />
-        <item itemvalue="TestNG.MyAccountTest.testUnsuccessfulPasswordResetWithUsedResetLink" />
+        <item itemvalue="TestNG.ProductPageTest.testConfirmThatAllGalleryImagesBelongToTheSameProduct" />
+        <item itemvalue="TestNG.ProductPageTest.testCanUserMultipleProductsAndSeeCorrectPriceInCart" />
+        <item itemvalue="TestNG.ProductPageTest" />
+        <item itemvalue="TestNG.ProductPageTest.createBaselineImages" />
       </list>
     </recent_temporary>
   </component>
@@ -153,6 +180,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="224" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1589844686803" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589990427354">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1589990427354" />
     <state x="2637" y="379" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1589659646161">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -161,63 +192,63 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1589683733095" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1589690643592">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1590009721355">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589690643592" />
-    <state width="1323" height="147" key="GridCell.Tab.0.bottom" timestamp="1589857620817">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590009721355" />
+    <state width="1877" height="414" key="GridCell.Tab.0.bottom" timestamp="1590462494945">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="147" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589857620817" />
+    <state width="1323" height="251" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590456648755" />
     <state width="1877" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663849271" />
-    <state width="1323" height="147" key="GridCell.Tab.0.center" timestamp="1589857620817">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462494945" />
+    <state width="1877" height="414" key="GridCell.Tab.0.center" timestamp="1590462494945">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="147" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589857620817" />
+    <state width="1323" height="251" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590456648755" />
     <state width="1877" height="346" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="294" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663849271" />
-    <state width="1323" height="147" key="GridCell.Tab.0.left" timestamp="1589857620817">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462494945" />
+    <state width="1877" height="414" key="GridCell.Tab.0.left" timestamp="1590462494945">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="147" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589857620817" />
+    <state width="1323" height="251" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590456648755" />
     <state width="1877" height="346" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="294" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663849271" />
-    <state width="1323" height="147" key="GridCell.Tab.0.right" timestamp="1589857620817">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462494945" />
+    <state width="1877" height="414" key="GridCell.Tab.0.right" timestamp="1590462494945">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="147" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589857620817" />
+    <state width="1323" height="251" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590456648755" />
     <state width="1877" height="346" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472581875" />
-    <state width="1877" height="294" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663849271" />
-    <state width="1323" height="196" key="GridCell.Tab.1.bottom" timestamp="1589855307400">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462494945" />
+    <state width="1877" height="414" key="GridCell.Tab.1.bottom" timestamp="1590462429454">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589855307400" />
+    <state width="1323" height="251" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590456660768" />
     <state width="1877" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="294" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663818463" />
-    <state width="1323" height="196" key="GridCell.Tab.1.center" timestamp="1589855307400">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462429454" />
+    <state width="1877" height="414" key="GridCell.Tab.1.center" timestamp="1590462429454">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589855307400" />
+    <state width="1323" height="251" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1590456660768" />
     <state width="1877" height="346" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="294" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663818463" />
-    <state width="1323" height="196" key="GridCell.Tab.1.left" timestamp="1589855307400">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462429454" />
+    <state width="1877" height="414" key="GridCell.Tab.1.left" timestamp="1590462429454">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589855307400" />
+    <state width="1323" height="251" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1590456660767" />
     <state width="1877" height="346" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="294" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663818462" />
-    <state width="1323" height="196" key="GridCell.Tab.1.right" timestamp="1589855307400">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462429454" />
+    <state width="1877" height="414" key="GridCell.Tab.1.right" timestamp="1590462429454">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589855307400" />
+    <state width="1323" height="251" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590456660768" />
     <state width="1877" height="346" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589472596747" />
-    <state width="1877" height="294" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589663818463" />
-    <state x="326" y="0" key="SettingsEditor" timestamp="1589761276619">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="414" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590462429454" />
+    <state x="2381" y="164" key="SettingsEditor" timestamp="1590456935805">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="326" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589761276619" />
-    <state x="2381" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589394880091" />
+    <state x="326" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590007089286" />
+    <state x="2381" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590456935805" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1589489847983">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -226,23 +257,24 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1589842255470" />
-    <state x="474" y="187" key="refactoring.ChangeSignatureDialog" timestamp="1589674318475">
+    <state x="474" y="187" key="refactoring.ChangeSignatureDialog" timestamp="1590010693734">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="474" y="187" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1589674318475" />
+    <state x="474" y="187" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1590010693719" />
     <state x="2586" y="267" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1589503244228" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1589840941863">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="2406" y="70" width="945" height="969" key="search.everywhere.popup" timestamp="1590100383542">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1589840941863" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1590009750618" />
+    <state x="2406" y="70" width="945" height="969" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590100383542" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/classesUtilities/nadaEmailApiClasses/NadaEmailService.java</url>
-          <line>146</line>
-          <option name="timeStamp" value="87" />
+          <url>file://$PROJECT_DIR$/src/test/java/testClasses/ProductPageTest.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="147" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

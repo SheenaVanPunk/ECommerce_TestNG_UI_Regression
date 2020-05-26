@@ -16,7 +16,7 @@ public class Page {
 
     public Page(WebDriver driver) {
         Page.driver = driver;
-        wait = new WebDriverWait(driver, 15);
+        Page.wait = new WebDriverWait(driver, 15);
     }
 
     protected WebElement getWebElement(By locator, String elementName) {
@@ -26,7 +26,7 @@ public class Page {
             element = driver.findElement(locator);
             if (driver instanceof JavascriptExecutor) {
                 ((JavascriptExecutor) driver)
-                        .executeScript("arguments[0].style.border='5px solid red'", element);
+                        .executeScript("arguments[0].style.border='5px solid orange'", element);
             }
         } catch (StaleElementReferenceException e) {
             log.error("Element " + elementName + "cannot be located on the page.");
@@ -125,7 +125,7 @@ public class Page {
 
 
     protected void waitUntil(ExpectedCondition<WebElement> condition, Integer timeoutInSeconds){
-        timeoutInSeconds = timeoutInSeconds != null ? timeoutInSeconds : 20;
+        timeoutInSeconds = timeoutInSeconds != null ? timeoutInSeconds : 15;
         WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
         wait.until(condition);
     }
@@ -135,9 +135,10 @@ public class Page {
         wait.until(ExpectedConditions.numberOfWindowsToBe(complete));
     }
 
-    protected void waitForElementVisibility(WebElement element, Integer... timeoutInSeconds) {
+    protected void waitForElementVisibility(WebElement element, Integer... timeOutInSeconds) {
         try {
-                waitUntil(ExpectedConditions.visibilityOf(element), timeoutInSeconds.length > 0 ? timeoutInSeconds[0] : 5);
+                var timeout = timeOutInSeconds.length > 0 ? timeOutInSeconds[0] : 15;
+                waitUntil(ExpectedConditions.visibilityOf(element), timeout);
             } catch (TimeoutException e) {
                 log.error("Timeout - the wait time expired and the element is still not visible.");
             }

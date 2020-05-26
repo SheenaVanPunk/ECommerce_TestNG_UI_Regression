@@ -14,7 +14,7 @@
 9. Data driven testing - Data Provider class called CsvParser is added, it reads from csv files from the path resources/testData
 10. Explicit waits - incorporated in wrapper methods in Page class.
 11. BrowserFactory class for cross-browser testing - extended the framework to include Chrome and Mozilla, more browsers can be added anytime
-12. Visual comparison - TODO
+12. Visual comparison - added Ocular library
 13. Exception catching logic implemented in methods
 14. Jenkins automated pipeline - TODO
 15. Connection with a MySql for DDT

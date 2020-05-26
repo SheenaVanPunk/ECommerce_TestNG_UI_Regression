@@ -1,13 +1,14 @@
 package pageObjects;
 
+import classesUtilities.Page;
 import classesUtilities.StepsLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import classesUtilities.Page;
 
-import java.security.PrivateKey;
+import java.util.List;
+import java.util.Random;
 
 
 public class HomePage extends Page {
@@ -17,6 +18,7 @@ public class HomePage extends Page {
     private By disclaimer = By.cssSelector("p[data-notice-id = '1013467fc0b780504faafa9d866c07ac']");
     private By dismissDisclaimer = By.linkText("Dismiss");
     private By myAccountLink = By.linkText("My Account");
+    private By productThumbnails = By.cssSelector("div.noo-product-inner");
 
 
     public HomePage(WebDriver driver) {
@@ -39,9 +41,8 @@ public class HomePage extends Page {
     }
 
 
-
     public String findLocatorOfPageSection(String key){
-        /**
+        /*
          * for entered name of the home page section, switch expression returns the unique locator
          */
         return switch(key){
@@ -94,5 +95,29 @@ public class HomePage extends Page {
 //        new StepsLogger().info("Home page sections are: " + sectionsMap.keySet().toString().toUpperCase());
 //        return sectionsMap;
 //    }
+
+    private WebElement getHomePageSection(By locator){
+        return getWebElement(locator, "HP SECTION");
+    }
+
+    public WebElement getProductSection(){
+        String locator = findLocatorOfPageSection("ladies");
+        scrollUntilHomePageSection("ladies");
+        return getHomePageSection(By.cssSelector(locator));
+    }
+
+    private List<WebElement> getAllProductsFromHomePage(){
+        return driver.findElements(productThumbnails);
+    }
+
+    public ProductPage clickOnARandomProduct(){
+        Random random = new Random();
+        WebElement product =  getAllProductsFromHomePage().get(random.nextInt(6));
+        scrollUntilHomePageSection("ladies");
+        clickOnElement(product, product.getText());
+        return new ProductPage(driver);
+    }
+
+
 
 }

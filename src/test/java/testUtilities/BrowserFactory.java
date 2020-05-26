@@ -43,9 +43,9 @@ public class BrowserFactory extends BaseTest {
 
     private static ChromeOptions getChromeDriverOptions() {
         ChromeOptions options = new ChromeOptions();
-        //options.addArguments("start-maximized");
-        options.addArguments("--window-size=1366x626");
-        options.setHeadless(true);
+        options.addArguments("start-maximized");
+        options.addArguments("--window-size=1920x1080");
+        //options.setHeadless(true);
         options.setPageLoadStrategy(PageLoadStrategy.EAGER);
         return options;
     }
@@ -54,7 +54,7 @@ public class BrowserFactory extends BaseTest {
         FirefoxOptions options = new FirefoxOptions();
         FirefoxBinary binary = new FirefoxBinary();
         binary.addCommandLineOptions("--headless");
-        options.addArguments("--window-size=1366x626");
+        options.addArguments("--window-size=1920x1080");
         options.setBinary(binary);
         return options;
     }
