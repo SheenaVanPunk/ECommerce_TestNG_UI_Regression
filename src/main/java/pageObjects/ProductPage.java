@@ -130,6 +130,7 @@ public class ProductPage extends Page {
     }
 
 
+
     public List<Boolean> toggleThroughGalleryImagesAndCompareSS() {
         /**
          *  fetch the list of all gallery photos

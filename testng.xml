@@ -29,25 +29,26 @@
 <!--       </classes>-->
 <!--    </test>-->
 
-<!--    <test name="Quick Smoke Test in Firefox">-->
-<!--        <parameter name="browser" value="firefox"/>-->
-<!--        <classes>-->
-<!--&lt;!&ndash;            <class name="testClasses.SearchTest"/>&ndash;&gt;-->
-<!--&lt;!&ndash;            <class name="testClasses.HomePageTest"/>&ndash;&gt;-->
-<!--            <class name="testClasses.MyAccountTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--</suite>-->
-        <test name="ProductPageTest">
-            <parameter name="browser" value="chrome"/>
-            <parameter name="url" value="http://shop.demoqa.com/product/black-satin-one-shoulder-cut-out-midi-dress/"/>
-<!--         <groups>-->
-<!--             <run>-->
-<!--                 <include name="visual"/>-->
-<!--             </run>-->
-<!--         </groups>-->
-            <classes>
-                <class name="testClasses.ProductPageTest"/>
-            </classes>
-        </test>
+    <test name="MyAccountTest in Firefox">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="url" value="http://shop.demoqa.com/my-account//"/>
+        <classes>
+<!--            <class name="testClasses.SearchTest"/>-->
+<!--            <class name="testClasses.HomePageTest"/>-->
+            <class name="testClasses.MyAccountTest"/>
+        </classes>
+    </test>
+
+<!--        <test name="ProductPageTest">-->
+<!--            <parameter name="browser" value="chrome"/>-->
+<!--            <parameter name="url" value="http://shop.demoqa.com/product/black-satin-one-shoulder-cut-out-midi-dress/"/>-->
+<!--&lt;!&ndash;         <groups>&ndash;&gt;-->
+<!--&lt;!&ndash;             <run>&ndash;&gt;-->
+<!--&lt;!&ndash;                 <include name="visual"/>&ndash;&gt;-->
+<!--&lt;!&ndash;             </run>&ndash;&gt;-->
+<!--&lt;!&ndash;         </groups>&ndash;&gt;-->
+<!--            <classes>-->
+<!--                <class name="testClasses.ProductPageTest"/>-->
+<!--            </classes>-->
+<!--        </test>-->
 </suite>
